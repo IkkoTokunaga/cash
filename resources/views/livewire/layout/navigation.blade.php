@@ -45,6 +45,11 @@ new class extends Component
                         {{ __('Create') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('account.show')" :active="request()->routeIs('account.show')" wire:navigate>
+                        {{ __('Accounts') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->

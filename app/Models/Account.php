@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Exception;
+use Illuminate\Support\Facades\Auth;
 
 class Account extends Model
 {
@@ -27,6 +28,7 @@ class Account extends Model
         ];
         return DB::table(self::ACCOUNT_TABLE)
             ->select($select)
+            ->where('user_id', Auth::id())
             ->whereNull('deleted_at')
             ->orderBy('code')
             ->get();
@@ -41,6 +43,7 @@ class Account extends Model
         ];
         return DB::table(self::ACCOUNT_TABLE)
             ->select($select)
+            ->where('user_id', Auth::id())
             ->where('id', $id)
             ->whereNull('deleted_at')
             ->first();
@@ -56,6 +59,7 @@ class Account extends Model
 
                 DB::table(self::ACCOUNT_TABLE)
                     ->where('id', $id)
+                    ->where('user_id', Auth::id())
                     ->update(['deleted_at' => now()]);
             }
 
@@ -64,6 +68,7 @@ class Account extends Model
             if (!$id && $insertId) {
                 DB::table(self::ACCOUNT_TABLE)
                     ->where('id', $insertId)
+                    ->where('user_id', Auth::id())
                     ->update([
                         'code' => $insertId
                     ]);
@@ -93,6 +98,7 @@ class Account extends Model
 
                 $deleted = DB::table(self::ACCOUNT_TABLE)
                     ->where('id', $id)
+                    ->where('user_id', Auth::id())
                     ->update(['deleted_at' => now()]);
                 DB::commit();
                 return $deleted;

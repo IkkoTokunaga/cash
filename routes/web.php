@@ -6,9 +6,7 @@ use App\Livewire\Transaction\Edit as TransactionEdit;
 use App\Livewire\Transaction\Show as TransactionShow;
 use App\Livewire\Account\Show as AccountShow;
 
-Route::get('/', function() {
-    return redirect(route('dashboard'));
-});
+Route::view('/', 'welcome');
 
 Route::middleware(['auth', 'verified'])->group(function () {
 

@@ -5,8 +5,10 @@ use App\Livewire\Transaction\Create as TransactionCreate;
 use App\Livewire\Transaction\Edit as TransactionEdit;
 use App\Livewire\Transaction\Show as TransactionShow;
 use App\Livewire\Account\Show as AccountShow;
+use App\Livewire\Support\Create as SupportCreate;
 
 Route::view('/', 'welcome');
+Route::get('support', SupportCreate::class)->name('support.create');
 
 Route::middleware(['auth', 'verified'])->group(function () {
 

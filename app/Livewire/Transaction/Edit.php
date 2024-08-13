@@ -66,11 +66,6 @@ class Edit extends Component
         return $this->redirect('/transaction');
     }
 
-    public function goBack()
-    {
-        return redirect($this->previousUrl);
-    }
-
     public function mount($id)
     {
         $transaction = Transaction::getById($id);

@@ -53,7 +53,7 @@ new class extends Component {
                     </th>
                     <td>
                         <x-text-input wire:model="current_password" id="update_password_current_password"
-                            name="current_password" type="password" class="mt-1 block w-full"
+                            name="current_password" type="password" class="mt-1 block w-full shadow-none"
                             autocomplete="current-password" />
                         <x-input-error :messages="$errors->get('current_password')" class="mt-2" />
                     </td>
@@ -64,7 +64,7 @@ new class extends Component {
                     </th>
                     <td>
                         <x-text-input wire:model="password" id="update_password_password" name="password"
-                            type="password" class="mt-1 block w-full" autocomplete="new-password" />
+                            type="password" class="mt-1 block w-full shadow-none" autocomplete="new-password" />
                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
                     </td>
                 </tr>
@@ -74,7 +74,7 @@ new class extends Component {
                     </th>
                     <td>
                         <x-text-input wire:model="password_confirmation" id="update_password_password_confirmation"
-                        name="password_confirmation" type="password" class="mt-1 block w-full" autocomplete="new-password" />
+                        name="password_confirmation" type="password" class="mt-1 block w-full shadow-none" autocomplete="new-password" />
                     <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                             </td>
                 </tr>
@@ -88,7 +88,7 @@ new class extends Component {
         </div>
 
         <div class="flex items-center gap-4">
-            <button type="submit" class="btn btn-danger btn-lg mt-3">更新</button>
+            <x-primary-button>{{ __('更新') }}</x-primary-button>
 
             <x-action-message class="me-3" on="password-updated">
                 {{ __('更新しました') }}

@@ -8,13 +8,14 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <form wire:submit="save">
-                <input type="text" class="form-control w-25" style="min-width: 400px;" id="account_name"
-                    wire:model="account_name">
+                <x-text-input wire:model="account_name" id="account_name" type="email" class="mt-1 mb-2 w-50 block shadow-none" />
+                <x-input-error class="mt-2" :messages="$errors->get('email')" />
+
                 @error('account_name')
                     <p class="error">{{ $message }}</p>
                 @enderror
                 <input type="hidden" id="account_id" wire:model="account_id">
-                <button type="submit" class="btn btn-danger btn-lg mt-3"> &nbsp;&nbsp;保存&nbsp;&nbsp; </button>
+                <x-primary-button>{{ __('作成') }}</x-primary-button>
             </form>
             <div class="row ">
                 <div class="col">

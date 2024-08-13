@@ -77,7 +77,7 @@ new class extends Component {
                     </th>
                     <td>
                         <x-text-input wire:model="name" id="name" name="name" type="text"
-                            class="mt-1 block w-full" required autofocus autocomplete="name" />
+                            class="mt-1 block w-full shadow-none" required autofocus autocomplete="name" />
                         <x-input-error class="mt-2" :messages="$errors->get('name')" />
                     </td>
                 </tr>
@@ -87,7 +87,7 @@ new class extends Component {
                     </th>
                     <td>
                         <x-text-input wire:model="email" id="email" name="email" type="email"
-                            class="mt-1 block w-full" required autocomplete="username" />
+                            class="mt-1 block w-full shadow-none" required autocomplete="username" />
                         <x-input-error class="mt-2" :messages="$errors->get('email')" />
 
                         @if (auth()->user() instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !auth()->user()->hasVerifiedEmail())
@@ -117,7 +117,7 @@ new class extends Component {
         </div>
 
         <div class="flex items-center gap-4">
-            <button type="submit" class="btn btn-danger btn-lg mt-3">更新</button>
+            <x-primary-button>{{ __('更新') }}</x-primary-button>
 
             <x-action-message class="me-3" on="profile-updated">
                 {{ __('更新しました') }}

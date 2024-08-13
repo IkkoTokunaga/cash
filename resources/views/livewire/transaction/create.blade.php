@@ -12,20 +12,22 @@
                     <form wire:submit="save">
                         <table class="table table-bordered mt-2 ">
                             <tr>
-                                <th class="table-success"><label for="date">日付</label></th>
+                                <th class="table-success">
+                                    <x-input-label for="date" :value="__('日付')" />
+                                </th>
                                 <td>
-                                    <input type="date" id="date" wire:model="date">
-                                    <div>
-                                        @error('date')
-                                            <p class="error">{{ $message }}</p>
-                                        @enderror
-                                    </div>
+                                    <x-text-input wire:model="date" id="date" name="date" type="date"
+                                        class="mt-1 block shadow-none" />
+                                    <x-input-error :messages="$errors->get('date')" class="mt-2" />
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success"><label for="account_id">科目</label></th>
+                                <th class="table-success">
+                                    <x-input-label for="account_id" :value="__('科目')" />
+                                </th>
                                 <td>
-                                    <select id="account_id" wire:model="account_id" class="w-75">
+                                    <select id="account_id" wire:model="account_id"
+                                        class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md">
                                         <option value="">選択してください</option>
                                         @foreach ($accounts as $account)
                                             <option value="{{ $account->id }}">{{ $account->name }}</option>
@@ -39,18 +41,19 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success"><label for="description">摘要</label></th>
+                                <th class="table-success">
+                                    <x-input-label for="description" :value="__('摘要')" />
+                                </th>
                                 <td>
-                                    <input type="text" id="description" class="w-100" wire:model="description">
-                                    <div>
-                                        @error('description')
-                                            <span class="error">{{ $message }}</span>
-                                        @enderror
-                                    </div>
+                                    <x-text-input wire:model="description" id="description" name="description"
+                                        type="text" class="w-full mt-1 block shadow-none" />
+                                    <x-input-error :messages="$errors->get('description')" class="mt-2" />
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success"><label>収支タイプ</label></th>
+                                <th class="table-success">
+                                    <x-input-label :value="__('収支タイプ')" />
+                                </th>
                                 <td>
                                     @foreach ($payment_type_list as $payment_type => $label)
                                         <label for="{{ $payment_type }}">{{ $label }}
@@ -58,27 +61,22 @@
                                                 name="payment_type" class="me-3"
                                                 wire:model="selected_payment_type"></label>
                                     @endforeach
-                                    <div>
-                                        @error('payment_type')
-                                            <span class="error">{{ $message }}</span>
-                                        @enderror
-                                    </div>
+                                    <x-input-error :messages="$errors->get('selected_payment_type')" class="mt-2" />
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success"><label for="payment">金額 / 円</label></th>
+                                <th class="table-success">
+                                    <label for="payment">金額 / 円</label>
+                                    <x-input-label for="payment" :value="__('金額 / 円')" />
+                                </th>
                                 <td>
-                                    <div>
-                                        <input type="number" id="payment" wire:model="payment">
-                                        @error('payment')
-                                            <span class="error">{{ $message }}</span>
-                                        @enderror
-                                    </div>
+                                    <x-text-input wire:model="payment" id="payment" name="payment"
+                                        type="number" class="w-full mt-1 block shadow-none" />
+                                    <x-input-error :messages="$errors->get('payment')" class="mt-2" />
                                 </td>
                             </tr>
                         </table>
-
-                        <button type="submit" class="btn btn-danger btn-lg mt-3">保存</button>
+                        <x-primary-button>{{ __('保存') }}</x-primary-button>
                     </form>
                 </div>
                 <div class="col-12 col-sm-2 col-md-4 col-lg-6">

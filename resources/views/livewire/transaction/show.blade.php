@@ -9,10 +9,12 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="row mt-2">
                 <div class="col">
-                    <a href="{{ route('transaction.show', $prevMonth_Ym) }}" class="btn btn-primary">◁前月</a>
+                    <x-secondary-button href="{{ route('transaction.show', $prevMonth_Ym) }}"
+                        wire:navigate>◁前月</x-secondary-button>
                 </div>
                 <div class="col">
-                    <a href="{{ route('transaction.show', $nextMonth_Ym) }}" class="btn btn-primary">次月▷</a>
+                    <x-secondary-button href="{{ route('transaction.show', $nextMonth_Ym) }}"
+                        wire:navigate>次月▷</x-secondary-button>
                 </div>
                 <div class="col-9">
 
@@ -47,8 +49,8 @@
                             <td></td>
                             <td>
                                 ❕前月残高が確定されていません<br>
-                                <button type="submit" wire:click="endOfMonthConfirmation('{{ $prevEndOfMonth_Ymd }}')"
-                                    class="btn btn-danger btn-lg">前月残高確定</button>
+                                <x-danger-button
+                                    wire:click="endOfMonthConfirmation('{{ $prevEndOfMonth_Ymd }}')">前月残高確定</x-danger-button>
                             </td>
                             <td></td>
                             <td></td>
@@ -70,7 +72,8 @@
                             <td class="text-end">{{ number_format($transaction->balance) }}</td>
                             <td>
                                 <div class="d-flex justify-content-around">
-                                    <a href="/transaction/edit/{{ $transaction->id }}" wire:navigate style="cursor: pointer;"><img
+                                    <a href="/transaction/edit/{{ $transaction->id }}" wire:navigate
+                                        style="cursor: pointer;"><img
                                             src="{{ asset('storage/edit_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                             alt=""></a>
                                     <div wire:click="delete({{ $transaction->id }})"

@@ -12,32 +12,32 @@
                     <form wire:submit="save">
                         <table class="table table-bordered mt-2 ">
                             <tr>
-                                <th class="table-success"><label for="name">お名前</label></th>
+                                <th class="table-success">
+                                    <x-input-label for="name" :value="__('お名前')" />
+                                </th>
                                 <td>
-                                    <input type="text" id="name" class="w-100" wire:model="name">
-                                    <div>
-                                        @error('name')
-                                            <span class="error">{{ $message }}</span>
-                                        @enderror
-                                    </div>
+                                    <x-text-input wire:model="name" id="name" name="name" type="text"
+                                        class="w-full mt-1 block shadow-none" />
+                                    <x-input-error :messages="$errors->get('name')" class="mt-2" />
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success"><label for="email">メールアドレス</label></th>
+                                <th class="table-success">
+                                    <x-input-label for="name" :value="__('Email')" />
+                                </th>
                                 <td>
-                                    <input type="email" id="email" class="w-100" wire:model="email">
-                                    <div>
-                                        @error('email')
-                                            <span class="error">{{ $message }}</span>
-                                        @enderror
-                                    </div>
+                                    <x-text-input wire:model="email" id="email" name="email" type="text"
+                                        class="w-full mt-1 block shadow-none" />
+                                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success"><label for="payment">内容</label></th>
+                                <th class="table-success">
+                                    <x-input-label :value="__('内容')" />
+                                </th>
                                 <td>
                                     <div>
-                                        <textarea name="content" class="w-100" rows="6" wire:model="content"></textarea>
+                                        <textarea name="content" class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md" rows="6" wire:model="content"></textarea>
                                         @error('content')
                                             <span class="error">{{ $message }}</span>
                                         @enderror
@@ -45,8 +45,7 @@
                                 </td>
                             </tr>
                         </table>
-
-                        <button type="submit" class="btn btn-danger btn-lg mt-3">問い合わせる</button>
+                        <x-primary-button>{{ __('問い合わせる') }}</x-primary-button>
                     </form>
                 </div>
                 <div class="col-12 col-sm-2 col-md-4 col-lg-6">

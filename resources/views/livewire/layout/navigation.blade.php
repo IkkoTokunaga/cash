@@ -126,7 +126,7 @@ new class extends Component {
             </x-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link wire:click="logout" style="cursor: pointer">
+            <x-responsive-nav-link wire:click="logout" wire:confirm="ログアウトしてもよろしいですか?" style="cursor: pointer">
                 {{ __('Log Out') }}
             </x-responsive-nav-link>
         </div>

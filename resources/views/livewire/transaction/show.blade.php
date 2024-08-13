@@ -77,7 +77,7 @@
                                             src="{{ asset('storage/edit_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                             alt=""></a>
                                     <div wire:click="delete({{ $transaction->id }})"
-                                        wire:confirm="Are you sure you want to delete this one?"
+                                        wire:confirm="削除されたデータは元に戻せません。よろしいですか?"
                                         style="cursor: pointer;"><img
                                             src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                             alt=""></div>

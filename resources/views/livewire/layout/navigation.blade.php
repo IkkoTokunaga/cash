@@ -60,7 +60,7 @@ new class extends Component {
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link wire:click="logout" style="cursor: pointer">
+                    <x-nav-link wire:click="logout" wire:confirm="ログアウトしてもよろしいですか?" style="cursor: pointer">
                         {{ __('Log Out') }}
                     </x-nav-link>
                 </div>

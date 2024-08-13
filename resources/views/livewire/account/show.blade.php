@@ -8,8 +8,8 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <form wire:submit="save">
-                <x-text-input wire:model="account_name" id="account_name" type="email" class="mt-1 mb-2 w-50 block shadow-none" />
-                <x-input-error class="mt-2" :messages="$errors->get('email')" />
+                <x-text-input wire:model="account_name" id="account_name" type="text" class="mt-1 mb-2 w-50 block shadow-none" />
+                <x-input-error class="mt-2" :messages="$errors->get('account_name')" />
 
                 @error('account_name')
                     <p class="error">{{ $message }}</p>
@@ -36,7 +36,7 @@
                                                     src="{{ asset('storage/edit_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt=""></div>
                                             <div wire:click="delete({{ $account->id }})"
-                                                wire:confirm="Are you sure you want to delete this one?"
+                                                wire:confirm="削除したデータは元に戻せません。よろしいですか?"
                                                 style="cursor: pointer;"><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt=""></div>

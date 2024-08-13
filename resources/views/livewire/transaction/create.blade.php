@@ -66,7 +66,6 @@
                             </tr>
                             <tr>
                                 <th class="table-success">
-                                    <label for="payment">金額 / 円</label>
                                     <x-input-label for="payment" :value="__('金額 / 円')" />
                                 </th>
                                 <td>

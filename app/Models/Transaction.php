@@ -60,10 +60,11 @@ class Transaction extends Model
 
         return DB::table(self::TRANSACTION_TABLE . ' as t')
             ->select($select)
-            ->leftJoin(self::ACCOUNT_TABLE . ' as a', 'a.id', 't.account_id')
+            ->leftJoin(self::ACCOUNT_TABLE . ' as a', 'a.code', 't.account_id')
             ->where('t.date', 'LIKE', $month . '%')
             ->where('t.user_id', Auth::id())
             ->whereNull('t.deleted_at')
+            ->whereNull('a.deleted_at')
             ->orderBy('t.date')
             ->get()
             ->toArray() ?? [];

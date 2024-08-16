@@ -34,7 +34,7 @@ class Account extends Model
             ->get();
     }
 
-    public static function getById($id)
+    public static function getById($code)
     {
         $select = [
             'id',
@@ -44,28 +44,28 @@ class Account extends Model
         return DB::table(self::ACCOUNT_TABLE)
             ->select($select)
             ->where('user_id', Auth::id())
-            ->where('id', $id)
+            ->where('code', $code)
             ->whereNull('deleted_at')
             ->first();
     }
 
-    public static function store(array $insertData, int $id = null)
+    public static function store(array $insertData, int $code = null)
     {
         DB::beginTransaction();
 
         try {
 
-            if ($id) {
+            if ($code) {
 
                 DB::table(self::ACCOUNT_TABLE)
-                    ->where('id', $id)
+                    ->where('code', $code)
                     ->where('user_id', Auth::id())
                     ->update(['deleted_at' => now()]);
             }
 
             $insertId = DB::table(self::ACCOUNT_TABLE)->insertGetId($insertData);
 
-            if (!$id && $insertId) {
+            if (!$code && $insertId) {
                 DB::table(self::ACCOUNT_TABLE)
                     ->where('id', $insertId)
                     ->where('user_id', Auth::id())
@@ -76,7 +76,7 @@ class Account extends Model
 
             DB::commit();
 
-            return $insertId;
+            return $code ?: $insertId;
         } catch (Exception $e) {
 
             DB::rollBack();

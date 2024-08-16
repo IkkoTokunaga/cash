@@ -30,7 +30,7 @@
                                         class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md">
                                         <option value="">選択してください</option>
                                         @foreach ($accounts as $account)
-                                            <option value="{{ $account->id }}">{{ $account->name }}</option>
+                                            <option value="{{ $account->code }}">{{ $account->name }}</option>
                                         @endforeach
                                     </select>
                                     <x-input-error :messages="$errors->get('account_id')" class="mt-2" />

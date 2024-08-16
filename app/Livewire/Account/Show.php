@@ -30,6 +30,7 @@ class Show extends Component
         $insertData = [
             'user_id' => Auth::id(),
             'name' => $this->account_name,
+            'code' => $this->account_id,
             'created_at' => now(),
             'updated_at' => now(),
         ];
@@ -43,11 +44,11 @@ class Show extends Component
         $this->mount();
     }
 
-    public function edit($id)
+    public function edit($code)
     {
-        if ($id) {
-            $account = Account::getById($id);
-            $this->account_id = $id;
+        if ($code) {
+            $account = Account::getById($code);
+            $this->account_id = $code;
             $this->account_name = $account->name;
         }
     }

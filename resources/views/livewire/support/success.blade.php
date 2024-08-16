@@ -7,7 +7,15 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            問い合わせが完了しました。
+            @if (session()->has('saved_message'))
+                @if (session('saved_support_id'))
+                    <div class="alert alert-info">
+                @else
+                    <div class="alert alert-danger">
+                @endif
+                        {{ session('saved_message') }}
+                    </div>
+            @endif
         </div>
     </div>
 </div>

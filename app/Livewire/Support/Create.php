@@ -36,7 +36,12 @@ class Create extends Component
         ];
 
         Log::debug('support insert data : ' . print_r($insertData, true));
-        Support::store($insertData);
+        $isSaved = Support::store($insertData);
+        $message = $isSaved ?
+            '問い合わせが完了しました。' :
+            '処理に失敗しました';
+        session()->flash('saved_message', $message);
+        session()->flash('saved_support_id', $isSaved);
 
         return $this->redirect('/support/success');
     }

@@ -33,7 +33,13 @@ class Show extends Component
             'created_at' => now(),
             'updated_at' => now(),
         ];
-        Account::store($insertData, $this->account_id);
+        $isSaved = Account::store($insertData, $this->account_id);
+        $message = $isSaved ?
+            '保存しました。' :
+            '処理に失敗しました。';
+        session()->flash('saved_message', $message);
+        session()->flash('saved_account_id', $isSaved);
+
         $this->mount();
     }
 
@@ -51,6 +57,7 @@ class Show extends Component
         if ($id) {
             Account::deleteById($id);
             $this->mount();
+            session()->flash('saved_message', '削除しました。');
         }
     }
 

@@ -61,7 +61,13 @@ class Edit extends Component
         ];
 
         Log::debug('transaction update data : ' . print_r($insertData, true));
-        Transaction::store($insertData, $this->id);
+        $isSaved = Transaction::store($insertData, $this->id);
+
+        $message = $isSaved ?
+            '保存しました。' :
+            '処理に失敗しました。';
+        session()->flash('saved_message', $message);
+        session()->flash('saved_transaction_id', $isSaved);
 
         return $this->redirect('/transaction');
     }

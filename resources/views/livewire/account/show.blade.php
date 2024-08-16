@@ -7,6 +7,15 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            @if (session()->has('saved_message'))
+                @if (session('saved_account_id'))
+                    <div class="alert alert-info">
+                @else
+                    <div class="alert alert-danger">
+                @endif
+                        {{ session('saved_message') }}
+                    </div>
+            @endif
             <form wire:submit="save">
                 <x-text-input wire:model="account_name" id="account_name" type="text" class="mt-1 mb-2 w-50 block shadow-none" />
                 <x-input-error class="mt-2" :messages="$errors->get('account_name')" />
@@ -24,8 +33,8 @@
                         </thead>
                         <tbody>
                             @foreach ($accounts as $account)
-                                <tr>
-                                    <td>{{ $account->name }}</td>
+                            <tr @if (session('saved_account_id') === $account->id && session('saved_account_id')) class="table-info" @endif>
+                                <td>{{ $account->name }}</td>
                                     <td>
                                         <div class="d-flex justify-content-around">
                                             <div wire:click="edit({{ $account->id }})" style="cursor: pointer;"><img

@@ -56,7 +56,13 @@ class Create extends Component
         ];
 
         Log::debug('transaction insert data : ' . print_r($insertData, true));
-        Transaction::store($insertData);
+        $isSaved = Transaction::store($insertData);
+
+        $message = $isSaved ?
+            '保存しました。' :
+            '処理に失敗しました。';
+        session()->flash('saved_message', $message);
+        session()->flash('saved_transaction_id', $isSaved);
 
         return $this->redirect('/transaction');
     }

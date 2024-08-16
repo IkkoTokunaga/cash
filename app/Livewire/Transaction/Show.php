@@ -45,6 +45,7 @@ class Show extends Component
         if ($id) {
             if (Transaction::deleteById($id)) {
                 $this->refreshList($this->month);
+                session()->flash('saved_message', '削除しました。');
             }
         }
     }

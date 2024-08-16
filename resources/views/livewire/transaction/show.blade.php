@@ -50,7 +50,12 @@
                             <td>
                                 ❕前月残高が確定されていません<br>
                                 <x-danger-button
-                                    wire:click="endOfMonthConfirmation('{{ $prevEndOfMonth_Ymd }}')">前月残高確定</x-danger-button>
+                                    wire:click="endOfMonthConfirmation('{{ $prevEndOfMonth_Ymd }}')"
+                                    wire:confirm="前月の締め処理を実行します。この処理を行うと前月のデータが確定し、修正ができなくなります。\n実行してもよろしいですか？"
+                                    >
+                                    前月残高確定
+                                </x-danger-button>
+                                <x-input-error :messages="$errors->get('endOfMonth_Ymd')" class="mt-2" />
                             </td>
                             <td></td>
                             <td></td>
@@ -71,17 +76,27 @@
                             </td>
                             <td class="text-end">{{ number_format($transaction->balance) }}</td>
                             <td>
-                                <div class="d-flex justify-content-around">
-                                    <a href="/transaction/edit/{{ $transaction->id }}" wire:navigate
-                                        style="cursor: pointer;"><img
-                                            src="{{ asset('storage/edit_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
-                                            alt=""></a>
-                                    <div wire:click="delete({{ $transaction->id }})"
-                                        wire:confirm="削除されたデータは元に戻せません。よろしいですか?"
-                                        style="cursor: pointer;"><img
-                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
-                                            alt=""></div>
-                                </div>
+                                @if (!$thisMonthCloseFlg)
+                                    <div class="d-flex justify-content-around">
+                                        <a href="/transaction/edit/{{ $transaction->id }}" wire:navigate
+                                            style="cursor: pointer;"><img
+                                                src="{{ asset('storage/edit_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                                alt=""></a>
+                                        <div wire:click="delete({{ $transaction->id }})"
+                                            wire:confirm="削除されたデータは元に戻せません。よろしいですか?" style="cursor: pointer;"><img
+                                                src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @else
+                                    <div class="d-flex justify-content-around">
+                                        <i style="cursor: not-allowed;"><img
+                                                src="{{ asset('storage/edit_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                                alt=""></i>
+                                        <i style="cursor: not-allowed;"><img
+                                                src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                                alt=""></i>
+                                    </div>
+                                @endif
                             </td>
                         </tr>
                     @endforeach

@@ -29,6 +29,19 @@ class Summary extends Model
             ->first();
     }
 
+    public static function judgeFirst()
+    {
+        $select = [
+            'id',
+        ];
+        return DB::table(self::SUMMARY_TABLE)
+            ->select($select)
+            ->where('user_id', Auth::id())
+            ->whereNull('deleted_at')
+            ->first() ? false : true;
+
+    }
+
     public static function store($insertData)
     {
         try {

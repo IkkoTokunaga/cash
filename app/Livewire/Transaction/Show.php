@@ -23,6 +23,9 @@ class Show extends Component
     public $totalIncome;
     public $totalExpense;
 
+    public $thisMonthCloseFlg;
+    public $endOfMonth_Ymd;
+
     public function mount($month = null)
     {
         $this->month = $month ? $month . '-01' : Carbon::now();
@@ -71,6 +74,10 @@ class Show extends Component
             $totalExpense += $transaction->expense;
         }
 
+        // 既に締めていれば修正不可のため、確認
+        $thisMonth = Carbon::parse($date)->endOfMonth()->format('Y-m-d');
+        $thisMonthCloseFlg = Summary::get($thisMonth);
+
         $this->transactions = $transactions;
         $this->prevMonthData = $prevMonthSummary;
         $this->prevEndOfMonth_Ymd = $prevEndOfMonth;
@@ -80,11 +87,23 @@ class Show extends Component
         $this->balance = $balance;
         $this->totalIncome = $totalIncome;
         $this->totalExpense = $totalExpense;
+        $this->thisMonthCloseFlg = $thisMonthCloseFlg;
 
     }
 
     public function endOfMonthConfirmation($endOfMonth_Ymd)
     {
+        $this->endOfMonth_Ymd = $endOfMonth_Ymd;
+        $this->validate(
+            [
+                'endOfMonth_Ymd' => 'required|date_format:Y-m-d|is_prev_monthly_closing',
+            ],
+            [
+                'endOfMonth_Ymd.required' => '名前は必須項目です。',
+                'endOfMonth_Ymd.date_format' => 'フォーマットが不正です',
+                'endOfMonth_Ymd.is_prev_monthly_closing' => '前々月の締め処理を行ってから、実行してください。',
+            ]
+        );
         $endOfMonth = Carbon::parse($endOfMonth_Ymd)->format('Y-m');
         $summary = Transaction::summary($endOfMonth);
 
@@ -104,42 +123,8 @@ class Show extends Component
 
     public function render()
     {
-
-        $date = $this->month;
-        $year = Carbon::parse($date)->format('Y');
-        $month = Carbon::parse($date)->format('m');
-
-        $transactions = [];
-
-        $prevEndOfMonth = Carbon::parse($date)->subMonth()->endOfMonth()->format('Y-m-d');
-        $prevMonthSummary = Summary::get($prevEndOfMonth);
-        $balance = $prevMonthSummary ? $prevMonthSummary->amount : 0;
-        $totalIncome = 0;
-        $totalExpense = 0;
-        foreach (Transaction::get($year . '-' . $month) as $transaction) {
-
-            $transaction->date = Carbon::parse($transaction->date)->format('Y-m-d');
-            $balance += $transaction->income - $transaction->expense;
-            $transaction->balance = $balance;
-            $transactions[] = $transaction;
-
-            $totalIncome += $transaction->income;
-            $totalExpense += $transaction->expense;
-        }
-
         return view(
             'livewire.transaction.show',
-            // [
-            //     'transactions' => $transactions,
-            //     'prevMonthData' => $prevMonthSummary,
-            //     'prevEndOfMonth_Ymd' => $prevEndOfMonth,
-            //     'prevMonth_Ym' => Carbon::parse($prevEndOfMonth)->format('Y-m'),
-            //     'nextMonth_Ym' => Carbon::parse($date)->addMonth()->format('Y-m'),
-            //     'accountList' => Account::get(),
-            //     'balance' => $balance,
-            //     'totalIncome' => $totalIncome,
-            //     'totalExpense' => $totalExpense,
-            // ]
         )->layout('layouts.app');
     }
 }

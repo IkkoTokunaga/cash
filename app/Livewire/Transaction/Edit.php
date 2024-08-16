@@ -5,6 +5,8 @@ namespace App\Livewire\Transaction;
 use Livewire\Component;
 use App\Models\Account;
 use App\Models\Transaction;
+use App\Models\Summary;
+use Carbon\Carbon;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
@@ -33,8 +35,6 @@ class Edit extends Component
         'income' => '収入',
         'expense' => '支出'
     ];
-
-    public $previousUrl;
 
     public function save()
     {
@@ -70,6 +70,12 @@ class Edit extends Component
     {
         $transaction = Transaction::getById($id);
 
+        // 既に締めていれば表示不可
+        $summary = Summary::get(
+            Carbon::parse($transaction->date)->endOfMonth()->format('Y-m-d')
+        );
+        if ($summary) return redirect(route('dashboard'));
+
         $this->id = $transaction->id;
         $this->user_id = $transaction->user_id;
         $this->date = $transaction->date;
@@ -78,7 +84,6 @@ class Edit extends Component
         $this->selected_payment_type = $transaction->income > 0 ? 'income' : 'expense';
         $this->payment = $transaction->income > 0 ? intval($transaction->income) : intval($transaction->expense);
 
-        $this->previousUrl = url()->previous();
     }
 
     public function messages()

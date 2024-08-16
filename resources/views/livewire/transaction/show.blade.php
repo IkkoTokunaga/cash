@@ -19,11 +19,11 @@
         <div class="row mt-2">
             <div class="col">
                 <x-secondary-button href="{{ route('transaction.show', $prevMonth_Ym) }}"
-                    wire:navigate>◁前月</x-secondary-button>
+                    wire:navigate>◀ 前月</x-secondary-button>
             </div>
             <div class="col">
                 <x-secondary-button href="{{ route('transaction.show', $nextMonth_Ym) }}"
-                    wire:navigate>次月▷</x-secondary-button>
+                    wire:navigate>次月 ▶</x-secondary-button>
             </div>
             <div class="col-9">
 

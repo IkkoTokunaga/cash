@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 
 class Summary extends Model
 {
@@ -23,6 +24,7 @@ class Summary extends Model
         return DB::table(self::SUMMARY_TABLE)
             ->select($select)
             ->where('date', $date)
+            ->where('user_id', Auth::id())
             ->whereNull('deleted_at')
             ->first();
     }

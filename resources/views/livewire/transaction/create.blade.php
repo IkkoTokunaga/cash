@@ -33,11 +33,7 @@
                                             <option value="{{ $account->id }}">{{ $account->name }}</option>
                                         @endforeach
                                     </select>
-                                    <div>
-                                        @error('daaccount_idte')
-                                            <span class="error">{{ $message }}</span>
-                                        @enderror
-                                    </div>
+                                    <x-input-error :messages="$errors->get('account_id')" class="mt-2" />
                                 </td>
                             </tr>
                             <tr>
@@ -69,8 +65,8 @@
                                     <x-input-label for="payment" :value="__('金額 / 円')" />
                                 </th>
                                 <td>
-                                    <x-text-input wire:model="payment" id="payment" name="payment"
-                                        type="number" class="w-full mt-1 block shadow-none" />
+                                    <x-text-input wire:model="payment" id="payment" name="payment" type="number"
+                                        class="w-full mt-1 block shadow-none" />
                                     <x-input-error :messages="$errors->get('payment')" class="mt-2" />
                                 </td>
                             </tr>

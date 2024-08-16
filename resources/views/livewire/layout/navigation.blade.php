@@ -23,7 +23,7 @@ new class extends Component {
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}" wire:navigate>
-                        <strong>収支管理ツール</strong>
+                        <strong>収支管理</strong>
                         {{-- <x-application-logo class="block h-9 w-auto fill-current text-gray-800" /> --}}
                     </a>
                 </div>
@@ -31,37 +31,37 @@ new class extends Component {
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
-                        {{ __('Dashboard') }}
+                        {{ __('ホーム') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('transaction.show')" :active="request()->routeIs('transaction.show')" wire:navigate>
-                        {{ __('List') }}
+                        {{ __('一覧') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('transaction.create')" :active="request()->routeIs('transaction.create')" wire:navigate>
-                        {{ __('Create') }}
+                        {{ __('作成') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('account.show')" :active="request()->routeIs('account.show')" wire:navigate>
-                        {{ __('Accounts') }}
+                        {{ __('科目') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('profile')" :active="request()->routeIs('profile')" wire:navigate>
-                        {{ __('Profile') }}
+                        {{ __('ユーザ') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('support.create')" :active="request()->routeIs('support.create')" wire:navigate>
-                        {{ __('Support') }}
+                        {{ __('サポート') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link wire:click="logout" wire:confirm="ログアウトしてもよろしいですか?" style="cursor: pointer">
-                        {{ __('Log Out') }}
+                        {{ __('ログアウト') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -97,37 +97,37 @@ new class extends Component {
     <div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
-                {{ __('Dashboard') }}
+                {{ __('ホーム') }}
             </x-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('transaction.show')" :active="request()->routeIs('transaction.show')" wire:navigate>
-                {{ __('List') }}
+                {{ __('収支一覧') }}
             </x-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('transaction.create')" :active="request()->routeIs('transaction.create')" wire:navigate>
-                {{ __('Create') }}
+                {{ __('新規作成') }}
             </x-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('account.show')" :active="request()->routeIs('account.show')" wire:navigate>
-                {{ __('Accounts') }}
+                {{ __('科目マスタ') }}
             </x-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('profile')" :active="request()->routeIs('profile')" wire:navigate>
-                {{ __('Profile') }}
+                {{ __('ユーザ情報') }}
             </x-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('support.create')" :active="request()->routeIs('support.create')" wire:navigate>
-                {{ __('Support') }}
+                {{ __('問い合わせ') }}
             </x-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link wire:click="logout" wire:confirm="ログアウトしてもよろしいですか?" style="cursor: pointer">
-                {{ __('Log Out') }}
+                {{ __('ログアウト') }}
             </x-responsive-nav-link>
         </div>
 

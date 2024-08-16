@@ -10,10 +10,6 @@
             <form wire:submit="save">
                 <x-text-input wire:model="account_name" id="account_name" type="text" class="mt-1 mb-2 w-50 block shadow-none" />
                 <x-input-error class="mt-2" :messages="$errors->get('account_name')" />
-
-                @error('account_name')
-                    <p class="error">{{ $message }}</p>
-                @enderror
                 <input type="hidden" id="account_id" wire:model="account_id">
                 <x-primary-button>{{ __('作成') }}</x-primary-button>
             </form>

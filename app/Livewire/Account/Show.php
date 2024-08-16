@@ -54,6 +54,13 @@ class Show extends Component
         }
     }
 
+    public function messages()
+    {
+        return [
+            'account_name.required' => '科目名は必須項目です。',
+            'account_name.max' => '科目名は255文字以内で入力してください。',
+        ];
+    }
 
     public function render()
     {

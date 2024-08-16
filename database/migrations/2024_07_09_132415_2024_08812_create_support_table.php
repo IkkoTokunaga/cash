@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->date('date')->nullable(false);
-            $table->date('time')->nullable(false);
+            $table->time('time')->nullable(false);
             $table->string('name')->nullable(false);
             $table->string('email')->nullable(false);
             $table->text('content')->nullable(false);

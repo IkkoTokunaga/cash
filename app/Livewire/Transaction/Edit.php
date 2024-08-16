@@ -81,6 +81,23 @@ class Edit extends Component
         $this->previousUrl = url()->previous();
     }
 
+    public function messages()
+    {
+        return [
+            'date.required' => '日付は必須項目です。',
+            'date.date_format' => '日付フォーマットが誤っています。',
+            'date.isnot_monthly_closing' => '既に締め処理を行っているため、修正できません。',
+            'account_id.required' => '科目は必須項目です。',
+            'account_id.numeric' => '科目のデータ形式が誤っています。',
+            'description.required' => '摘要を入力してください。',
+            'description.max' => '摘要は200文字以内で入力してください。',
+            'selected_payment_type.required' => '収支タイプを選択してください。',
+            'selected_payment_type.in' => '収支タイプを選択してください。',
+            'payment.required' => '金額を入力してください。',
+            'payment.numeric' => '金額を入力してください。',
+        ];
+    }
+
     public function render()
     {
         return view(

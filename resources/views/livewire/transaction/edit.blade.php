@@ -36,12 +36,8 @@ use Carbon\Carbon;
                                             <option value="{{ $account->id }}">{{ $account->name }}</option>
                                         @endforeach
                                     </select>
-                                    <div>
-                                        @error('daaccount_idte')
-                                            <span class="error">{{ $message }}</span>
-                                        @enderror
-                                    </div>
-                                </td>
+                                    <x-input-error :messages="$errors->get('account_id')" class="mt-2" />
+                                    </td>
                             </tr>
                             <tr>
                                 <th class="table-success">

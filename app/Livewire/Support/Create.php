@@ -47,6 +47,19 @@ class Create extends Component
         $this->email = Auth::user()->email;
     }
 
+    public function messages()
+    {
+        return [
+            'name.required' => 'お名前は必須項目です。',
+            'name.max' => 'お名前は200文字以内で入力してください。',
+            'email.required' => 'Emailは必須項目です。',
+            'email.max' => 'Emailは200文字以内で入力してください。',
+            'email.email' => 'Emailの入力形式が誤っています。',
+            'content.required' => '内容を入力してください。',
+            'content.max' => '内容は1000文字以内で入力してください。',
+        ];
+    }
+
     public function render()
     {
         return view(

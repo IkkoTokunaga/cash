@@ -37,10 +37,9 @@
                                 </th>
                                 <td>
                                     <div>
-                                        <textarea name="content" class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md" rows="6" wire:model="content"></textarea>
-                                        @error('content')
-                                            <span class="error">{{ $message }}</span>
-                                        @enderror
+                                        <textarea name="content" class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md"
+                                            rows="6" wire:model="content"></textarea>
+                                        <x-input-error :messages="$errors->get('content')" class="mt-2" />
                                     </div>
                                 </td>
                             </tr>

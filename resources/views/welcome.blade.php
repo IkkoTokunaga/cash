@@ -94,15 +94,10 @@
                                 <h2 class="text-xl font-semibold text-black">問い合わせ</h2>
 
                                 <p class="mt-4 text-sm/relaxed">
-                                    もっと詳細に知りたい場合はこちら<br>
-                                    <x-primary-button class="mt-3">お問い合わせ</x-primary-button>
+                                    もっと詳細に知りたい場合はこちら
+
                                 </p>
-                                <p class="mt-3">
-                                    本システムをベースとした、追加開発の受注も受け付けております。<br>
-                                    こちらは有償とはなりますが、個別の機能や項目を追加することができるフルオーダーなシステムとなっております。<br>
-                                    詳しくはお問合せからお願いいたします。<br>
-                                    ※エンジニアのスケジュールの関係でお受けできない、または納期がお約束できない場合がございます。
-                                </p>
+                                <livewire:support.guest />
                             </div>
                         </div>
                     </div>

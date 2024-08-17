@@ -23,7 +23,7 @@
             <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
                 <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
                     <div class="flex lg:justify-center lg:col-start-2">
-                        <h1>{{ env('APP_NAME') }}</h1>
+                        <h1 class="fs-2 fw-bold text-dark">{{ env('APP_NAME') }}</h1>
                     </div>
                     @if (Route::has('login'))
                         <livewire:welcome.navigation />
@@ -50,6 +50,7 @@
 
                             </div>
                             <ul>
+                                <li>使用例</li>
                                 <li>・ 個人事業主様の出納帳</li>
                                 <li>・ 法人様の出納帳</li>
                                 <li>・ 家計簿</li>

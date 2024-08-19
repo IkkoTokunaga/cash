@@ -9,6 +9,7 @@ use App\Livewire\Support\Create as SupportCreate;
 use App\Livewire\Support\Success as SupportSuccess;
 
 Route::view('/', 'welcome');
+Route::view('/document', 'document')->name('document');
 
 Route::middleware(['auth', 'verified'])->group(function () {
 

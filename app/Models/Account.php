@@ -97,8 +97,9 @@ class Account extends Model
             if ($id) {
 
                 $deleted = DB::table(self::ACCOUNT_TABLE)
-                    ->where('id', $id)
+                    ->where('code', $id)
                     ->where('user_id', Auth::id())
+                    ->whereNull('deleted_at')
                     ->update(['deleted_at' => now()]);
                 DB::commit();
                 return $deleted;

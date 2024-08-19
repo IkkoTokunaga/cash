@@ -83,7 +83,9 @@
 
                                 <p class="mt-4 text-sm/relaxed">
                                     誰にでもわかりやすく、簡潔な操作ができるように設計されています。<br>
-                                    <x-primary-button class="mt-3">詳しい操作方法を見る</x-primary-button>
+                                    <a href="{{ route('document') }}" wire:navigate>
+                                        <x-primary-button class="mt-3">詳しい操作方法を見る</x-primary-button>
+                                    </a>
                                 </p>
                             </div>
                         </div>

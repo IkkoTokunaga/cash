@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 class Show extends Component
 {
     public $month;
+    public $currentMonth;
     public $transactions;
     public $prevMonthData;
     public $prevEndOfMonth_Ymd;
@@ -29,6 +30,7 @@ class Show extends Component
     public function mount($month = null)
     {
         $this->month = $month ? $month . '-01' : Carbon::now();
+        $this->currentMonth = $month ? Carbon::parse($this->month)->format('Y年m月') : Carbon::now()->format('Y年m月');
         $this->refreshList($this->month);
 
     }

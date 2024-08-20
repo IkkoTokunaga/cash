@@ -22,12 +22,5 @@
         rows="6" wire:model="content"></textarea>
     <x-input-error :messages="$errors->get('content')" class="mt-2" />
     <x-primary-button>{{ __('問い合わせる') }}</x-primary-button>
-
-    <p class="mt-3">
-        本システムをベースとした、追加開発の受注も受け付けております。<br>
-        こちらは有償とはなりますが、個別の機能や項目を追加することができるフルオーダーなシステムとなっております。<br>
-        詳しくはお問合せからお願いいたします。<br>
-        ※エンジニアのスケジュールの関係でお受けできない、または納期がお約束できない場合がございます。
-    </p>
 </form>
 </div>

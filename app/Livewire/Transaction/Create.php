@@ -23,7 +23,7 @@ class Create extends Component
     #[Validate('bail|required|in:income,expense')]
     public $selected_payment_type = null;
 
-    #[Validate('bail|required|numeric')]
+    #[Validate('bail|required|numeric|max_digits:10')]
     public $payment;
 
     public $payment_type_list = [
@@ -86,6 +86,7 @@ class Create extends Component
             'selected_payment_type.in' => '収支タイプを選択してください。',
             'payment.required' => '金額を入力してください。',
             'payment.numeric' => '金額を入力してください。',
+            'payment.max_digits' => '金額が大きすぎます。',
         ];
     }
 

@@ -22,10 +22,13 @@
                     wire:navigate>◀ 前月</x-secondary-button>
             </div>
             <div class="col">
+                <h2 class="font-semibold text-l text-gray-800 leading-tight py-2">{{ $currentMonth }}</h2>
+            </div>
+            <div class="col">
                 <x-secondary-button href="{{ route('transaction.show', $nextMonth_Ym) }}"
                     wire:navigate>次月 ▶</x-secondary-button>
             </div>
-            <div class="col-9">
+            <div class="col-8">
 
             </div>
         </div>

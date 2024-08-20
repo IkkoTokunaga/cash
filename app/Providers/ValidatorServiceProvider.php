@@ -29,7 +29,7 @@ class ValidatorServiceProvider extends ServiceProvider
             'isnot_monthly_closing',
             function ($attribute, $value, $parameters, $validator) {
                 $prevEndOfMonth = Carbon::parse($value)->format('Y-m-t');
-                $isMonthlyClosing = Summary::get($prevEndOfMonth);
+                $isMonthlyClosing = Summary::comfirmCheck($prevEndOfMonth);
 
                 return $isMonthlyClosing ? false : true;
             }

@@ -29,6 +29,30 @@ class Summary extends Model
             ->first();
     }
 
+    /**
+     * 登録予定月以降に締めをしていないか確認
+     *
+     * @param [type] $date
+     * @return void
+     */
+    public static function comfirmCheck($date)
+    {
+        $select = [
+            'id'
+        ];
+        return DB::table(self::SUMMARY_TABLE)
+            ->select($select)
+            ->where('date', '>=', $date)
+            ->where('user_id', Auth::id())
+            ->whereNull('deleted_at')
+            ->first();
+    }
+
+    /**
+     * 初めての締め処理かどうか判定
+     *
+     * @return void
+     */
     public static function judgeFirst()
     {
         $select = [
@@ -39,7 +63,6 @@ class Summary extends Model
             ->where('user_id', Auth::id())
             ->whereNull('deleted_at')
             ->first() ? false : true;
-
     }
 
     public static function store($insertData)

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Dashboard\Home;
 use App\Livewire\Transaction\Create as TransactionCreate;
 use App\Livewire\Transaction\Edit as TransactionEdit;
 use App\Livewire\Transaction\Show as TransactionShow;
@@ -13,7 +14,7 @@ Route::view('/document', 'document')->name('document');
 
 Route::middleware(['auth', 'verified'])->group(function () {
 
-    Route::view('dashboard', 'dashboard')->name('dashboard');
+    Route::get('dashboard', Home::class)->name('dashboard');
     Route::view('profile', 'profile')->name('profile');
 
     Route::get('transaction/create', TransactionCreate::class)->name('transaction.create');

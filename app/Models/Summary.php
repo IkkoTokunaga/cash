@@ -14,6 +14,21 @@ class Summary extends Model
 
     const SUMMARY_TABLE = 'summary';
 
+    public static function getAll($limit = null)
+    {
+        $select = [
+            'id',
+            'date',
+            'amount'
+        ];
+        return DB::table(self::SUMMARY_TABLE)
+            ->select($select)
+            ->where('user_id', Auth::id())
+            ->whereNull('deleted_at')
+            ->orderBy('date', 'desc')
+            ->get();
+    }
+
     public static function get($date)
     {
         $select = [

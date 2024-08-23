@@ -35,11 +35,15 @@ class Guest extends Create
         session()->flash('saved_message', $message);
         session()->flash('saved_support_id', $isSaved);
 
+        $this->mount();
         // return $this->redirect('/support/success');
     }
 
     public function mount()
     {
+        $this->name = '';
+        $this->email = '';
+        $this->content = '';
     }
 
     public function render()

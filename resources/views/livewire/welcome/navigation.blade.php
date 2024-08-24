@@ -18,7 +18,7 @@
         @if (Route::has('register'))
             <a href="{{ route('register') }}">
                 <x-secondary-button>
-                    アカウント新規作成
+                    会員登録
                 </x-secondary-button>
             </a>
         @endif

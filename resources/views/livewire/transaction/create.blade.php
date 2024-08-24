@@ -1,4 +1,4 @@
-<div>
+<x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('新規作成') }}
@@ -6,9 +6,9 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="row ">
-                <div class="col">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
+            <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+                <div class=" max-w-xl">
                     <form wire:submit="save">
                         <table class="table table-bordered mt-2 ">
                             <tr>
@@ -71,12 +71,12 @@
                                 </td>
                             </tr>
                         </table>
-                        <x-primary-button>{{ __('保存') }}</x-primary-button>
+                        <div class="flex sm:justify-center sm:items-center">
+                            <x-primary-button>{{ __('保存') }}</x-primary-button>
+                        </div>
                     </form>
-                </div>
-                <div class="col-12 col-sm-2 col-md-4 col-lg-6">
                 </div>
             </div>
         </div>
     </div>
-</div>
+</x-app-layout>

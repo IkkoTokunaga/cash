@@ -5,6 +5,7 @@ namespace App\Livewire\Transaction;
 use Livewire\Component;
 use App\Models\Account;
 use App\Models\Transaction;
+use Carbon\Carbon;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
@@ -12,7 +13,7 @@ use Illuminate\Support\Facades\Log;
 class Create extends Component
 {
     #[Validate('bail|required|date_format:Y-m-d|isnot_monthly_closing')]
-    public $date = '';
+    public $date;
 
     #[Validate('bail|required|numeric')]
     public $account_id = null;
@@ -30,6 +31,8 @@ class Create extends Component
         'income' => '収入',
         'expense' => '支出'
     ];
+
+    public $accounts;
 
     public function save()
     {
@@ -69,7 +72,9 @@ class Create extends Component
 
     public function mount()
     {
+        $this->accounts = Account::get();
         $this->selected_payment_type = 'income';
+        $this->date = Carbon::now()->format('Y-m-d');
     }
 
     public function messages()
@@ -93,10 +98,7 @@ class Create extends Component
     public function render()
     {
         return view(
-            'livewire.transaction.create',
-            [
-                'accounts' => Account::get()
-            ]
-        )->layout('layouts.app');
+            'livewire.transaction.create'
+        );
     }
 }

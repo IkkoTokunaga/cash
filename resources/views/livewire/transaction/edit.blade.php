@@ -1,7 +1,7 @@
 @php
-use Carbon\Carbon;
+    use Carbon\Carbon;
 @endphp
-<div>
+<x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('編集') }}
@@ -9,9 +9,9 @@ use Carbon\Carbon;
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="row ">
-                <div class="col">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
+            <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+                <div class=" max-w-xl">
                     <form wire:submit="save">
                         <table class="table table-bordered mt-2 ">
                             <tr>
@@ -37,7 +37,7 @@ use Carbon\Carbon;
                                         @endforeach
                                     </select>
                                     <x-input-error :messages="$errors->get('account_id')" class="mt-2" />
-                                    </td>
+                                </td>
                             </tr>
                             <tr>
                                 <th class="table-success">
@@ -68,19 +68,20 @@ use Carbon\Carbon;
                                     <x-input-label for="payment" :value="__('金額 / 円')" />
                                 </th>
                                 <td>
-                                    <x-text-input wire:model="payment" id="payment" name="payment"
-                                        type="number" class="w-full mt-1 block shadow-none" />
+                                    <x-text-input wire:model="payment" id="payment" name="payment" type="number"
+                                        class="w-full mt-1 block shadow-none" />
                                     <x-input-error :messages="$errors->get('payment')" class="mt-2" />
                                 </td>
                             </tr>
                         </table>
-                        <x-primary-button>{{ __('保存') }}</x-primary-button>
-                        <a href="{{ route('transaction.show', Carbon::parse($date)->format('Y-m')) }}" wire:navigate><x-secondary-button>{{ __('一覧へ戻る') }}</x-secondary-button></a>
-                    </div>
-                    <div class="col-12 col-sm-2 col-md-4 col-lg-6">
-                    </div>
-
-            </form>
+                        <div class="flex justify-center items-center">
+                            <x-primary-button class="me-5">{{ __('保存') }}</x-primary-button>
+                            <a href="{{ route('transaction.show', Carbon::parse($date)->format('Y-m')) }}"
+                                wire:navigate><x-secondary-button>{{ __('一覧へ戻る') }}</x-secondary-button></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</x-app-layout>

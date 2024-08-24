@@ -50,6 +50,6 @@ class Guest extends Create
     {
         return view(
             'livewire.support.guest'
-        )->layout('layouts.app');
+        );
     }
 }

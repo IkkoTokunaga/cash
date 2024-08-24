@@ -11,8 +11,11 @@ new #[Layout('layouts.guest')] class extends Component
     /**
      * Send a password reset link to the provided email address.
      */
-    public function sendPasswordResetLink(): void
+    public function sendPasswordResetLink()
     {
+
+        return $this->redirectRoute('welcome', navigate: true);
+
         $this->validate([
             'email' => ['required', 'string', 'email'],
         ]);
@@ -38,7 +41,7 @@ new #[Layout('layouts.guest')] class extends Component
 
 <div>
     <div class="mb-4 text-sm text-gray-600">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+        {{ __('こちらはただいま調整中です。メールは送信されません。お問合せからお願いいたします。') }}
     </div>
 
     <!-- Session Status -->
@@ -46,15 +49,15 @@ new #[Layout('layouts.guest')] class extends Component
 
     <form wire:submit="sendPasswordResetLink">
         <!-- Email Address -->
-        <div>
+        {{-- <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input wire:model="email" id="email" class="block mt-1 w-full" type="email" name="email" required autofocus />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
+        </div> --}}
 
         <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Email Password Reset Link') }}
+            <x-primary-button >
+                {{ __('戻る') }}
             </x-primary-button>
         </div>
     </form>

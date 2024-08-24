@@ -128,6 +128,6 @@ class Show extends Component
     {
         return view(
             'livewire.transaction.show',
-        )->layout('layouts.app');
+        );
     }
 }

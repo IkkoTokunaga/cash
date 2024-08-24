@@ -69,6 +69,6 @@ class Create extends Component
     {
         return view(
             'livewire.support.create'
-        )->layout('layouts.app');
+        );
     }
 }

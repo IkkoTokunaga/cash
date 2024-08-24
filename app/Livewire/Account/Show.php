@@ -75,6 +75,6 @@ class Show extends Component
 
         return view(
             'livewire.account.show'
-        )->layout('layouts.app');
+        );
     }
 }

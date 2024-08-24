@@ -36,6 +36,8 @@ class Edit extends Component
         'expense' => '支出'
     ];
 
+    public $accounts;
+
     public function save()
     {
         $this->validate();
@@ -90,6 +92,7 @@ class Edit extends Component
         $this->selected_payment_type = $transaction->income > 0 ? 'income' : 'expense';
         $this->payment = $transaction->income > 0 ? intval($transaction->income) : intval($transaction->expense);
 
+        $this->accounts = Account::get();
     }
 
     public function messages()
@@ -112,10 +115,7 @@ class Edit extends Component
     public function render()
     {
         return view(
-            'livewire.transaction.edit',
-            [
-                'accounts' => Account::get()
-            ]
-        )->layout('layouts.app');
+            'livewire.transaction.edit'
+        );
     }
 }

@@ -99,6 +99,6 @@ class Create extends Component
     {
         return view(
             'livewire.transaction.create'
-        );
+        )->layout('layouts.app');
     }
 }

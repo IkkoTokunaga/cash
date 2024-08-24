@@ -6,8 +6,6 @@
                 ホーム
             </x-secondary-button>
         </a>
-
-        </a>
     @else
         <a href="{{ route('login') }}">
             <x-secondary-button class="me-2">

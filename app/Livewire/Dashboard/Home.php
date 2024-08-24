@@ -20,6 +20,6 @@ class Home extends Component
     {
         return view(
             'livewire.dashboard.home'
-        );
+        )->layout('layouts.app');
     }
 }

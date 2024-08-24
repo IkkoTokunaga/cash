@@ -11,6 +11,6 @@ class Success extends Component
     {
         return view(
             'livewire.support.success'
-        );
+        )->layout('layouts.app');
     }
 }

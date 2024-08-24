@@ -1,11 +1,11 @@
-<x-app-layout>
-    <div class="py-12">
-        <x-slot name="header">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('収支一覧') }}
-            </h2>
-        </x-slot>
+<div>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('収支一覧') }}
+        </h2>
+    </x-slot>
 
+    <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
                 <div class="max-w-full">
@@ -15,7 +15,6 @@
                         @else
                             <div class="alert alert-danger"> {{ session('saved_message') }} </div>
                         @endif
-                        <div> {{ session('saved_message') }} </div>
                     @endif
                     <div class="flex items-center">
                         <div class="me-5 sm:me-2">
@@ -94,7 +93,8 @@
                                                 <div wire:click="delete({{ $transaction->id }})"
                                                     wire:confirm="削除されたデータは元に戻せません。よろしいですか?" style="cursor: pointer;">
                                                     <img src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
-                                                        alt=""></div>
+                                                        alt="">
+                                                </div>
                                             </div>
                                         @else
                                             <div class="d-flex justify-content-around">
@@ -126,4 +126,4 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+</div>

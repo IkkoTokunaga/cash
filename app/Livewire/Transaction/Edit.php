@@ -116,6 +116,6 @@ class Edit extends Component
     {
         return view(
             'livewire.transaction.edit'
-        );
+        )->layout('layouts.app');
     }
 }

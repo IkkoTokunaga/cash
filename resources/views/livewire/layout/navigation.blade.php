@@ -29,34 +29,34 @@ new class extends Component {
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                {{-- <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
                         {{ __('ホーム') }}
                     </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                </div> --}}
+                <div class=" space-x-8 -my-px ms-10 flex">
                     <x-nav-link :href="route('transaction.show')" :active="request()->routeIs('transaction.show')" wire:navigate>
-                        {{ __('一覧') }}
+                        {{ __('収支一覧') }}
                     </x-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <div class=" space-x-8 -my-px ms-10 flex">
                     <x-nav-link :href="route('transaction.create')" :active="request()->routeIs('transaction.create')" wire:navigate>
-                        {{ __('作成') }}
+                        {{ __('新規作成') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('account.show')" :active="request()->routeIs('account.show')" wire:navigate>
-                        {{ __('科目') }}
+                        {{ __('科目マスタ') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('profile')" :active="request()->routeIs('profile')" wire:navigate>
-                        {{ __('ユーザ') }}
+                        {{ __('ユーザ情報') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('support.create')" :active="request()->routeIs('support.create')" wire:navigate>
-                        {{ __('サポート') }}
+                        {{ __('問い合わせ') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">

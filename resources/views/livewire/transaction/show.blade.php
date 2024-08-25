@@ -1,3 +1,6 @@
+<?php
+use Carbon\Carbon;
+?>
 <div>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -43,7 +46,7 @@
                         <tbody>
                             @if ($prevMonthData)
                                 <tr>
-                                    <td class="text-center">{{ $prevEndOfMonth_Ymd }}</td>
+                                    <td class="text-center">{{ Carbon::parse($prevEndOfMonth_Ymd)->format('n/j') }}</td>
                                     <td></td>
                                     <td class="text-primary">前月繰越金</td>
                                     <td></td>
@@ -53,7 +56,7 @@
                                 </tr>
                             @else
                                 <tr>
-                                    <td class="text-center">{{ $prevEndOfMonth_Ymd }}</td>
+                                    <td class="text-center">{{ Carbon::parse($prevEndOfMonth_Ymd)->format('n/j') }}</td>
                                     <td></td>
                                     <td>
                                         ❕前月残高が確定されていません<br>
@@ -66,7 +69,7 @@
                                     </td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <td class="hidden md:block"></td>
                                     <td></td>
                                 </tr>
                             @endif
@@ -86,7 +89,7 @@
                                         {{ $transaction->expense != 0 ? number_format($transaction->expense) : '' }}
                                     </td>
                                     <td class="text-end">{{ number_format($transaction->balance) }}</td>
-                                    <td>
+                                    <td class="min-w-[70px]">
                                         @if (!$thisMonthCloseFlg)
                                             <div class="d-flex justify-content-around">
                                                 <a href="/transaction/edit/{{ $transaction->id }}" wire:navigate

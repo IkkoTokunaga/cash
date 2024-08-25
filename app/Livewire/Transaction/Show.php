@@ -68,7 +68,7 @@ class Show extends Component
         $totalExpense = 0;
         foreach (Transaction::get($year . '-' . $month) as $transaction) {
 
-            $transaction->date = Carbon::parse($transaction->date)->format('Y-m-d');
+            $transaction->date = Carbon::parse($transaction->date)->format('n/j');
             $balance += $transaction->income - $transaction->expense;
             $transaction->balance = $balance;
             $transactions[] = $transaction;

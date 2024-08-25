@@ -33,9 +33,10 @@
                                 <th class="text-center">日付</th>
                                 <th class="text-center">科目</th>
                                 <th class="text-center">摘要</th>
-                                <th class="text-center">収入 / 円</th>
-                                <th class="text-center">支出 / 円</th>
-                                <th class="text-center">残高 / 円</th>
+                                <th class="text-center hidden md:table-cell">収入 (円)</th>
+                                <th class="text-center table-cell md:hidden">金額 (円)</th>
+                                <th class="text-center hidden md:table-cell">支出 (円)</th>
+                                <th class="text-center">残高 (円)</th>
                                 <th class="text-center"></th>
                             </tr>
                         </thead>
@@ -46,7 +47,7 @@
                                     <td></td>
                                     <td class="text-primary">前月繰越金</td>
                                     <td></td>
-                                    <td></td>
+                                    <td class="hidden md:block"></td>
                                     <td class="text-end">{{ number_format($prevMonthData->amount) }}</td>
                                     <td></td>
                                 </tr>
@@ -76,8 +77,12 @@
                                     <td>{{ $transaction->description }}</td>
                                     <td class="text-end">
                                         {{ $transaction->income != 0 ? number_format($transaction->income) : '' }}
+                                        <span class="md:hidden">
+                                            {{ $transaction->expense != 0 ? '-' . number_format($transaction->expense) : '' }}
+                                        </span>
+
                                     </td>
-                                    <td class="text-end">
+                                    <td class="text-end hidden md:table-cell">
                                         {{ $transaction->expense != 0 ? number_format($transaction->expense) : '' }}
                                     </td>
                                     <td class="text-end">{{ number_format($transaction->balance) }}</td>
@@ -110,10 +115,9 @@
                             @if (count($transactions))
                                 <tr>
                                     <th colspan="3" class="table-success">合計</th>
-                                    <td class="text-end">{{ $totalIncome != 0 ? number_format($totalIncome) : '' }}
-                                    </td>
-                                    <td class="text-end">{{ $totalExpense != 0 ? number_format($totalExpense) : '' }}
-                                    </td>
+                                    <td class="text-end hidden md:table-cell">{{ $totalIncome != 0 ? number_format($totalIncome) : '' }}</td>
+                                    <td class="text-end md:hidden">{{ number_format($totalIncome - $totalExpense) ?? '' }}</td>
+                                    <td class="text-end hidden md:table-cell">{{ $totalExpense != 0 ? number_format($totalExpense) : '' }}</td>
                                     <td class="text-end">{{ $totalExpense != 0 ? number_format($balance) : '' }}</td>
                                     <td></td>
                                 </tr>

@@ -44,10 +44,10 @@
                                 </td>
                             </tr>
                         </table>
-                        <x-primary-button>{{ __('問い合わせる') }}</x-primary-button>
+                        <div class="flex justify-center items-center">
+                            <x-primary-button>{{ __('問い合わせる') }}</x-primary-button>
+                        </div>
                     </form>
-                </div>
-                <div class="col-12 col-sm-2 col-md-4 col-lg-6">
                 </div>
             </div>
         </div>

@@ -71,7 +71,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <div class="flex sm:justify-center sm:items-center">
+                        <div class="flex justify-center items-center">
                             <x-primary-button>{{ __('保存') }}</x-primary-button>
                         </div>
                     </form>

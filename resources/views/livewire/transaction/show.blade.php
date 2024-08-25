@@ -18,15 +18,13 @@
                     @endif
                     <div class="flex items-center">
                         <div class="me-5 sm:me-2">
-                            <x-secondary-button href="{{ route('transaction.show', $prevMonth_Ym) }}" wire:navigate>◀
-                                前月</x-secondary-button>
+                            <x-secondary-button href="{{ route('transaction.show', $prevMonth_Ym) }}" wire:navigate>◀</x-secondary-button>
                         </div>
                         <div class="me-5 sm:me-2">
                             <h2 class="font-semibold text-l text-gray-800 leading-tight py-2">{{ $currentMonth }}</h2>
                         </div>
                         <div>
-                            <x-secondary-button href="{{ route('transaction.show', $nextMonth_Ym) }}" wire:navigate>次月
-                                ▶</x-secondary-button>
+                            <x-secondary-button href="{{ route('transaction.show', $nextMonth_Ym) }}" wire:navigate>▶</x-secondary-button>
                         </div>
                     </div>
                     <table class="table table-bordered mt-2">

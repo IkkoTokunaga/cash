@@ -21,6 +21,8 @@
     <textarea name="content" class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md"
         rows="6" wire:model="content"></textarea>
     <x-input-error :messages="$errors->get('content')" class="mt-2" />
-    <x-primary-button>{{ __('問い合わせる') }}</x-primary-button>
+    <div class="flex justify-center items-center">
+        <x-primary-button>{{ __('問い合わせる') }}</x-primary-button>
+    </div>
 </form>
 </div>

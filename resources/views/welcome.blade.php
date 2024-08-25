@@ -93,11 +93,7 @@
                         <div
                             class="border border-dark flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300  lg:pb-10">
                             <div class="pt-3 sm:pt-5">
-                                <h2 class="text-xl font-semibold text-black">問い合わせ</h2>
-
-                                <p class="mt-4 text-sm/relaxed">
-                                    もっと詳細に知りたい場合はこちら
-                                </p>
+                                <h2 class="text-xl font-semibold text-black mb-3">問い合わせ</h2>
                                 <livewire:support.guest />
                                 <p class="mt-3">
                                     本システムをベースとした、追加開発の受注も受け付けております。<br>

@@ -51,8 +51,7 @@ use Carbon\Carbon;
                                 <tr>
                                     <td class="text-center">{{ Carbon::parse($prevEndOfMonth_Ymd)->format('n/j') }}</td>
                                     <td class="hidden md:block"></td>
-                                    <td class="text-primary">前月繰越金</td>
-                                    <td></td>
+                                    <td colspan="2" class="text-primary">前月繰越金</td>
                                     <td class="hidden md:block"></td>
                                     <td class="text-end">{{ number_format($prevMonthData->amount) }}</td>
                                     <td></td>
@@ -61,7 +60,7 @@ use Carbon\Carbon;
                                 <tr>
                                     <td class="text-center">{{ Carbon::parse($prevEndOfMonth_Ymd)->format('n/j') }}</td>
                                     <td class="hidden md:block"></td>
-                                    <td>
+                                    <td colspan="2">
                                         ❕前月残高が確定されていません<br>
                                         <x-danger-button
                                             wire:click="endOfMonthConfirmation('{{ $prevEndOfMonth_Ymd }}')"
@@ -70,7 +69,6 @@ use Carbon\Carbon;
                                         </x-danger-button>
                                         <x-input-error :messages="$errors->get('endOfMonth_Ymd')" class="mt-2" />
                                     </td>
-                                    <td></td>
                                     <td></td>
                                     <td class="hidden md:block"></td>
                                     <td></td>

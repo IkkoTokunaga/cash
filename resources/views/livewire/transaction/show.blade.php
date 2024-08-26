@@ -80,7 +80,7 @@ use Carbon\Carbon;
                                     <td class="text-center" wire:click="edit({{ $transaction->id }})">
                                         {{ $transaction->date }}
                                     </td>
-                                    <td wire:click="edit({{ $transaction->id }})" class="text-end hidden md:table-cell">
+                                    <td wire:click="edit({{ $transaction->id }})" class="hidden md:table-cell">
                                         {{ $transaction->account_name }}
                                     </td>
                                     <td wire:click="edit({{ $transaction->id }})">

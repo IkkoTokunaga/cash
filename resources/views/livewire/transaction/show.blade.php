@@ -60,7 +60,7 @@ use Carbon\Carbon;
                             @else
                                 <tr>
                                     <td class="text-center">{{ Carbon::parse($prevEndOfMonth_Ymd)->format('n/j') }}</td>
-                                    <td></td>
+                                    <td class="hidden md:block"></td>
                                     <td>
                                         ❕前月残高が確定されていません<br>
                                         <x-danger-button

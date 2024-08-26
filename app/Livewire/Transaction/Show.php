@@ -37,8 +37,8 @@ class Show extends Component
 
     public function edit($id)
     {
-        if ($id) {
-            return $this->redirect('/transaction/edit/' . $id);
+        if ($id && !$this->thisMonthCloseFlg) {
+            return $this->redirect('/transaction/edit/' . $id, navigate: true);
         }
     }
 

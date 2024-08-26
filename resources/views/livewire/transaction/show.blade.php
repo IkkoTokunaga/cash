@@ -21,16 +21,19 @@ use Carbon\Carbon;
                     @endif
                     <div class="flex items-center">
                         <div class="me-5 sm:me-2">
-                            <x-secondary-button href="{{ route('transaction.show', $prevMonth_Ym) }}" wire:navigate>◀</x-secondary-button>
+                            <x-secondary-button href="{{ route('transaction.show', $prevMonth_Ym) }}"
+                                wire:navigate>◀</x-secondary-button>
                         </div>
                         <div class="me-5 sm:me-2">
                             <h2 class="font-semibold text-l text-gray-800 leading-tight py-2">{{ $currentMonth }}</h2>
                         </div>
                         <div>
-                            <x-secondary-button href="{{ route('transaction.show', $nextMonth_Ym) }}" wire:navigate>▶</x-secondary-button>
+                            <x-secondary-button href="{{ route('transaction.show', $nextMonth_Ym) }}"
+                                wire:navigate>▶</x-secondary-button>
                         </div>
                     </div>
                     <table class="table table-bordered mt-2">
+                        <caption align=top>行を選択することでで編集画面へ移動できます。</caption>
                         <thead class="table-success">
                             <tr>
                                 <th class="text-center">日付</th>
@@ -40,7 +43,7 @@ use Carbon\Carbon;
                                 <th class="text-center table-cell md:hidden">金額 (円)</th>
                                 <th class="text-center hidden md:table-cell">支出 (円)</th>
                                 <th class="text-center">残高 (円)</th>
-                                <th class="text-center"></th>
+                                <th class="text-center">削除</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -74,28 +77,29 @@ use Carbon\Carbon;
                                 </tr>
                             @endif
                             @foreach ($transactions as $transaction)
-                                <tr @if (session('saved_transaction_id') === $transaction->id && session('saved_transaction_id')) class="table-info" @endif>
-                                    <td class="text-center">{{ $transaction->date }}</td>
-                                    <td>{{ $transaction->account_name }}</td>
-                                    <td>{{ $transaction->description }}</td>
-                                    <td class="text-end">
+                                <tr @if (session('saved_transaction_id') === $transaction->id && session('saved_transaction_id')) class="table-info" @endif
+                                    style="cursor: pointer;">
+                                    <td class="text-center" wire:click="edit({{ $transaction->id }})">
+                                        {{ $transaction->date }}</td>
+                                    <td wire:click="edit({{ $transaction->id }})">{{ $transaction->account_name }}
+                                    </td>
+                                    <td wire:click="edit({{ $transaction->id }})">{{ $transaction->description }}</td>
+                                    <td class="text-end" wire:click="edit({{ $transaction->id }})">
                                         {{ $transaction->income != 0 ? number_format($transaction->income) : '' }}
                                         <span class="md:hidden">
                                             {{ $transaction->expense != 0 ? '-' . number_format($transaction->expense) : '' }}
                                         </span>
 
                                     </td>
-                                    <td class="text-end hidden md:table-cell">
+                                    <td class="text-end hidden md:table-cell"
+                                        wire:click="edit({{ $transaction->id }})">
                                         {{ $transaction->expense != 0 ? number_format($transaction->expense) : '' }}
                                     </td>
-                                    <td class="text-end">{{ number_format($transaction->balance) }}</td>
+                                    <td class="text-end" wire:click="edit({{ $transaction->id }})">
+                                        {{ number_format($transaction->balance) }}</td>
                                     <td>
                                         @if (!$thisMonthCloseFlg)
-                                            <div class="d-flex justify-content-around">
-                                                <a href="/transaction/edit/{{ $transaction->id }}" wire:navigate
-                                                    style="cursor: pointer;"><img
-                                                        src="{{ asset('storage/edit_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
-                                                        alt="" class="min-w-[26px]"></a>
+                                            <div class="d-flex justify-center">
                                                 <div wire:click="delete({{ $transaction->id }})"
                                                     wire:confirm="削除されたデータは元に戻せません。よろしいですか?" style="cursor: pointer;">
                                                     <img src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
@@ -103,10 +107,7 @@ use Carbon\Carbon;
                                                 </div>
                                             </div>
                                         @else
-                                            <div class="d-flex justify-content-around">
-                                                <i style="cursor: not-allowed;"><img
-                                                        src="{{ asset('storage/edit_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
-                                                        alt="" class="min-w-[26px]"></i>
+                                            <div class="d-flex justify-center">
                                                 <i style="cursor: not-allowed;"><img
                                                         src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                         alt="" class="min-w-[26px]"></i>
@@ -118,9 +119,12 @@ use Carbon\Carbon;
                             @if (count($transactions))
                                 <tr>
                                     <th colspan="3" class="table-success">合計</th>
-                                    <td class="text-end hidden md:table-cell">{{ $totalIncome != 0 ? number_format($totalIncome) : '' }}</td>
-                                    <td class="text-end md:hidden">{{ number_format($totalIncome - $totalExpense) ?? '' }}</td>
-                                    <td class="text-end hidden md:table-cell">{{ $totalExpense != 0 ? number_format($totalExpense) : '' }}</td>
+                                    <td class="text-end hidden md:table-cell">
+                                        {{ $totalIncome != 0 ? number_format($totalIncome) : '' }}</td>
+                                    <td class="text-end md:hidden">
+                                        {{ number_format($totalIncome - $totalExpense) ?? '' }}</td>
+                                    <td class="text-end hidden md:table-cell">
+                                        {{ $totalExpense != 0 ? number_format($totalExpense) : '' }}</td>
                                     <td class="text-end">{{ $totalExpense != 0 ? number_format($balance) : '' }}</td>
                                     <td></td>
                                 </tr>

@@ -89,27 +89,27 @@ use Carbon\Carbon;
                                         {{ $transaction->expense != 0 ? number_format($transaction->expense) : '' }}
                                     </td>
                                     <td class="text-end">{{ number_format($transaction->balance) }}</td>
-                                    <td class="min-w-[70px]">
+                                    <td>
                                         @if (!$thisMonthCloseFlg)
                                             <div class="d-flex justify-content-around">
                                                 <a href="/transaction/edit/{{ $transaction->id }}" wire:navigate
                                                     style="cursor: pointer;"><img
                                                         src="{{ asset('storage/edit_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
-                                                        alt=""></a>
+                                                        alt="" class="min-w-[26px]"></a>
                                                 <div wire:click="delete({{ $transaction->id }})"
                                                     wire:confirm="削除されたデータは元に戻せません。よろしいですか?" style="cursor: pointer;">
                                                     <img src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
-                                                        alt="">
+                                                        alt="" class="min-w-[26px]">
                                                 </div>
                                             </div>
                                         @else
                                             <div class="d-flex justify-content-around">
                                                 <i style="cursor: not-allowed;"><img
                                                         src="{{ asset('storage/edit_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
-                                                        alt=""></i>
+                                                        alt="" class="min-w-[26px]"></i>
                                                 <i style="cursor: not-allowed;"><img
                                                         src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
-                                                        alt=""></i>
+                                                        alt="" class="min-w-[26px]"></i>
                                             </div>
                                         @endif
                                     </td>

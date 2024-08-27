@@ -48,6 +48,10 @@ $contents = [
                     <div class="">
                         <div
                             class="border border-dark flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 md:row-span-3 lg:p-10 lg:pb-10 mb-3">
+                            <p>画面のサンプルはPC版の画面となります。スマートフォンやタブレット端末ではレイアウトが少し異なりますが、基本的な使用方法としては大きな違いはありません。
+                                <br>
+                            スマートフォンは上部のナビバーが隠れている場合がございますので、メニュが見つからない場合は右上のボタンよりメニュを表示させてください。
+                            </p>
                             <h2 class="text-xl font-semibold text-black">目次</h2>
                             <ul>
                                 @foreach ($contents as $content)

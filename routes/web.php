@@ -6,6 +6,9 @@ use App\Livewire\Transaction\Create as TransactionCreate;
 use App\Livewire\Transaction\Edit as TransactionEdit;
 use App\Livewire\Transaction\Show as TransactionShow;
 use App\Livewire\Account\Show as AccountShow;
+use App\Livewire\TargetUser\Show as TargetUserShow;
+use App\Livewire\TargetUser\Create as TargetUserCreate;
+use App\Livewire\TargetUser\Edit as TargetUserEdit;
 use App\Livewire\Support\Create as SupportCreate;
 use App\Livewire\Support\Success as SupportSuccess;
 
@@ -22,6 +25,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('transaction/{month?}', TransactionShow::class)->name('transaction.show');
 
     Route::get('account', AccountShow::class)->name('account.show');
+    Route::get('target_user', TargetUserShow::class)->name('target_user.show');
+    Route::get('target_user/create', TargetUserCreate::class)->name('target_user.create');
+    Route::get('target_user/edit/{id}', TargetUserEdit::class)->name('target_user.edit');
 
     Route::get('support', SupportCreate::class)->name('support.create');
     Route::get('support/success', SupportSuccess::class);

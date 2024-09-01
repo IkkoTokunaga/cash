@@ -50,6 +50,11 @@ new class extends Component {
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('target_user.show')" :active="request()->routeIs('target_user.show')" wire:navigate>
+                        {{ __('取引先') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('profile')" :active="request()->routeIs('profile')" wire:navigate>
                         {{ __('ユーザ情報') }}
                     </x-nav-link>
@@ -113,6 +118,11 @@ new class extends Component {
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('account.show')" :active="request()->routeIs('account.show')" wire:navigate>
                 {{ __('科目マスタ') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('target_user.show')" :active="request()->routeIs('target_user.show')" wire:navigate>
+                {{ __('取引先') }}
             </x-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">

@@ -1,0 +1,125 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use Exception;
+use Illuminate\Support\Facades\Auth;
+
+class TargetUser extends Model
+{
+    use HasFactory;
+
+    const TARGET_USER_TABLE = 'target_user';
+
+    public static function getAll()
+    {
+        $select = [
+            'id',
+            'code',
+            'name',
+            'kana',
+            'tel',
+            'email',
+            'address',
+            'description',
+        ];
+        return DB::table(self::TARGET_USER_TABLE)
+            ->select($select)
+            ->where('user_id', Auth::id())
+            ->whereNull('deleted_at')
+            ->orderBy('code')
+            ->get();
+    }
+
+    public static function getById($code)
+    {
+        $select = [
+            'id',
+            'code',
+            'name',
+            'kana',
+            'tel',
+            'email',
+            'address',
+            'description',
+        ];
+        return DB::table(self::TARGET_USER_TABLE)
+            ->select($select)
+            ->where('user_id', Auth::id())
+            ->where('code', $code)
+            ->whereNull('deleted_at')
+            ->first();
+    }
+
+    public static function store(array $insertData, int $code = null)
+    {
+        DB::beginTransaction();
+
+        try {
+
+            if ($code) {
+
+                DB::table(self::TARGET_USER_TABLE)
+                    ->where('code', $code)
+                    ->where('user_id', Auth::id())
+                    ->update(['deleted_at' => now()]);
+            }
+
+            $insertId = DB::table(self::TARGET_USER_TABLE)->insertGetId($insertData);
+
+            if (!$code && $insertId) {
+                DB::table(self::TARGET_USER_TABLE)
+                    ->where('id', $insertId)
+                    ->where('user_id', Auth::id())
+                    ->update([
+                        'code' => $insertId
+                    ]);
+            }
+
+            DB::commit();
+
+            return $code ?: $insertId;
+        } catch (Exception $e) {
+
+            DB::rollBack();
+            Log::critical($e->getMessage());
+            throw new Exception(
+                'Failed to save.',
+                500
+            );
+        }
+    }
+
+    public static function deleteById(int $id)
+    {
+        DB::beginTransaction();
+
+        try {
+
+            if ($id) {
+
+                $deleted = DB::table(self::TARGET_USER_TABLE)
+                    ->where('code', $id)
+                    ->where('user_id', Auth::id())
+                    ->whereNull('deleted_at')
+                    ->update(['deleted_at' => now()]);
+                DB::commit();
+                return $deleted;
+            }
+
+            return false;
+        } catch (Exception $e) {
+
+            DB::rollBack();
+            Log::critical('Failed to delete.' . $id);
+            throw new Exception(
+                'Failed to save.',
+                500
+            );
+        }
+    }
+}

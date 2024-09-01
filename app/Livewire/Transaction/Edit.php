@@ -102,7 +102,6 @@ class Edit extends Component
         $this->accounts = Account::get();
         $this->targetUsers = TargetUser::getAll();
         $this->selected_payment_type = 'income';
-        $this->date = Carbon::now()->format('Y-m-d');
     }
 
     public function messages()

@@ -35,15 +35,15 @@ use Carbon\Carbon;
                         </thead>
                         <tbody>
                             @foreach ($targetUsers as $targetUser)
-                                <tr @if (session('saved_target_user_id') === $targetUser->code && session('saved_target_user_id')) class="table-info" @endif>
-                                    <td class="text-center">{{ $targetUser->code }}</td>
-                                    <td>
+                                <tr @if (session('saved_target_user_id') === $targetUser->code && session('saved_target_user_id')) class="table-info" @endif style="cursor: pointer;">
+                                    <td class="text-center" wire:click="edit({{ $targetUser->code }})">{{ $targetUser->code }}</td>
+                                    <td wire:click="edit({{ $targetUser->code }})">
                                         {{ $targetUser->name }}
                                         @if ($targetUser->kana)
                                             <br> ({{ $targetUser->kana }})
                                         @endif
                                     </td>
-                                    <td>
+                                    <td wire:click="edit({{ $targetUser->code }})">
                                         @if ($targetUser->tel)
                                             【 TEL 】 {{ $targetUser->tel }} <br>
                                         @endif
@@ -54,15 +54,15 @@ use Carbon\Carbon;
                                             【 住所 】 {{ $targetUser->address }} <br>
                                         @endif
                                     </td>
-                                    <td>{{ $targetUser->description }}</td>
+                                    <td wire:click="edit({{ $targetUser->code }})">{{ $targetUser->description }}</td>
                                     <td>
                                         <div class="d-flex justify-content-around">
-                                            <div wire:click="edit({{ $targetUser->code }})" style="cursor: pointer;">
+                                            {{-- <div wire:click="edit({{ $targetUser->code }})" style="cursor: pointer;">
                                                 <img src="{{ asset('storage/edit_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="">
-                                            </div>
+                                            </div> --}}
                                             <div wire:click="delete({{ $targetUser->code }})"
-                                                wire:confirm="削除したデータは元に戻せません。よろしいですか?" style="cursor: pointer;"><img
+                                                wire:confirm="削除したデータは元に戻せません。よろしいですか?"><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt=""></div>
                                         </div>

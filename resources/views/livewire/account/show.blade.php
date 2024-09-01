@@ -38,17 +38,13 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($accounts as $account)
-                                        <tr @if (session('saved_account_id') === $account->code && session('saved_account_id')) class="table-info" @endif>
-                                            <td>{{ $account->name }}</td>
+                                        <tr @if (session('saved_account_id') === $account->code && session('saved_account_id')) class="table-info" @endif wire:click="edit({{ $account->code }})" style="cursor: pointer;">
+                                            <td wire:click="edit({{ $account->code }})">{{ $account->name }}</td>
                                             <td>
                                                 <div class="d-flex justify-content-around">
-                                                    <div wire:click="edit({{ $account->code }})"
-                                                        style="cursor: pointer;"><img
-                                                            src="{{ asset('storage/edit_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
-                                                            alt=""></div>
                                                     <div wire:click="delete({{ $account->code }})"
                                                         wire:confirm="削除したデータは元に戻せません。よろしいですか?"
-                                                        style="cursor: pointer;"><img
+                                                        ><img
                                                             src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                             alt=""></div>
                                                 </div>

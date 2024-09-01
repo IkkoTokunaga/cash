@@ -52,7 +52,7 @@ class Show extends Component
             $account = Account::getById($code);
             $this->account_id = $code;
             $this->account_name = $account->name;
-            $this->bottomText = '修正';
+            $this->bottomText = '更新';
 
         }
     }

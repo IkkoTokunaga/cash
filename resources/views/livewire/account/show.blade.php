@@ -29,7 +29,7 @@
                     <div class="row ">
                         <div class="col">
                             <table class="table table-bordered mt-2">
-                                <caption align=top>行を選択することでで上記作成ボタンが修正ボタンになり、修正を行えます。</caption>
+                                <caption align=top>行を選択することでで上記作成ボタンが更新ボタンになり、修正を行えます。</caption>
                                 <thead class="table-success">
                                     <tr>
                                         <th class="text-center">科目名</th>

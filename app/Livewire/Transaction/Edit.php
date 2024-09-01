@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\Account;
 use App\Models\Transaction;
 use App\Models\Summary;
+use App\Models\TargetUser;
 use Carbon\Carbon;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
@@ -22,13 +23,16 @@ class Edit extends Component
     #[Validate('bail|required|numeric')]
     public $account_id;
 
+    #[Validate('bail|numeric|is_target_user_id|nullable')]
+    public $target_user_id;
+
     #[Validate('required|max:200')]
     public $description;
 
     #[Validate('bail|required|in:income,expense')]
     public $selected_payment_type;
 
-    #[Validate('bail|required|numeric')]
+    #[Validate('bail|required|numeric|max_digits:10')]
     public $payment;
 
     public $payment_type_list = [
@@ -37,6 +41,7 @@ class Edit extends Component
     ];
 
     public $accounts;
+    public $targetUsers;
 
     public function save()
     {
@@ -58,6 +63,7 @@ class Edit extends Component
             'date' => $this->date,
             'description' => $this->description,
             'account_id' => $this->account_id,
+            'target_user_id' => $this->target_user_id,
             'created_at' => now(),
             'updated_at' => now(),
         ];
@@ -71,7 +77,7 @@ class Edit extends Component
         session()->flash('saved_message', $message);
         session()->flash('saved_transaction_id', $isSaved);
 
-        return $this->redirect('/transaction');
+        return $this->redirect('/transaction', true);
     }
 
     public function mount($id)
@@ -89,10 +95,14 @@ class Edit extends Component
         $this->date = $transaction->date;
         $this->description = $transaction->description;
         $this->account_id = $transaction->account_id;
+        $this->target_user_id = $transaction->target_user_id;
         $this->selected_payment_type = $transaction->income > 0 ? 'income' : 'expense';
         $this->payment = $transaction->income > 0 ? intval($transaction->income) : intval($transaction->expense);
 
         $this->accounts = Account::get();
+        $this->targetUsers = TargetUser::getAll();
+        $this->selected_payment_type = 'income';
+        $this->date = Carbon::now()->format('Y-m-d');
     }
 
     public function messages()
@@ -103,6 +113,8 @@ class Edit extends Component
             'date.isnot_monthly_closing' => '既に締め処理を行っているため、修正できません。',
             'account_id.required' => '科目は必須項目です。',
             'account_id.numeric' => '科目のデータ形式が誤っています。',
+            'target_user_id.numeric' => '取引先のデータ形式が誤っています。',
+            'target_user_id.is_target_user_id' => '取引先データが存在しません。',
             'description.required' => '摘要を入力してください。',
             'description.max' => '摘要は200文字以内で入力してください。',
             'selected_payment_type.required' => '収支タイプを選択してください。',

@@ -15,6 +15,7 @@ class Transaction extends Model
 
     const TRANSACTION_TABLE = 'transaction';
     const ACCOUNT_TABLE = 'account';
+    const TARGET_USER_TABLE = 'target_user';
 
     public static function store(array $insertData, int $id = null)
     {
@@ -53,18 +54,22 @@ class Transaction extends Model
             't.date',
             't.description',
             't.account_id',
+            't.target_user_id',
             't.income',
             't.expense',
             'a.name as account_name',
+            'tu.name as target_user_name',
         ];
 
         return DB::table(self::TRANSACTION_TABLE . ' as t')
             ->select($select)
             ->leftJoin(self::ACCOUNT_TABLE . ' as a', 'a.code', 't.account_id')
+            ->leftJoin(self::TARGET_USER_TABLE . ' as tu', 'tu.code', 't.target_user_id')
             ->where('t.date', 'LIKE', $month . '%')
             ->where('t.user_id', Auth::id())
             ->whereNull('t.deleted_at')
             ->whereNull('a.deleted_at')
+            ->whereNull('tu.deleted_at')
             ->orderBy('t.date')
             ->get()
             ->toArray() ?? [];
@@ -78,6 +83,7 @@ class Transaction extends Model
             'date',
             'description',
             'account_id',
+            'target_user_id',
             'income',
             'expense',
         ];

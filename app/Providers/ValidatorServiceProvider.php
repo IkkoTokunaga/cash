@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
 use Carbon\Carbon;
 use App\Models\Summary;
+use App\Models\TargetUser;
 
 class ValidatorServiceProvider extends ServiceProvider
 {
@@ -48,6 +49,15 @@ class ValidatorServiceProvider extends ServiceProvider
                 }
 
                 return $isMonthlyClosing ? true : false;
+            }
+        );
+        /**
+         * 取引先データの存在有無
+         */
+        Validator::extend(
+            'is_target_user_id',
+            function ($attribute, $value, $parameters, $validator) {
+                return TargetUser::getById($value) ? true : false;
             }
         );
     }

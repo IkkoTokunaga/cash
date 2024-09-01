@@ -41,6 +41,25 @@
                             </tr>
                             <tr>
                                 <th class="table-success">
+                                    <x-input-label for="target_user_id" :value="__('取引先')" />
+                                </th>
+                                <td>
+                                    <div class="flex justify-start items-center">
+                                        <x-text-input wire:model="target_user_id" id="date" name="date" type="text"
+                                            class="me-1 block shadow-none w-[60px]" />
+                                        <select id="target_user_id" wire:model="target_user_id"
+                                            class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md">
+                                            <option value="">選択してください</option>
+                                            @foreach ($targetUsers as $targetUser)
+                                                <option value="{{ $targetUser->code }}">{{ $targetUser->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <x-input-error :messages="$errors->get('target_user_id')" class="mt-2" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="table-success">
                                     <x-input-label for="description" :value="__('摘要')" />
                                 </th>
                                 <td>

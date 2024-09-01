@@ -38,6 +38,7 @@ use Carbon\Carbon;
                             <tr>
                                 <th class="text-center">日付</th>
                                 <th class="text-center hidden md:table-cell">科目</th>
+                                <th class="text-center hidden md:table-cell">取引先</th>
                                 <th class="text-center">摘要</th>
                                 <th class="text-center hidden md:table-cell">収入 (円)</th>
                                 <th class="text-center table-cell md:hidden">金額 (円)</th>
@@ -50,17 +51,24 @@ use Carbon\Carbon;
                             @if ($prevMonthData)
                                 <tr>
                                     <td class="text-center">{{ Carbon::parse($prevEndOfMonth_Ymd)->format('n/j') }}</td>
-                                    <td class="hidden md:block"></td>
-                                    <td colspan="2" class="text-primary">前月繰越金</td>
-                                    <td class="hidden md:block"></td>
+                                    <td colspan="5" class="text-primary hidden md:table-cell">前月繰越金</td>
+                                    <td colspan="2" class="text-primary md:hidden">前月繰越金</td>
                                     <td class="text-end">{{ number_format($prevMonthData->amount) }}</td>
                                     <td></td>
                                 </tr>
                             @else
                                 <tr>
                                     <td class="text-center">{{ Carbon::parse($prevEndOfMonth_Ymd)->format('n/j') }}</td>
-                                    <td class="hidden md:block"></td>
-                                    <td colspan="2">
+                                    <td colspan="5" class="hidden md:table-cell">
+                                        ❕前月残高が確定されていません<br>
+                                        <x-danger-button
+                                            wire:click="endOfMonthConfirmation('{{ $prevEndOfMonth_Ymd }}')"
+                                            wire:confirm="前月の締め処理を実行します。この処理を行うと前月のデータが確定し、修正ができなくなります。\n実行してもよろしいですか？">
+                                            前月残高確定
+                                        </x-danger-button>
+                                        <x-input-error :messages="$errors->get('endOfMonth_Ymd')" class="mt-2" />
+                                    </td>
+                                    <td colspan="2" class="md:hidden">
                                         ❕前月残高が確定されていません<br>
                                         <x-danger-button
                                             wire:click="endOfMonthConfirmation('{{ $prevEndOfMonth_Ymd }}')"
@@ -70,7 +78,6 @@ use Carbon\Carbon;
                                         <x-input-error :messages="$errors->get('endOfMonth_Ymd')" class="mt-2" />
                                     </td>
                                     <td></td>
-                                    <td class="hidden md:block"></td>
                                     <td></td>
                                 </tr>
                             @endif
@@ -83,10 +90,18 @@ use Carbon\Carbon;
                                     <td wire:click="edit({{ $transaction->id }})" class="hidden md:table-cell">
                                         {{ $transaction->account_name }}
                                     </td>
+                                    <td wire:click="edit({{ $transaction->id }})" class="hidden md:table-cell">
+                                        {{ $transaction->target_user_name }}
+                                    </td>
                                     <td wire:click="edit({{ $transaction->id }})">
-                                        <span class="md:hidden">
-                                            【{{ $transaction->account_name }}】<br>
+                                        <span class="md:hidden text-success">
+                                            【 科目 】{{ $transaction->account_name }}<br>
                                         </span>
+                                        @if ($transaction->target_user_name)
+                                            <span class="md:hidden text-success">
+                                                【取引先】{{ $transaction->target_user_name }}<br>
+                                            </span>
+                                        @endif
                                         {{ $transaction->description }}
                                     </td>
                                     <td class="text-end" wire:click="edit({{ $transaction->id }})">
@@ -122,7 +137,7 @@ use Carbon\Carbon;
                             @endforeach
                             @if (count($transactions))
                                 <tr>
-                                    <th colspan="3" class="table-success hidden md:table-cell">合計</th>
+                                    <th colspan="4" class="table-success hidden md:table-cell">合計</th>
                                     <th colspan="2" class="table-success md:hidden">合計</th>
                                     <td class="text-end hidden md:table-cell">
                                         {{ $totalIncome != 0 ? number_format($totalIncome) : '' }}</td>
@@ -130,7 +145,7 @@ use Carbon\Carbon;
                                         {{ number_format($totalIncome - $totalExpense) ?? '' }}</td>
                                     <td class="text-end hidden md:table-cell">
                                         {{ $totalExpense != 0 ? number_format($totalExpense) : '' }}</td>
-                                    <td class="text-end">{{ $totalExpense != 0 ? number_format($balance) : '' }}</td>
+                                    <td class="text-end">{{ $balance != 0 ? number_format($balance) : '' }}</td>
                                     <td></td>
                                 </tr>
                             @endif

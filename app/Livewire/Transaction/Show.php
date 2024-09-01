@@ -118,10 +118,7 @@ class Show extends Component
             'updated_at' => now(),
         ]);
 
-        return redirect()->route(
-            'transaction.show',
-            Carbon::parse($endOfMonth_Ymd)->addMonth()->format('Y-m')
-        );
+        $this->refreshList($this->month);
     }
 
     public function render()

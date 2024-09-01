@@ -29,7 +29,7 @@ use Carbon\Carbon;
                                 <th class="text-center">No.</th>
                                 <th class="text-center">名前</th>
                                 <th class="text-center">情報</th>
-                                <th class="text-center">備考</th>
+                                <th class="text-center hidden md:table-cell">備考</th>
                                 <th class="text-center"></th>
                             </tr>
                         </thead>
@@ -53,8 +53,13 @@ use Carbon\Carbon;
                                         @if ($targetUser->address)
                                             【 住所 】 {{ $targetUser->address }} <br>
                                         @endif
+                                        @if ($targetUser->description)
+                                            <span class="text-end md:hidden">
+                                                【 備考 】 {{ $targetUser->description }}
+                                            </span>
+                                        @endif
                                     </td>
-                                    <td wire:click="edit({{ $targetUser->code }})">{{ $targetUser->description }}</td>
+                                    <td wire:click="edit({{ $targetUser->code }})" class="hidden md:table-cell">{{ $targetUser->description }}</td>
                                     <td>
                                         <div class="d-flex justify-content-around">
                                             {{-- <div wire:click="edit({{ $targetUser->code }})" style="cursor: pointer;">

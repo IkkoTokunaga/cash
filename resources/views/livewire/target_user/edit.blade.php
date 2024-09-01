@@ -12,7 +12,7 @@
                     <form wire:submit="save">
                         <table class="table table-bordered mt-2 ">
                             <tr>
-                                <th class="table-success">コード</th>
+                                <th class="table-success">No.</th>
                                 <td>{{ $code }}</td>
                             </tr>
                             <tr>

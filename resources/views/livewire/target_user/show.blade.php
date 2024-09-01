@@ -26,7 +26,7 @@ use Carbon\Carbon;
                     <table class="table table-bordered mt-2">
                         <thead class="table-success">
                             <tr>
-                                <th class="text-center">コード</th>
+                                <th class="text-center">No.</th>
                                 <th class="text-center">名前</th>
                                 <th class="text-center">情報</th>
                                 <th class="text-center">備考</th>

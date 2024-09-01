@@ -46,7 +46,7 @@
                                                         wire:confirm="削除したデータは元に戻せません。よろしいですか?"
                                                         ><img
                                                             src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
-                                                            alt=""></div>
+                                                            alt="" class="min-w-[30px]"></div>
                                                 </div>
                                             </td>
                                         </tr>

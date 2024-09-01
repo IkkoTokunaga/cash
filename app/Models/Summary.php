@@ -14,7 +14,7 @@ class Summary extends Model
 
     const SUMMARY_TABLE = 'summary';
 
-    public static function getAll($limit = null)
+    public static function getAll(int $limit)
     {
         $select = [
             'id',
@@ -26,6 +26,7 @@ class Summary extends Model
             ->where('user_id', Auth::id())
             ->whereNull('deleted_at')
             ->orderBy('date', 'desc')
+            ->limit($limit)
             ->get();
     }
 

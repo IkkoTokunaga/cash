@@ -3,7 +3,6 @@
 namespace App\Livewire\Account;
 
 use Livewire\Component;
-use Carbon\Carbon;
 use App\Models\Account;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
@@ -16,11 +15,14 @@ class Show extends Component
     #[Validate('required|max:255')]
     public $account_name = '';
 
+    public $bottomText;
+
     public function mount()
     {
         $this->accounts = Account::get();
         $this->account_id = null;
         $this->account_name = '';
+        $this->bottomText = '作成';
     }
 
     public function save()
@@ -50,6 +52,8 @@ class Show extends Component
             $account = Account::getById($code);
             $this->account_id = $code;
             $this->account_name = $account->name;
+            $this->bottomText = '修正';
+
         }
     }
 

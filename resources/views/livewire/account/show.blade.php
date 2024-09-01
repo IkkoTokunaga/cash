@@ -15,7 +15,6 @@
                         @else
                             <div class="alert alert-danger"> {{ session('saved_message') }} </div>
                         @endif
-                        <div> {{ session('saved_message') }} </div>
                     @endif
 
                     <form wire:submit="save">
@@ -25,11 +24,12 @@
                             class="mt-1 mb-2 w-50 block shadow-none" />
                         <x-input-error class="mt-2" :messages="$errors->get('account_name')" />
                         <input type="hidden" id="account_id" wire:model="account_id">
-                        <x-primary-button>{{ __('作成') }}</x-primary-button>
+                        <x-primary-button>{{ $bottomText }}</x-primary-button>
                     </form>
                     <div class="row ">
                         <div class="col">
                             <table class="table table-bordered mt-2">
+                                <caption align=top>行を選択することでで上記作成ボタンが修正ボタンになり、修正を行えます。</caption>
                                 <thead class="table-success">
                                     <tr>
                                         <th class="text-center">科目名</th>

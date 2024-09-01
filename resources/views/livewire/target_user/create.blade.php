@@ -71,7 +71,9 @@
                             </tr>
                         </table>
                         <div class="flex justify-center items-center">
-                            <x-primary-button>{{ __('保存') }}</x-primary-button>
+                            <x-primary-button class="me-5">{{ __('保存') }}</x-primary-button>
+                            <a href="{{ route('target_user.show') }}"
+                                wire:navigate><x-secondary-button>{{ __('一覧へ戻る') }}</x-secondary-button></a>
                         </div>
                     </form>
                 </div>

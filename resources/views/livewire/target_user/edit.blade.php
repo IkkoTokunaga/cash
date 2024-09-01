@@ -1,7 +1,7 @@
 <div>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('新規作成') }}
+            {{ __('修正') }}
         </h2>
     </x-slot>
 
@@ -11,6 +11,10 @@
                 <div class=" max-w-xl">
                     <form wire:submit="save">
                         <table class="table table-bordered mt-2 ">
+                            <tr>
+                                <th class="table-success">コード</th>
+                                <td>{{ $code }}</td>
+                            </tr>
                             <tr>
                                 <th class="table-success">
                                     <x-input-label for="name" :value="__('名前')" />
@@ -71,7 +75,9 @@
                             </tr>
                         </table>
                         <div class="flex justify-center items-center">
-                            <x-primary-button>{{ __('保存') }}</x-primary-button>
+                            <x-primary-button class="me-5">{{ __('保存') }}</x-primary-button>
+                            <a href="{{ route('target_user.show') }}"
+                                wire:navigate><x-secondary-button>{{ __('一覧へ戻る') }}</x-secondary-button></a>
                         </div>
                     </form>
                 </div>

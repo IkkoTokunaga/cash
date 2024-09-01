@@ -85,7 +85,7 @@ class Edit extends Component
     public function render()
     {
         return view(
-            'livewire.target_user.create'
+            'livewire.target_user.edit'
         )->layout('layouts.app');
     }
 }

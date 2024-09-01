@@ -1,7 +1,7 @@
 <div>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('科目マスタ') }}
+            {{ __('勘定科目') }}
         </h2>
     </x-slot>
 

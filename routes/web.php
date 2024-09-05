@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Welcome\Welcome;
+use App\Livewire\Welcome\Document;
 use App\Livewire\Dashboard\Home;
 use App\Livewire\Transaction\Create as TransactionCreate;
 use App\Livewire\Transaction\Edit as TransactionEdit;
@@ -16,7 +17,7 @@ use App\Http\Controllers\GoogleController;
 
 Route::get('/', Welcome::class)->name('welcome');
 
-Route::view('/document', 'document')->name('document');
+Route::get('/document', Document::class)->name('document');
 
 Route::middleware(['auth', 'verified'])->group(function () {
 

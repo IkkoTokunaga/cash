@@ -46,7 +46,7 @@ class Create extends Component
 
         if ($isSaved) {
             $gmail = new GoogleController();
-            $sent = $gmail->sendGmail(
+            $gmail->sendGmail(
                 $this->email,
                 'お問合せありがとうございます。',
                 view(
@@ -57,8 +57,19 @@ class Create extends Component
                     ]
                 )
             );
+            $gmail->sendGmail(
+                'cash.canvas.info@gmail.com',
+                'お問合せ通知',
+                view(
+                    'mail.support_admin',
+                    [
+                        'name' => $this->name,
+                        'email' => $this->email,
+                        'body' => $this->content
+                    ]
+                )
+            );
         }
-        dd($sent);
         return $this->redirect('/support/success');
     }
 

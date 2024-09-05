@@ -25,7 +25,7 @@
                     <div class=" space-x-8 -my-px ms-10 flex">
                         <div class=" space-x-8 -my-px ms-10 flex">
                             <x-nav-link :href="route('login')" :active="request()->routeIs('login')" wire:navigate>
-                                {{ __('ログイン') }}
+                                {{ __('Login') }}
                             </x-nav-link>
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                         <div class=" space-x-8 -my-px ms-10 flex">
                             <div class=" space-x-8 -my-px ms-10 flex">
                                 <x-nav-link :href="route('register')" :active="request()->routeIs('register')" wire:navigate>
-                                    {{ __('会員登録') }}
+                                    {{ __('Sing Up') }}
                                 </x-nav-link>
                             </div>
                         </div>

@@ -26,10 +26,11 @@ new #[Layout('layouts.guest')] class extends Component {
 <div>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-    <div class="flex items-center justify-center mt-12">
+    <div class="flex items-center justify-center min-h-[75vh]">
 
         <div class="border border-dark flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 md:row-span-3 lg:p-10 lg:pb-10 ">
-            <form wire:submit="login" class="min-w- m-auto">
+            <!-- コンテンツをここに配置 -->
+            <form wire:submit="login" class="m-auto">
                 <!-- Email Address -->
                 <div>
                     <x-input-label for="email" :value="__('Email')" />

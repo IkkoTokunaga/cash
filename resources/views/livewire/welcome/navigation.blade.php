@@ -22,8 +22,8 @@
                 </div>
 
                 @else
-                    <div class=" space-x-8 -my-px ms-5 flex">
-                        <div class=" space-x-8 -my-px ms-5 flex">
+                    <div class=" space-x-8 -my-px ms-1 flex">
+                        <div class=" space-x-8 -my-px ms-10 flex">
                             <x-nav-link :href="route('login')" :active="request()->routeIs('login')" wire:navigate>
                                 {{ __('Login') }}
                             </x-nav-link>
@@ -31,8 +31,8 @@
                     </div>
 
                     @if (Route::has('register'))
-                        <div class=" space-x-8 -my-px ms-5 flex">
-                            <div class=" space-x-8 -my-px ms-5 flex">
+                        <div class=" space-x-8 -my-px ms-1 flex">
+                            <div class=" space-x-8 -my-px ms-10 flex">
                                 <x-nav-link :href="route('register')" :active="request()->routeIs('register')" wire:navigate>
                                     {{ __('Sing Up') }}
                                 </x-nav-link>

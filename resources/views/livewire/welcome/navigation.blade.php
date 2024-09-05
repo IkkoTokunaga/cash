@@ -2,7 +2,7 @@
 
 
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <div class="shrink-0 flex items-center">
@@ -22,8 +22,8 @@
                 </div>
 
                 @else
-                    <div class=" space-x-8 -my-px ms-10 flex">
-                        <div class=" space-x-8 -my-px ms-10 flex">
+                    <div class=" space-x-8 -my-px ms-5 flex">
+                        <div class=" space-x-8 -my-px ms-5 flex">
                             <x-nav-link :href="route('login')" :active="request()->routeIs('login')" wire:navigate>
                                 {{ __('Login') }}
                             </x-nav-link>
@@ -31,8 +31,8 @@
                     </div>
 
                     @if (Route::has('register'))
-                        <div class=" space-x-8 -my-px ms-10 flex">
-                            <div class=" space-x-8 -my-px ms-10 flex">
+                        <div class=" space-x-8 -my-px ms-5 flex">
+                            <div class=" space-x-8 -my-px ms-5 flex">
                                 <x-nav-link :href="route('register')" :active="request()->routeIs('register')" wire:navigate>
                                     {{ __('Sing Up') }}
                                 </x-nav-link>

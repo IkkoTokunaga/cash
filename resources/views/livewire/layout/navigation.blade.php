@@ -24,22 +24,26 @@ new class extends Component {
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}" wire:navigate>
                         <img src="{{ asset('storage/cash-canvas-log.png') }}" alt="cash canvas">
-                        {{-- <x-application-logo class="block h-9 w-auto fill-current text-gray-800" /> --}}
                     </a>
                 </div>
 
-                <!-- Navigation Links -->
-                {{-- <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
-                        {{ __('ホーム') }}
+                <div class="sm:hidden space-x-8 -my-px ms-5 flex">
+                    <x-nav-link :href="route('transaction.show')" :active="request()->routeIs('transaction.show')" wire:navigate>
+                        {{ __('収支') }}<br>{{ __('一覧') }}
                     </x-nav-link>
-                </div> --}}
-                <div class=" space-x-8 -my-px ms-10 flex">
+                </div>
+                <div class="sm:hidden space-x-8 -my-px ms-5 flex">
+                    <x-nav-link :href="route('transaction.create')" :active="request()->routeIs('transaction.create')" wire:navigate>
+                        {{ __('新規') }}<br>{{ __('作成') }}
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('transaction.show')" :active="request()->routeIs('transaction.show')" wire:navigate>
                         {{ __('収支一覧') }}
                     </x-nav-link>
                 </div>
-                <div class=" space-x-8 -my-px ms-10 flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('transaction.create')" :active="request()->routeIs('transaction.create')" wire:navigate>
                         {{ __('新規作成') }}
                     </x-nav-link>

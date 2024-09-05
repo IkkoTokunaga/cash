@@ -23,7 +23,7 @@ new #[Layout('layouts.guest')] class extends Component {
     }
 }; ?>
 
-<div class="flex flex-col justify-center items-center p-4">
+<div class="min-h-[75vh] flex flex-col justify-center items-center p-4">
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -66,7 +66,7 @@ new #[Layout('layouts.guest')] class extends Component {
                     @endif
 
                     <x-primary-button class="ms-3">
-                        {{ __('ログイン') }}
+                        {{ __('Login') }}
                     </x-primary-button>
                 </div>
             </form>

@@ -38,13 +38,25 @@ class Guest extends Create
 
         if ($isSaved) {
             $gmail = new GoogleController();
-            $sent = $gmail->sendGmail(
+            $gmail->sendGmail(
                 $this->email,
                 'お問合せありがとうございます。',
                 view(
                     'mail.support',
                     [
                         'name' => $this->name,
+                        'body' => $this->content
+                    ]
+                )
+            );
+            $gmail->sendGmail(
+                'cash.canvas.info@gmail.com',
+                'お問合せ通知',
+                view(
+                    'mail.support_admin',
+                    [
+                        'name' => $this->name,
+                        'email' => $this->email,
                         'body' => $this->content
                     ]
                 )

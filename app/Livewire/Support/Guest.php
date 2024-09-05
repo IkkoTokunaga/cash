@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
+use App\Http\Controllers\GoogleController;
 
 class Guest extends Create
 {
@@ -35,8 +36,22 @@ class Guest extends Create
         session()->flash('saved_message', $message);
         session()->flash('saved_support_id', $isSaved);
 
+        if ($isSaved) {
+            $gmail = new GoogleController();
+            $sent = $gmail->sendGmail(
+                $this->email,
+                'お問合せありがとうございます。',
+                view(
+                    'mail.support',
+                    [
+                        'name' => $this->name,
+                        'body' => $this->content
+                    ]
+                )
+            );
+        }
+
         $this->mount();
-        // return $this->redirect('/support/success');
     }
 
     public function mount()

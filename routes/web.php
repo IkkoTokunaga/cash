@@ -11,6 +11,7 @@ use App\Livewire\TargetUser\Create as TargetUserCreate;
 use App\Livewire\TargetUser\Edit as TargetUserEdit;
 use App\Livewire\Support\Create as SupportCreate;
 use App\Livewire\Support\Success as SupportSuccess;
+use App\Http\Controllers\GoogleController;
 
 Route::view('/', 'welcome')->name('welcome');
 Route::view('/document', 'document')->name('document');
@@ -33,5 +34,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('support/success', SupportSuccess::class);
 
 });
+
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
 require __DIR__ . '/auth.php';

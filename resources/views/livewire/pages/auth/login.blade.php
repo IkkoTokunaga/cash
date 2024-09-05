@@ -23,14 +23,14 @@ new #[Layout('layouts.guest')] class extends Component {
     }
 }; ?>
 
-<div>
+<div class="min-h-[75vh] flex flex-col justify-center items-center p-4">
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-    <div class="flex items-center justify-center min-h-[75vh]">
 
-        <div class="border border-dark flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 md:row-span-3 lg:p-10 lg:pb-10 ">
+    <div class="w-full max-w-md">
+        <div class="border border-dark flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 md:row-span-3 lg:p-10 lg:pb-10">
             <!-- コンテンツをここに配置 -->
-            <form wire:submit="login" class="m-auto">
+            <form wire:submit="login" class="w-full">
                 <!-- Email Address -->
                 <div>
                     <x-input-label for="email" :value="__('Email')" />
@@ -42,10 +42,8 @@ new #[Layout('layouts.guest')] class extends Component {
                 <!-- Password -->
                 <div class="mt-4">
                     <x-input-label for="password" :value="__('パスワード')" />
-
                     <x-text-input wire:model="form.password" id="password" class="block mt-1 w-full" type="password"
                         name="password" required autocomplete="current-password" />
-
                     <x-input-error :messages="$errors->get('form.password')" class="mt-2" />
                 </div>
 

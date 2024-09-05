@@ -1,24 +1,47 @@
-<nav class="-mx-3 flex flex-1 justify-end">
-    @auth
-        <a href="{{ url('/dashboard') }}"
-            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-            <x-secondary-button class="me-2">
-                ホーム
-            </x-secondary-button>
-        </a>
-    @else
-        <a href="{{ route('login') }}">
-            <x-secondary-button class="me-2">
-                ログイン
-            </x-secondary-button>
-        </a>
+<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
 
-        @if (Route::has('register'))
-            <a href="{{ route('register') }}">
-                <x-secondary-button>
-                    会員登録
-                </x-secondary-button>
-            </a>
-        @endif
-    @endauth
+
+    <!-- Primary Navigation Menu -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex">
+                <div class="shrink-0 flex items-center">
+                    <a href="{{ route('welcome') }}" wire:navigate>
+                        <img src="{{ asset('storage/cash-canvas-log.png') }}" alt="cash canvas">
+                        {{-- <x-application-logo class="block h-9 w-auto fill-current text-gray-800" /> --}}
+                    </a>
+                </div>
+
+                @auth
+                <div class=" space-x-8 -my-px ms-10 flex">
+                    <div class=" space-x-8 -my-px ms-10 flex">
+                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
+                            {{ __('ホーム') }}
+                        </x-nav-link>
+                    </div>
+                </div>
+
+                @else
+                    <div class=" space-x-8 -my-px ms-10 flex">
+                        <div class=" space-x-8 -my-px ms-10 flex">
+                            <x-nav-link :href="route('login')" :active="request()->routeIs('login')" wire:navigate>
+                                {{ __('ログイン') }}
+                            </x-nav-link>
+                        </div>
+                    </div>
+
+                    @if (Route::has('register'))
+                        <div class=" space-x-8 -my-px ms-10 flex">
+                            <div class=" space-x-8 -my-px ms-10 flex">
+                                <x-nav-link :href="route('register')" :active="request()->routeIs('register')" wire:navigate>
+                                    {{ __('会員登録') }}
+                                </x-nav-link>
+                            </div>
+                        </div>
+                    @endif
+                @endauth
+
+            </div>
+        </div>
+    </div>
 </nav>

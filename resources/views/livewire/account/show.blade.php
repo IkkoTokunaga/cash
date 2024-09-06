@@ -20,7 +20,7 @@
                     <form wire:submit="save">
 
                         <x-input-label for="account_name" :value="__('科目名を入力して、作成ボタンを押してください。')" />
-                        <x-text-input wire:model="account_name" id="account_name" type="text"
+                        <x-text-input wire:model="account_name" id="account_name"
                             class="mt-1 mb-2 w-50 block shadow-none" />
                         <x-input-error class="mt-2" :messages="$errors->get('account_name')" />
                         <input type="hidden" id="account_id" wire:model="account_id">

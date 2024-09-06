@@ -1,15 +1,16 @@
 <div>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('新規作成') }}
+            {{ __('取引先情報 新規作成') }}
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="sm:py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
             <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
                 <div class=" max-w-xl">
                     <form wire:submit="save">
+                        <p>各項目を入力して問い合わせるボタンを押してください。</p>
                         <table class="table table-bordered mt-2 ">
                             <tr>
                                 <th class="table-success">

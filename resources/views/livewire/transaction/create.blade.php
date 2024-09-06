@@ -10,7 +10,7 @@
             <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
                 <div class=" max-w-xl">
                     <form wire:submit="save">
-                        <p>各項目を入力して保存ボタンを押してください。<x-required-label />は必須項目です。</p>
+                        <p>各項目を入力して保存ボタンを押してください。<br>※<x-required-label />は必須項目です。</p>
                         <table class="table table-bordered mt-2 ">
                             <tr>
                                 <th class="table-success">

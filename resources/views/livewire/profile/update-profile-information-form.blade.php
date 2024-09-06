@@ -73,7 +73,7 @@ new class extends Component {
             <table class="table table-bordered mt-2 ">
                 <tr>
                     <th class="table-success">
-                        <x-input-label for="name" :value="__('氏名')" />
+                        <x-input-label for="name" :value="__('氏名')" /><x-required-label />
                     </th>
                     <td>
                         <x-text-input wire:model="name" id="name" name="name" type="text"
@@ -83,7 +83,7 @@ new class extends Component {
                 </tr>
                 <tr>
                     <th class="table-success">
-                        <x-input-label for="email" :value="__('Email')" />
+                        <x-input-label for="email" :value="__('Email')" /><x-required-label />
                     </th>
                     <td>
                         <x-text-input wire:model="email" id="email" name="email" type="email"

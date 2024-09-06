@@ -49,7 +49,7 @@ new class extends Component {
             <table class="table table-bordered mt-2 ">
                 <tr>
                     <th class="table-success">
-                        <x-input-label for="update_password_current_password" :value="__('現在のパスワード')" />
+                        <x-input-label for="update_password_current_password" :value="__('現在のパスワード')" /><x-required-label />
                     </th>
                     <td>
                         <x-text-input wire:model="current_password" id="update_password_current_password"
@@ -60,7 +60,7 @@ new class extends Component {
                 </tr>
                 <tr>
                     <th class="table-success">
-                        <x-input-label for="update_password_password" :value="__('新しいパスワード')" />
+                        <x-input-label for="update_password_password" :value="__('新しいパスワード')" /><x-required-label />
                     </th>
                     <td>
                         <x-text-input wire:model="password" id="update_password_password" name="password"
@@ -70,7 +70,7 @@ new class extends Component {
                 </tr>
                 <tr>
                     <th class="table-success">
-                        <x-input-label for="update_password_password_confirmation" :value="__('確認')" />
+                        <x-input-label for="update_password_password_confirmation" :value="__('確認')" /><x-required-label />
                     </th>
                     <td>
                         <x-text-input wire:model="password_confirmation" id="update_password_password_confirmation"

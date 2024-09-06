@@ -10,11 +10,11 @@
             <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
                 <div class=" max-w-xl">
                     <form wire:submit="save">
-                        <p>各項目を入力して問い合わせるボタンを押してください。</p>
+                        <p>各項目を入力して問い合わせるボタンを押してください。<x-required-label />は必須項目です。</p>
                         <table class="table table-bordered mt-2 ">
                             <tr>
                                 <th class="table-success">
-                                    <x-input-label for="name" :value="__('お名前')" />
+                                    <x-input-label for="name" :value="__('お名前')" /><x-required-label />
                                 </th>
                                 <td>
                                     <x-text-input wire:model="name" id="name" name="name" type="text"
@@ -24,7 +24,7 @@
                             </tr>
                             <tr>
                                 <th class="table-success">
-                                    <x-input-label for="name" :value="__('Email')" />
+                                    <x-input-label for="name" :value="__('Email')" /><x-required-label />
                                 </th>
                                 <td>
                                     <x-text-input wire:model="email" id="email" name="email" type="text"
@@ -34,7 +34,7 @@
                             </tr>
                             <tr>
                                 <th class="table-success">
-                                    <x-input-label :value="__('内容')" />
+                                    <x-input-label :value="__('内容')" /><x-required-label />
                                 </th>
                                 <td>
                                     <div>

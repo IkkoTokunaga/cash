@@ -10,11 +10,11 @@
             <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
                 <div class=" max-w-xl">
                     <form wire:submit="save">
-                        <p>各項目を入力して保存ボタンを押してください。</p>
+                        <p>各項目を入力して保存ボタンを押してください。<x-required-label />は必須項目です。</p>
                         <table class="table table-bordered mt-2 ">
                             <tr>
                                 <th class="table-success">
-                                    <x-input-label for="date" :value="__('日付')" />
+                                    <x-input-label for="date" :value="__('日付')" /><x-required-label />
                                 </th>
                                 <td>
                                     <x-text-input wire:model="date" id="date" name="date" type="date"
@@ -24,7 +24,7 @@
                             </tr>
                             <tr>
                                 <th class="table-success">
-                                    <x-input-label for="account_id" :value="__('科目')" />
+                                    <x-input-label for="account_id" :value="__('科目')" /><x-required-label />
                                 </th>
                                 <td>
                                     <select id="account_id" wire:model="account_id"
@@ -43,8 +43,8 @@
                                 </th>
                                 <td>
                                     <div class="flex justify-start items-center">
-                                        <x-text-input wire:model="target_user_id" id="date" name="date" type="text"
-                                            class="me-1 block shadow-none w-[60px]" />
+                                        <x-text-input wire:model="target_user_id" id="date" name="date"
+                                            type="text" class="me-1 block shadow-none w-[60px]" />
                                         <select id="target_user_id" wire:model="target_user_id"
                                             class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md">
                                             <option value="">選択してください</option>
@@ -58,7 +58,7 @@
                             </tr>
                             <tr>
                                 <th class="table-success">
-                                    <x-input-label for="description" :value="__('摘要')" />
+                                    <x-input-label for="description" :value="__('摘要')" /><x-required-label />
                                 </th>
                                 <td>
                                     <x-text-input wire:model="description" id="description" name="description"
@@ -68,7 +68,7 @@
                             </tr>
                             <tr>
                                 <th class="table-success">
-                                    <x-input-label :value="__('収支タイプ')" />
+                                    <x-input-label :value="__('収支タイプ')" /><x-required-label />
                                 </th>
                                 <td>
                                     @foreach ($payment_type_list as $payment_type => $label)
@@ -82,7 +82,7 @@
                             </tr>
                             <tr>
                                 <th class="table-success">
-                                    <x-input-label for="payment" :value="__('金額 / 円')" />
+                                    <x-input-label for="payment" :value="__('金額 / 円')" /><x-required-label />
                                 </th>
                                 <td>
                                     <x-text-input wire:model="payment" id="payment" name="payment" type="number"

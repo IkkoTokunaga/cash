@@ -18,7 +18,7 @@
                             </tr>
                             <tr>
                                 <th class="table-success">
-                                    <x-input-label for="name" :value="__('名前')" />
+                                    <x-input-label for="name" :value="__('名前')" /><x-required-label />
                                 </th>
                                 <td>
                                     <x-text-input wire:model="name" id="name" name="name" type="text"

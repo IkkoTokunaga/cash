@@ -5,7 +5,7 @@ $contents = [
     ['title' => '勘定科目修正', 'id' => 'acount_edit', 'template' => 'document.acount_edit', 'index' => ++$index],
     ['title' => '勘定科目削除', 'id' => 'acount_delete', 'template' => 'document.acount_delete', 'index' => ++$index],
     ['title' => '取引先登録', 'id' => 'target_user_create', 'template' => 'document.target_user_create', 'index' => ++$index],
-    // ['title' => '取引先修正', 'id' => 'target_user_edit', 'template' => 'document.target_user_edit', 'index' => ++$index],
+    ['title' => '取引先修正', 'id' => 'target_user_edit', 'template' => 'document.target_user_edit', 'index' => ++$index],
     // ['title' => '取引先削除', 'id' => 'target_user_delete', 'template' => 'document.target_user_delete', 'index' => ++$index],
     ['title' => '収支登録', 'id' => 'transaction_crete', 'template' => 'document.transaction_create', 'index' => ++$index],
     ['title' => '収支一覧確認(前月残高確定)', 'id' => 'transaction_list', 'template' => 'document.transaction_list', 'index' => ++$index],

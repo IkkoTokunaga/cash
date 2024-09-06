@@ -45,13 +45,11 @@ $contents = [
                             </div>
 
                             @foreach ($contents as $content)
-                                <div class="mb-12"
-                                    id="{{ $content['id'] }}">
+                                <div class="mb-12" id="{{ $content['id'] }}">
                                     <h2 class="text-xl font-semibold text-black">{{ $content['title'] }}</h2>
                                     @livewire($content['template'])
                                 </div>
                             @endforeach
-
                         </div>
                     </main>
 

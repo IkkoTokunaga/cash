@@ -149,12 +149,12 @@
                     <tbody>
 
                         <tr class="table-info" style="cursor: pointer;">
-                            <td class="text-center" wire:click="edit(13)">13</td>
-                            <td wire:click="edit(13)">
+                            <td class="text-center">13</td>
+                            <td>
                                 テスト売上先
                                 <br> (てすとうりあげさき)
                             </td>
-                            <td wire:click="edit(13)">
+                            <td>
                                 【 TEL 】 090-1234-5678 <br>
                                 【Email】 test@exsample.com <br>
                                 【 住所 】 東京都港区 <br>
@@ -164,14 +164,13 @@
                                     要月初の連絡。
                                 </span>
                             </td>
-                            <td wire:click="edit(13)" class="hidden md:table-cell">テストです。
+                            <td class="hidden md:table-cell">テストです。
                                 毎月100程度発注あり。
                                 要月初の連絡。</td>
                             <td>
                                 <div class="d-flex justify-content-around">
-
-                                    <div wire:click="delete(13)" wire:confirm="削除したデータは元に戻せません。よろしいですか?"><img
-                                            src="http://localhost:8000/storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
+                                    <div><img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                             alt="" class="min-w-[30px]"></div>
                                 </div>
                             </td>

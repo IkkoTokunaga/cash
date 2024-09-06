@@ -26,13 +26,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!--[if BLOCK]><![endif]-->
                                 <tr style="cursor: pointer;">
                                     <td>売上</td>
                                     <td>
                                         <div class="d-flex justify-content-around">
                                             <div><img
-                                                    src="http://localhost:8000/storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
+                                                    src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
                                         </div>
                                     </td>
@@ -42,7 +41,7 @@
                                     <td>
                                         <div class="d-flex justify-content-around">
                                             <div><img
-                                                    src="http://localhost:8000/storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
+                                                    src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
                                         </div>
                                     </td>
@@ -52,7 +51,7 @@
                                     <td>
                                         <div class="d-flex justify-content-around">
                                             <div><img
-                                                    src="http://localhost:8000/storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
+                                                    src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
                                         </div>
                                     </td>
@@ -62,7 +61,7 @@
                                     <td>
                                         <div class="d-flex justify-content-around">
                                             <div><img
-                                                    src="http://localhost:8000/storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
+                                                    src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
                                         </div>
                                     </td>
@@ -72,7 +71,7 @@
                                     <td>
                                         <div class="d-flex justify-content-around">
                                             <div><img
-                                                    src="http://localhost:8000/storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
+                                                    src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
                                         </div>
                                     </td>
@@ -112,13 +111,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!--[if BLOCK]><![endif]-->
                             <tr style="cursor: pointer;">
                                 <td>売上</td>
                                 <td>
                                     <div class="d-flex justify-content-around">
                                         <div><img
-                                                src="http://localhost:8000/storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
+                                                src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                 alt="" class="min-w-[30px]"></div>
                                     </div>
                                 </td>
@@ -128,7 +126,7 @@
                                 <td>
                                     <div class="d-flex justify-content-around">
                                         <div><img
-                                                src="http://localhost:8000/storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
+                                                src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                 alt="" class="min-w-[30px]"></div>
                                     </div>
                                 </td>
@@ -138,7 +136,7 @@
                                 <td>
                                     <div class="d-flex justify-content-around">
                                         <div><img
-                                                src="http://localhost:8000/storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
+                                                src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                 alt="" class="min-w-[30px]"></div>
                                     </div>
                                 </td>
@@ -148,7 +146,7 @@
                                 <td>
                                     <div class="d-flex justify-content-around">
                                         <div><img
-                                                src="http://localhost:8000/storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
+                                                src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                 alt="" class="min-w-[30px]"></div>
                                     </div>
                                 </td>
@@ -158,7 +156,7 @@
                                 <td>
                                     <div class="d-flex justify-content-around">
                                         <div><img
-                                                src="http://localhost:8000/storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
+                                                src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                 alt="" class="min-w-[30px]"></div>
                                     </div>
                                 </td>
@@ -168,7 +166,7 @@
                                 <td>
                                     <div class="d-flex justify-content-around">
                                         <div><img
-                                                src="http://localhost:8000/storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
+                                                src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                 alt="" class="min-w-[30px]"></div>
                                     </div>
                                 </td>

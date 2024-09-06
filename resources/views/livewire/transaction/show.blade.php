@@ -44,7 +44,9 @@ use Carbon\Carbon;
                                 <th class="text-center table-cell md:hidden">金額 (円)</th>
                                 <th class="text-center hidden md:table-cell">支出 (円)</th>
                                 <th class="text-center">残高 (円)</th>
-                                <th class="text-center"></th>
+                                @if (!$thisMonthCloseFlg)
+                                    <th class="text-center"></th>
+                                @endif
                             </tr>
                         </thead>
                         <tbody>
@@ -54,7 +56,9 @@ use Carbon\Carbon;
                                     <td colspan="5" class="text-primary hidden md:table-cell">前月繰越金</td>
                                     <td colspan="2" class="text-primary md:hidden">前月繰越金</td>
                                     <td class="text-end">{{ number_format($prevMonthData->amount) }}</td>
-                                    <td></td>
+                                    @if (!$thisMonthCloseFlg)
+                                        <td></td>
+                                    @endif
                                 </tr>
                             @else
                                 <tr>
@@ -78,7 +82,9 @@ use Carbon\Carbon;
                                         <x-input-error :messages="$errors->get('endOfMonth_Ymd')" class="mt-2" />
                                     </td>
                                     <td></td>
-                                    <td></td>
+                                    @if (!$thisMonthCloseFlg)
+                                        <td></td>
+                                    @endif
                                 </tr>
                             @endif
                             @foreach ($transactions as $transaction)
@@ -116,8 +122,8 @@ use Carbon\Carbon;
                                     </td>
                                     <td class="text-end" wire:click="edit({{ $transaction->id }})">
                                         {{ number_format($transaction->balance) }}</td>
-                                    <td>
-                                        @if (!$thisMonthCloseFlg)
+                                    @if (!$thisMonthCloseFlg)
+                                        <td>
                                             <div class="d-flex justify-center">
                                                 <div wire:click="delete({{ $transaction->id }})"
                                                     wire:confirm="削除されたデータは元に戻せません。よろしいですか?" style="cursor: pointer;">
@@ -125,14 +131,8 @@ use Carbon\Carbon;
                                                         alt="削除" class="min-w-[30px]">
                                                 </div>
                                             </div>
-                                        @else
-                                            <div class="d-flex justify-center">
-                                                <i style="cursor: not-allowed;"><img
-                                                        src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
-                                                        alt="削除" class="min-w-[30px]"></i>
-                                            </div>
-                                        @endif
-                                    </td>
+                                        </td>
+                                    @endif
                                 </tr>
                             @endforeach
                             @if (count($transactions))
@@ -146,7 +146,9 @@ use Carbon\Carbon;
                                     <td class="text-end hidden md:table-cell">
                                         {{ $totalExpense != 0 ? number_format($totalExpense) : '' }}</td>
                                     <td class="text-end">{{ $balance != 0 ? number_format($balance) : '' }}</td>
-                                    <td></td>
+                                    @if (!$thisMonthCloseFlg)
+                                        <td></td>
+                                    @endif
                                 </tr>
                             @endif
                         </tbody>

@@ -38,7 +38,7 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($accounts as $account)
-                                        <tr @if (session('saved_account_id') === $account->code && session('saved_account_id')) class="table-info" @endif wire:click="edit({{ $account->code }})" style="cursor: pointer;">
+                                        <tr @if (session('saved_account_id') === $account->code && session('saved_account_id')) class="table-info" @endif style="cursor: pointer;">
                                             <td wire:click="edit({{ $account->code }})">{{ $account->name }}</td>
                                             <td>
                                                 <div class="d-flex justify-content-around">

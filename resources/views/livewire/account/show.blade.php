@@ -18,7 +18,6 @@
                     @endif
 
                     <form wire:submit="save">
-
                         <x-input-label for="account_name" :value="__('科目名を入力して、作成ボタンを押してください。')" />
                         <x-text-input wire:model="account_name" id="account_name"
                             class="mt-1 mb-2 w-50 block shadow-none" />
@@ -38,15 +37,16 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($accounts as $account)
-                                        <tr @if (session('saved_account_id') === $account->code && session('saved_account_id')) class="table-info" @endif style="cursor: pointer;">
+                                        <tr @if (session('saved_account_id') === $account->code && session('saved_account_id')) class="table-info" @endif
+                                            style="cursor: pointer;">
                                             <td wire:click="edit({{ $account->code }})">{{ $account->name }}</td>
                                             <td>
                                                 <div class="d-flex justify-content-around">
                                                     <div wire:click="delete({{ $account->code }})"
-                                                        wire:confirm="削除したデータは元に戻せません。よろしいですか?"
-                                                        ><img
+                                                        wire:confirm="削除したデータは元に戻せません。よろしいですか?"><img
                                                             src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
-                                                            alt="" class="min-w-[30px]"></div>
+                                                            alt="" class="min-w-[30px]">
+                                                    </div>
                                                 </div>
                                             </td>
                                         </tr>

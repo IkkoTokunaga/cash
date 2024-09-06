@@ -16,7 +16,7 @@ $contents = [
 
 ?>
 
-<body class="antialiased font-sans">
+<div>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('使用方法') }}
@@ -60,6 +60,4 @@ $contents = [
             </div>
         </div>
     </div>
-</body>
-
-</html>
+</div>

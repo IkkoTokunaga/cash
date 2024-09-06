@@ -487,16 +487,16 @@
                             <td></td>
                         </tr>
                         <tr class="table-info" style="cursor: pointer;">
-                            <td class="text-center" wire:click="edit(97)">
+                            <td class="text-center">
                                 9/7
                             </td>
-                            <td wire:click="edit(97)" class="hidden md:table-cell">
+                            <td class="hidden md:table-cell">
                                 売上
                             </td>
-                            <td wire:click="edit(97)" class="hidden md:table-cell">
+                            <td class="hidden md:table-cell">
                                 テスト売上先
                             </td>
-                            <td wire:click="edit(97)">
+                            <td>
                                 <span class="md:hidden text-success">
                                     【 科目 】売上<br>
                                 </span>
@@ -505,22 +505,22 @@
                                 </span>
                                 売上＿商品A＿200個
                             </td>
-                            <td class="text-end" wire:click="edit(97)">
+                            <td class="text-end">
                                 98,000
                                 <span class="md:hidden">
 
                                 </span>
                             </td>
-                            <td class="text-end hidden md:table-cell" wire:click="edit(97)">
+                            <td class="text-end hidden md:table-cell">
 
                             </td>
-                            <td class="text-end" wire:click="edit(97)">
+                            <td class="text-end">
                                 1,391,000</td>
                             <td>
                                 <div class="d-flex justify-center">
-                                    <div wire:click="delete(97)" wire:confirm="削除されたデータは元に戻せません。よろしいですか?"
+                                    <div
                                         style="cursor: pointer;">
-                                        <img src="http://localhost:8000/storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
+                                        <img src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                             alt="削除" class="min-w-[30px]">
                                     </div>
                                 </div>

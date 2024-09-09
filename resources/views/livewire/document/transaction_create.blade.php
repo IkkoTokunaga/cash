@@ -1,11 +1,11 @@
 <div>
-    <p>上部ナビバーから作成を選択し、以下の画面へ移動してください。</p>
-    <p>フォームに入力して、作成ボタンを押します。</p>
+    <p class="ms-2">上部ナビバーから作成を選択し、以下の画面へ移動してください。</p>
+    <p class="ms-2">フォームに入力して、作成ボタンを押します。</p>
     <div class="mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
             <div class=" max-w-xl">
                 <form>
-                    <p>各項目を入力して保存ボタンを押してください。<br>※<x-required-label />
+                    <p class="ms-2">各項目を入力して保存ボタンを押してください。<br>※<x-required-label />
 
                         は必須項目です。</p>
                     <table class="table table-bordered mt-2 ">
@@ -128,7 +128,7 @@
             </div>
         </div>
     </div>
-    <p>作成には以下のような制限がかけられています。</p>
+    <p class="ms-2">作成には以下のような制限がかけられています。</p>
     <table class="table">
         <thead>
             <th>項目</th>
@@ -171,12 +171,12 @@
             </tr>
         </tbody>
     </table>
-    <p>エラー時は以下のような表示になります。</p>
+    <p class="ms-2">エラー時は以下のような表示になります。</p>
     <div class="mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
             <div class=" max-w-xl">
                 <form>
-                    <p>各項目を入力して保存ボタンを押してください。<br>※<x-required-label />
+                    <p class="ms-2">各項目を入力して保存ボタンを押してください。<br>※<x-required-label />
                         必須
                         </span>
 
@@ -302,12 +302,12 @@
             </div>
         </div>
     </div>
-    <p>制限にかからない状態で保存ボタンを押します。</p>
+    <p class="ms-2">制限にかからない状態で保存ボタンを押します。</p>
     <div class="mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
             <div class=" max-w-xl">
                 <form>
-                    <p>各項目を入力して保存ボタンを押してください。<br>※<x-required-label />
+                    <p class="ms-2">各項目を入力して保存ボタンを押してください。<br>※<x-required-label />
                         必須
                         </span>
 
@@ -441,7 +441,7 @@
             </div>
         </div>
     </div>
-    <p>保存に成功したら以下のような画面になります。</p>
+    <p class="ms-2">保存に成功したら以下のような画面になります。</p>
     <div class=" mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
             <div class="max-w-full">

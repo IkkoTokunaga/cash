@@ -1,7 +1,7 @@
 <div>
-    <p>以下のように科目の一覧が表示されています。</p>
-    <p>宿泊費(ホテル代)が不要な項目となり削除するとします。</p>
-    <p>宿泊費(ホテル代)項目の右部分 <img src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}" alt=""
+    <p class="ms-2">以下のように科目の一覧が表示されています。</p>
+    <p class="ms-2">宿泊費(ホテル代)が不要な項目となり削除するとします。</p>
+    <p class="ms-2">宿泊費(ホテル代)項目の右部分 <img src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}" alt=""
             class="d-inline-block">を押します。</p>
     <div class="mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
@@ -99,10 +99,10 @@
             </div>
         </div>
     </div>
-    <p>ポップアップで削除しても問題ないか確認されますので、OKを押します。</p>
-    <p>キャンセルを押した場合は削除されません。</p>
-    <p class="text-danger">※削除後のデータはもとに戻せませんので、最新の注意をお願いします。</p>
-    <p>削除が完了すると以下のような表示となります。</p>
+    <p class="ms-2">ポップアップで削除しても問題ないか確認されますので、OKを押します。</p>
+    <p class="ms-2">キャンセルを押した場合は削除されません。</p>
+    <p class="ms-2 text-danger">※削除後のデータはもとに戻せませんので、最新の注意をお願いします。</p>
+    <p class="ms-2">削除が完了すると以下のような表示となります。</p>
     <div class="mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
             <div class=" max-w-xl">

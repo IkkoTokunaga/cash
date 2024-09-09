@@ -25,7 +25,7 @@ $contents = [
 
     <div class="sm:py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+            <div class=" sm:p-8 bg-white sm:rounded-lg border">
                 <div class="max-w-full">
 
                     <main class="mt-6">
@@ -38,7 +38,7 @@ $contents = [
                                 <h2 class="text-xl font-semibold text-black">目次</h2>
                                 <ul>
                                     @foreach ($contents as $content)
-                                        <li><a href="#{{ $content['id'] }}">{{ $content['index'] }}.
+                                        <li class="my-2 mx-4"><a href="#{{ $content['id'] }}">{{ $content['index'] }}.
                                                 {{ $content['title'] }}</a></li>
                                     @endforeach
                                 </ul>
@@ -46,7 +46,7 @@ $contents = [
 
                             @foreach ($contents as $content)
                                 <div class="mb-12" id="{{ $content['id'] }}">
-                                    <h2 class="text-xl font-semibold text-black">{{ $content['title'] }}</h2>
+                                    <h2 class="my-2 mx-4 text-xl font-semibold text-black">{{ $content['title'] }}</h2>
                                     @livewire($content['template'])
                                 </div>
                             @endforeach

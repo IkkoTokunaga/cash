@@ -1,6 +1,6 @@
 <div>
-    <p>以下のように科目の一覧が表示されています。</p>
-    <p>例として宿泊費の名称を修正します。宿泊費の項目をクリックします。</p>
+    <p class="ms-2">以下のように科目の一覧が表示されています。</p>
+    <p class="ms-2">例として宿泊費の名称を修正します。宿泊費の項目をクリックします。</p>
     <div class=" mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
             <div class=" max-w-xl">
@@ -94,7 +94,7 @@
             </div>
         </div>
     </div>
-    <p>以下のように入力フォームに修正したい科目名が表示されますので、修正を行ってください。</p>
+    <p class="ms-2">以下のように入力フォームに修正したい科目名が表示されますので、修正を行ってください。</p>
     <div class="mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
             <div class=" max-w-xl">
@@ -191,7 +191,7 @@
             </div>
         </div>
     </div>
-    <p>修正後に作成ボタンを押すと、修正した内容が保存されます。</p>
+    <p class="ms-2">修正後に作成ボタンを押すと、修正した内容が保存されます。</p>
     <div class="mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
             <div class=" max-w-xl">

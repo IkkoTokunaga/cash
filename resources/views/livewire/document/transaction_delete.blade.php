@@ -1,6 +1,6 @@
 <div>
-    <p>上部ナビバーから一覧を選択し、以下の画面へ移動してください。</p>
-    <p>削除したい項目の右部分 <img src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}" alt=""
+    <p class="ms-2">上部ナビバーから一覧を選択し、以下の画面へ移動してください。</p>
+    <p class="ms-2">削除したい項目の右部分 <img src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}" alt=""
             class="d-inline-block">を押します。</p>
     <div class=" mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
@@ -197,8 +197,8 @@
             </div>
         </div>
     </div>
-    <p>確認のポップアップが表示されますので、OKを押します。一覧から対象の収支が削除され、残高が再計算されます。</p>
-    <p>キャンセルを押した場合は削除されません。</p>
+    <p class="ms-2">確認のポップアップが表示されますので、OKを押します。一覧から対象の収支が削除され、残高が再計算されます。</p>
+    <p class="ms-2">キャンセルを押した場合は削除されません。</p>
     <div class=" mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
             <div class="max-w-full">

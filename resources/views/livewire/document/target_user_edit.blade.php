@@ -1,5 +1,5 @@
 <div>
-    <p>上部ナビバーから取引先を選択し、以下の画面から修正したい取引先名をクリックしてください。</p>
+    <p class="ms-2">上部ナビバーから取引先を選択し、以下の画面から修正したい取引先名をクリックしてください。</p>
     <div class="mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
             <div class="max-w-full">
@@ -52,13 +52,13 @@
             </div>
         </div>
     </div>
-    <p>取引先情報 修正画面へ移動します。</p>
-    <p>必要事項を入力して保存ボタンを押します。</p>
+    <p class="ms-2">取引先情報 修正画面へ移動します。</p>
+    <p class="ms-2">必要事項を入力して保存ボタンを押します。</p>
     <div class="mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
             <div class=" max-w-xl">
                 <form>
-                    <p>各項目を入力して保存ボタンを押してください。<br>※<x-required-label />
+                    <p class="ms-2">各項目を入力して保存ボタンを押してください。<br>※<x-required-label />
 
                         は必須項目です。</p>
                     <table class="table table-bordered mt-2 ">
@@ -158,7 +158,7 @@
             </div>
         </div>
     </div>
-    <p>保存が正常に行われると以下のような画面となります。</p>
+    <p class="ms-2">保存が正常に行われると以下のような画面となります。</p>
     <div class="mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
             <div class="max-w-full">

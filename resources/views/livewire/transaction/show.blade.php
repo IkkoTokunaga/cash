@@ -15,6 +15,8 @@ use Carbon\Carbon;
                     @if (session()->has('saved_message'))
                         @if (session('saved_transaction_id'))
                             <div class="alert alert-info"> {{ session('saved_message') }} </div>
+                        @elseif (session('saved_summary') === true)
+                            <div class="alert alert-info"> {{ session('saved_message') }} </div>
                         @else
                             <div class="alert alert-danger"> {{ session('saved_message') }} </div>
                         @endif
@@ -51,7 +53,7 @@ use Carbon\Carbon;
                         </thead>
                         <tbody>
                             @if ($prevMonthData)
-                                <tr>
+                                <tr @if (session('saved_summary') === true)  class="table-info" @endif>
                                     <td class="text-center">{{ Carbon::parse($prevEndOfMonth_Ymd)->format('n/j') }}</td>
                                     <td colspan="5" class="text-primary hidden md:table-cell">前月繰越金</td>
                                     <td colspan="2" class="text-primary md:hidden">前月繰越金</td>

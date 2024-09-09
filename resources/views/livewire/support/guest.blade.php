@@ -10,7 +10,7 @@
     </div>
     @endif
 </div>
-<form wire:submit="save">
+<form wire:submit="save" class="max-w-[600px]">
     <x-input-label for="name" :value="__('お名前')" />
     <x-text-input wire:model="name" id="name" name="name" type="text" class="w-75 shadow-none" />
     <x-input-error :messages="$errors->get('name')" class="mt-2" />

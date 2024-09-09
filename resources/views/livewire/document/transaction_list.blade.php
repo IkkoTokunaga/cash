@@ -62,12 +62,12 @@
             <tr>
                 <td>科目</td>
                 <td>作成画面で選択した科目です。</td>
-                <td>売上、仕入などの設定した項目名</td>
+                <td>売上、仕入など</td>
             </tr>
             <tr>
                 <td>摘要</td>
                 <td>作成画面で入力した適用です。</td>
-                <td>仕入＿〇〇様＿10個</td>
+                <td>仕入＿10個</td>
             </tr>
             <tr>
                 <td>収入 / 円</td>
@@ -82,13 +82,7 @@
             <tr>
                 <td>残高 / 円</td>
                 <td>現在までの収支の金額です。</td>
-                <td>30,000(マイナス値もありえます）</td>
-            </tr>
-            <tr>
-                <td><img src="{{ asset('storage/edit_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}" alt=""
-                        class="d-inline-block"></td>
-                <td>収支を編集できます。</td>
-                <td>-</td>
+                <td>30,000<br>(マイナス値もありえます）</td>
             </tr>
             <tr>
                 <td><img src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}" alt=""
@@ -98,15 +92,411 @@
             </tr>
         </tbody>
     </table>
-    <div class="border mb-5"> <img src="{{ asset('storage/document/transaction_list_2.png') }}" alt=""
-            class="object-fill"> </div>
+    <div class="mb-5">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+            <div class="max-w-full">
+                <div class="flex items-center">
+                    <div class="me-5 sm:me-2"> <span
+                            class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xl sm:text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150">◀</span>
+                    </div>
+                    <div class="me-5 sm:me-2">
+                        <h2 class="font-semibold text-l text-gray-800 leading-tight py-2">2024年08月</h2>
+                    </div>
+                    <div> <span
+                            class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xl sm:text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150">▶</span>
+                    </div>
+                </div>
+                <table class="table table-bordered mt-2">
+                    <caption align="top">行を選択することでで編集画面へ移動できます。</caption>
+                    <thead class="table-success">
+                        <tr>
+                            <th class="text-center">日付</th>
+                            <th class="text-center hidden md:table-cell">科目</th>
+                            <th class="text-center hidden md:table-cell">取引先</th>
+                            <th class="text-center">摘要</th>
+                            <th class="text-center hidden md:table-cell">収入 (円)</th>
+                            <th class="text-center table-cell md:hidden">金額 (円)</th>
+                            <th class="text-center hidden md:table-cell">支出 (円)</th>
+                            <th class="text-center">残高 (円)</th>
+                            <th class="text-center"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">7/31</td>
+                            <td colspan="5" class="hidden md:table-cell"> ❕前月残高が確定されていません<br> <span type="submit"
+                                    class="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xl sm:text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150">前月残高確定</span>
+                            </td>
+                            <td colspan="2" class="md:hidden"> ❕前月残高が確定されていません<br> <button type="submit"
+                                    class="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xl sm:text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150">前月残高確定</button>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/5 </td>
+                            <td class="hidden md:table-cell"> 売上 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 半沢商事＿売上＿60個 </td>
+                            <td class="text-end"> 99,000 <span class="md:hidden"> </span> </td>
+                            <td class="text-end hidden md:table-cell"> </td>
+                            <td class="text-end"> 99,000</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/5 </td>
+                            <td class="hidden md:table-cell"> 仕入 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】仕入<br> </span> 岸和田ベンダー＿仕入＿20個 </td>
+                            <td class="text-end"> <span class="md:hidden"> -36,000 </span> </td>
+                            <td class="text-end hidden md:table-cell"> 36,000 </td>
+                            <td class="text-end"> 63,000</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/12 </td>
+                            <td class="hidden md:table-cell"> 消耗品 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】消耗品<br> </span> コピー用紙＿B5＿50セット </td>
+                            <td class="text-end"> <span class="md:hidden"> -50,000 </span> </td>
+                            <td class="text-end hidden md:table-cell"> 50,000 </td>
+                            <td class="text-end"> 13,000</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/14 </td>
+                            <td class="hidden md:table-cell"> 売上 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 近藤医院＿売上＿1600個 </td>
+                            <td class="text-end"> 862,000 <span class="md:hidden"> </span> </td>
+                            <td class="text-end hidden md:table-cell"> </td>
+                            <td class="text-end"> 875,000</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/15 </td>
+                            <td class="hidden md:table-cell"> 仕入 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】仕入<br> </span> 材料AAA＿9600個 </td>
+                            <td class="text-end"> <span class="md:hidden"> -140,000 </span> </td>
+                            <td class="text-end hidden md:table-cell"> 140,000 </td>
+                            <td class="text-end"> 735,000</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/15 </td>
+                            <td class="hidden md:table-cell"> 売上 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 宮地電機＿売上＿4800個 </td>
+                            <td class="text-end"> 463,000 <span class="md:hidden"> </span> </td>
+                            <td class="text-end hidden md:table-cell"> </td>
+                            <td class="text-end"> 1,198,000</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/16 </td>
+                            <td class="hidden md:table-cell"> 仕入 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】仕入<br> </span> はなベンダー＿仕入＿9900個 </td>
+                            <td class="text-end"> <span class="md:hidden"> -99,000 </span> </td>
+                            <td class="text-end hidden md:table-cell"> 99,000 </td>
+                            <td class="text-end"> 1,099,000</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/16 </td>
+                            <td class="hidden md:table-cell"> 売上 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 売上＿徳永商事様 </td>
+                            <td class="text-end"> 24,000 <span class="md:hidden"> </span> </td>
+                            <td class="text-end hidden md:table-cell"> </td>
+                            <td class="text-end"> 1,123,000</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/20 </td>
+                            <td class="hidden md:table-cell"> 売上 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 売上 </td>
+                            <td class="text-end"> 96,000 <span class="md:hidden"> </span> </td>
+                            <td class="text-end hidden md:table-cell"> </td>
+                            <td class="text-end"> 1,219,000</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="4" class="table-success hidden md:table-cell">合計</th>
+                            <th colspan="2" class="table-success md:hidden">合計</th>
+                            <td class="text-end hidden md:table-cell"> 1,544,000</td>
+                            <td class="text-end md:hidden"> 1,219,000</td>
+                            <td class="text-end hidden md:table-cell"> 325,000</td>
+                            <td class="text-end">1,219,000</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     <h2 class="font-semibold text-l text-gray-800 leading-tight">前月残高確定</h2>
     <p>初回表示時、または前月残高確定を行っていない月は以下のボタンが表示されます。</p>
     <p>ボタンを押して前月残高を確定することで、前月の繰越金として表示され、今月の残高に反映がされます。</p>
-    <div class="border mb-2"> <img src="{{ asset('storage/document/transaction_list_3.png') }}" alt=""
-            class="object-fill"> </div>
+    <div class=" mb-2">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+            <div colspan="5" class="hidden md:table-cell"> ❕前月残高が確定されていません<br> <span type="submit"
+                    class="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xl sm:text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150">前月残高確定</span>
+            </div>
+        </div>
+    </div>
     <p>前月残高確定後の表示。前月（2024-07-01～2024-07-31）の最終残高が今月（2024-08）の最初に作成され、そこから残高が計算されます。</p>
     <p class="text-danger">※前月残高確定処理を行わない場合は、前月残高は今月残高に反映されず、0として計算されています。</p>
-    <div class="border mb-5"> <img src="{{ asset('storage/document/transaction_list_4.png') }}" alt=""
-            class="object-fill"> </div>
+    <div class=" mb-5">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+            <div class="max-w-full">
+                <div class="alert alert-info"> 前月残高確定処理が完了しました。 </div>
+                <div class="flex items-center">
+                    <div class="me-5 sm:me-2"> <span
+                            class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xl sm:text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150">
+                            ◀ </span> </div>
+                    <div class="me-5 sm:me-2">
+                        <h2 class="font-semibold text-l text-gray-800 leading-tight py-2">2024年08月</h2>
+                    </div>
+                    <div> <span
+                            class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xl sm:text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150">
+                            ▶ </span> </div>
+                </div>
+                <table class="table table-bordered mt-2">
+                    <caption align="top">行を選択することでで編集画面へ移動できます。</caption>
+                    <thead class="table-success">
+                        <tr>
+                            <th class="text-center">日付</th>
+                            <th class="text-center hidden md:table-cell">科目</th>
+                            <th class="text-center hidden md:table-cell">取引先</th>
+                            <th class="text-center">摘要</th>
+                            <th class="text-center hidden md:table-cell">収入 (円)</th>
+                            <th class="text-center table-cell md:hidden">金額 (円)</th>
+                            <th class="text-center hidden md:table-cell">支出 (円)</th>
+                            <th class="text-center">残高 (円)</th>
+                            <th class="text-center"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-info" >
+                            <td class="text-center">7/31</td>
+                            <td colspan="5" class="text-primary hidden md:table-cell">前月繰越金</td>
+                            <td colspan="2" class="text-primary md:hidden">前月繰越金</td>
+                            <td class="text-end">67,894</td>
+                            <td></td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/5 </td>
+                            <td class="hidden md:table-cell"> 売上 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 半沢商事＿売上＿60個 </td>
+                            <td class="text-end"> 99,000 <span class="md:hidden"> </span> </td>
+                            <td class="text-end hidden md:table-cell"> </td>
+                            <td class="text-end"> 166,894</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/5 </td>
+                            <td class="hidden md:table-cell"> 仕入 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】仕入<br> </span> 岸和田ベンダー＿仕入＿20個 </td>
+                            <td class="text-end"> <span class="md:hidden"> -36,000 </span> </td>
+                            <td class="text-end hidden md:table-cell"> 36,000 </td>
+                            <td class="text-end"> 130,894</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/12 </td>
+                            <td class="hidden md:table-cell"> 消耗品 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】消耗品<br> </span> コピー用紙＿B5＿50セット </td>
+                            <td class="text-end"> <span class="md:hidden"> -50,000 </span> </td>
+                            <td class="text-end hidden md:table-cell"> 50,000 </td>
+                            <td class="text-end"> 80,894</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/14 </td>
+                            <td class="hidden md:table-cell"> 売上 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 近藤医院＿売上＿1600個 </td>
+                            <td class="text-end"> 862,000 <span class="md:hidden"> </span> </td>
+                            <td class="text-end hidden md:table-cell"> </td>
+                            <td class="text-end"> 942,894</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/15 </td>
+                            <td class="hidden md:table-cell"> 仕入 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】仕入<br> </span> 材料AAA＿9600個 </td>
+                            <td class="text-end"> <span class="md:hidden"> -140,000 </span> </td>
+                            <td class="text-end hidden md:table-cell"> 140,000 </td>
+                            <td class="text-end"> 802,894</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/15 </td>
+                            <td class="hidden md:table-cell"> 売上 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 宮地電機＿売上＿4800個 </td>
+                            <td class="text-end"> 463,000 <span class="md:hidden"> </span> </td>
+                            <td class="text-end hidden md:table-cell"> </td>
+                            <td class="text-end"> 1,265,894</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/16 </td>
+                            <td class="hidden md:table-cell"> 仕入 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】仕入<br> </span> はなベンダー＿仕入＿9900個 </td>
+                            <td class="text-end"> <span class="md:hidden"> -99,000 </span> </td>
+                            <td class="text-end hidden md:table-cell"> 99,000 </td>
+                            <td class="text-end"> 1,166,894</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/16 </td>
+                            <td class="hidden md:table-cell"> 売上 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 売上＿徳永商事様 </td>
+                            <td class="text-end"> 24,000 <span class="md:hidden"> </span> </td>
+                            <td class="text-end hidden md:table-cell"> </td>
+                            <td class="text-end"> 1,190,894</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="cursor: pointer;">
+                            <td class="text-center"> 8/20 </td>
+                            <td class="hidden md:table-cell"> 売上 </td>
+                            <td class="hidden md:table-cell"> </td>
+                            <td> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 売上 </td>
+                            <td class="text-end"> 96,000 <span class="md:hidden"> </span> </td>
+                            <td class="text-end hidden md:table-cell"> </td>
+                            <td class="text-end"> 1,286,894</td>
+                            <td>
+                                <div class="d-flex justify-center">
+                                    <div style="cursor: pointer;"> <img
+                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                            alt="削除" class="min-w-[30px]"> </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="4" class="table-success hidden md:table-cell">合計</th>
+                            <th colspan="2" class="table-success md:hidden">合計</th>
+                            <td class="text-end hidden md:table-cell"> 1,544,000</td>
+                            <td class="text-end md:hidden"> 1,219,000</td>
+                            <td class="text-end hidden md:table-cell"> 325,000</td>
+                            <td class="text-end">1,286,894</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>

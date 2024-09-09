@@ -118,6 +118,10 @@ class Show extends Component
             'updated_at' => now(),
         ]);
 
+        $message = '前月残高確定処理が完了しました。';
+        session()->flash('saved_message', $message);
+        session()->flash('saved_summary', true);
+
         $this->refreshList($this->month);
     }
 

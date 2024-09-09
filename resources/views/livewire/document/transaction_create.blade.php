@@ -483,7 +483,7 @@
                             <td class="text-center">8/31</td>
                             <td colspan="5" class="text-primary hidden md:table-cell">前月繰越金</td>
                             <td colspan="2" class="text-primary md:hidden">前月繰越金</td>
-                            <td class="text-end">3,000</td>
+                            <td class="text-end">1,000</td>
                             <td></td>
                         </tr>
                         <tr class="table-info" style="cursor: pointer;">
@@ -515,7 +515,7 @@
 
                             </td>
                             <td class="text-end">
-                                101,000</td>
+                                99,000</td>
                             <td>
                                 <div class="d-flex justify-center">
                                     <div
@@ -535,7 +535,7 @@
                                 98,000</td>
                             <td class="text-end hidden md:table-cell">
                             </td>
-                            <td class="text-end">101,000</td>
+                            <td class="text-end">99,000</td>
                             <td></td>
                         </tr>
                     </tbody>

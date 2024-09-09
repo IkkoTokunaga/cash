@@ -21,7 +21,7 @@
                                 <td>
                                     <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block shadow-none"
-                                        id="date" name="date" type="date">
+                                        id="date" name="date" type="date" value="2024-09-09">
                                 </td>
                             </tr>
                             <tr>
@@ -93,7 +93,7 @@
                                 <td>
                                     <label for="income">収入
                                         <input type="radio" id="income" value="income" name="payment_type"
-                                            class="me-3"></label>
+                                            class="me-3" checked></label>
                                     <label for="expense">支出
                                         <input type="radio" id="expense" value="expense" name="payment_type"
                                             class="me-3"></label>
@@ -194,7 +194,7 @@
                                 <td>
                                     <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block shadow-none"
-                                        id="date" name="date" type="date">
+                                        id="date" name="date" type="date" value="2024-09-09">
                                 </td>
                             </tr>
                             <tr>
@@ -209,11 +209,11 @@
                                     <select id="account_id"
                                         class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md">
                                         <option value="">選択してください</option>
-                                        <option value="55">売上</option>
-                                        <option value="56">仕入</option>
-                                        <option value="57">消耗品</option>
-                                        <option value="58">交通費</option>
-                                        <option value="60">雑費</option>
+                                        <option value="">売上</option>
+                                        <option value="">仕入</option>
+                                        <option value="">消耗品</option>
+                                        <option value="">交通費</option>
+                                        <option value="">雑費</option>
                                     </select>
                                     <ul class="text-sm text-red-600 space-y-1 mt-2">
                                         <li>科目は必須項目です。</li>
@@ -234,7 +234,7 @@
                                         <select id="target_user_id"
                                             class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md">
                                             <option value="">選択してください</option>
-                                            <option value="13">テスト売上先</option>
+                                            <option value="">テスト売上先</option>
                                         </select>
                                     </div>
                                 </td>
@@ -267,7 +267,7 @@
                                 <td>
                                     <label for="income">収入
                                         <input type="radio" id="income" value="income" name="payment_type"
-                                            class="me-3"></label>
+                                            class="me-3" checked></label>
                                     <label for="expense">支出
                                         <input type="radio" id="expense" value="expense" name="payment_type"
                                             class="me-3"></label>

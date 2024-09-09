@@ -212,21 +212,21 @@
                                 </th>
                                 <td> <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block shadow-none"
-                                        wire:model="date" id="date" name="date" type="date"> </td>
+                                        id="date" name="date" type="date" value="2024-09-09"> </td>
                             </tr>
                             <tr>
                                 <th class="table-success"> <label class="block font-medium text-sm text-gray-700"
                                         for="account_id"> 科目 </label> <span
                                         class="text-xs font-semibold bg-rose-500 text-white px-2 py-1"> 必須 </span>
                                 </th>
-                                <td> <select id="account_id" wire:model="account_id"
+                                <td> <select id="account_id"
                                         class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md">
                                         <option value="">選択してください</option>
-                                        <option value="55">売上</option>
-                                        <option value="56">仕入</option>
-                                        <option value="57">消耗品</option>
-                                        <option value="58">交通費</option>
-                                        <option value="60">雑費</option>
+                                        <option value="">売上</option>
+                                        <option value="">仕入</option>
+                                        <option value="">消耗品</option>
+                                        <option value="">交通費</option>
+                                        <option value="">雑費</option>
                                     </select> </td>
                             </tr>
                             <tr>
@@ -235,11 +235,11 @@
                                 <td>
                                     <div class="flex justify-start items-center"> <input
                                             class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm me-1 block shadow-none w-[60px]"
-                                            wire:model="target_user_id" id="date" name="date"
-                                            type="text"> <select id="target_user_id" wire:model="target_user_id"
+                                            id="date" name="date" type="text"> <select
+                                            id="target_user_id"
                                             class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md">
                                             <option value="">選択してください</option>
-                                            <option value="13">テスト売上先</option>
+                                            <option value="">テスト売上先</option>
                                         </select> </div>
                                 </td>
                             </tr>
@@ -250,8 +250,7 @@
                                 </th>
                                 <td> <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 block shadow-none"
-                                        wire:model="description" id="description" name="description" type="text">
-                                </td>
+                                        id="description" name="description" type="text"> </td>
                             </tr>
                             <tr>
                                 <th class="table-success"> <label class="block font-medium text-sm text-gray-700">
@@ -259,10 +258,9 @@
                                         class="text-xs font-semibold bg-rose-500 text-white px-2 py-1"> 必須 </span>
                                 </th>
                                 <td> <label for="income">収入 <input type="radio" id="income" value="income"
-                                            name="payment_type" class="me-3"
-                                            wire:model="selected_payment_type"></label> <label for="expense">支出
+                                            name="payment_type" class="me-3" checked></label> <label for="expense">支出
                                         <input type="radio" id="expense" value="expense" name="payment_type"
-                                            class="me-3" wire:model="selected_payment_type"></label> </td>
+                                            class="me-3"></label> </td>
                             </tr>
                             <tr>
                                 <th class="table-success"> <label class="block font-medium text-sm text-gray-700"
@@ -271,15 +269,15 @@
                                 </th>
                                 <td> <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 block shadow-none"
-                                        wire:model="payment" id="payment" name="payment" type="number"> </td>
+                                        id="payment" name="payment" type="number"> </td>
                             </tr>
                         </tbody>
                     </table>
-                    <div class="flex justify-center items-center"> <spantype="submit"
-                        class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xl sm:text-xs  text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150 me-5">
-                        保存 </span> <a href="http://localhost:8000/transaction/2024-08" wire:navigate=""><span
-                                class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xl sm:text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150">
-                                一覧へ戻る </span> </a> </div>
+                    <div class="flex justify-center items-center"> <span
+                            class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xl sm:text-xs  text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150 me-5">
+                            保存 </span> <span
+                            class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xl sm:text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150">
+                            一覧へ戻る </span> </div>
                 </form>
             </div>
         </div>

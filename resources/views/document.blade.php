@@ -31,14 +31,14 @@ $contents = [
                     <main class="mt-6">
                         <div class="">
                             <div class="mb-12">
-                                <p>画面のサンプルはPC版の画面となります。スマートフォンやタブレット端末ではレイアウトが少し異なりますが、基本的な使用方法としては大きな違いはありません。
+                                <p class="ms-2">画面のサンプルはPC版の画面となります。スマートフォンやタブレット端末ではレイアウトが少し異なりますが、基本的な使用方法としては大きな違いはありません。
                                     <br>
                                     スマートフォンは上部のナビバーが隠れている場合がございますので、メニュが見つからない場合は右上のボタンよりメニュを表示させてください。
                                 </p>
-                                <h2 class="text-xl font-semibold text-black">目次</h2>
+                                <h2 class="my-2 mx-4 text-xl font-semibold text-black">目次</h2>
                                 <ul>
                                     @foreach ($contents as $content)
-                                        <li class="my-2 mx-4"><a href="#{{ $content['id'] }}">{{ $content['index'] }}.
+                                        <li class="my-2 mx-4"><a class="border-bottom border-dark" href="#{{ $content['id'] }}">{{ $content['index'] }}.
                                                 {{ $content['title'] }}</a></li>
                                     @endforeach
                                 </ul>

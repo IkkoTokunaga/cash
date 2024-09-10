@@ -38,7 +38,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 });
 
-Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
+Route::get('auth/google/' . env('GOOGLE_AUTH_URL'), [GoogleController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
 require __DIR__ . '/auth.php';

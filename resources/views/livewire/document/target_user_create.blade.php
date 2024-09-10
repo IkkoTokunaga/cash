@@ -1,7 +1,7 @@
 <div>
     <p class="ms-2">上部ナビバーから取引先を選択し、以下の画面から新規取引先作成ボタンを押してください。</p>
     <div class="mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class="max-w-full">
                 <span
                     class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xl sm:text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150 mb-2">
@@ -26,7 +26,7 @@
     <p class="ms-2">取引先 新規作成画面へ移動します。</p>
     <p class="ms-2">必要事項を入力して保存ボタンを押します。</p>
     <div class="mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class=" max-w-xl">
                 <form>
                     <p class="ms-2">各項目を入力して保存ボタンを押してください。<br>※<x-required-label />
@@ -126,7 +126,7 @@
     </div>
     <div class="mb-5">
         <p class="ms-2">保存が正常に行われると以下のような画面となります。</p>
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class="max-w-full">
 
                 <div class="alert alert-info"> 保存しました。 </div>

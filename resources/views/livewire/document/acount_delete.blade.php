@@ -4,7 +4,7 @@
     <p class="ms-2">宿泊費(ホテル代)項目の右部分 <img src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}" alt=""
             class="d-inline-block">を押します。</p>
     <div class="mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class=" max-w-xl">
 
                 <form>
@@ -104,7 +104,7 @@
     <p class="ms-2 text-danger">※削除後のデータはもとに戻せませんので、最新の注意をお願いします。</p>
     <p class="ms-2">削除が完了すると以下のような表示となります。</p>
     <div class="mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class=" max-w-xl">
                 <div class="alert alert-danger"> 削除しました。 </div>
 

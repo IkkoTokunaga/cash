@@ -2,7 +2,7 @@
     <p class="ms-2">上部ナビバーから作成を選択し、以下の画面へ移動してください。</p>
     <p class="ms-2">フォームに入力して、作成ボタンを押します。</p>
     <div class="mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class=" max-w-xl">
                 <form>
                     <p class="ms-2">各項目を入力して保存ボタンを押してください。<br>※<x-required-label />
@@ -173,7 +173,7 @@
     </table>
     <p class="ms-2">エラー時は以下のような表示になります。</p>
     <div class="mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class=" max-w-xl">
                 <form>
                     <p class="ms-2">各項目を入力して保存ボタンを押してください。<br>※<x-required-label />
@@ -304,7 +304,7 @@
     </div>
     <p class="ms-2">制限にかからない状態で保存ボタンを押します。</p>
     <div class="mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class=" max-w-xl">
                 <form>
                     <p class="ms-2">各項目を入力して保存ボタンを押してください。<br>※<x-required-label />
@@ -443,7 +443,7 @@
     </div>
     <p class="ms-2">保存に成功したら以下のような画面になります。</p>
     <div class=" mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class="max-w-full">
                 <div class="alert alert-info"> 保存しました。 </div>
                 <div class="flex items-center">

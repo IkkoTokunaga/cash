@@ -3,7 +3,7 @@
     <p class="ms-2">削除したい項目の右部分 <img src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}" alt=""
             class="d-inline-block">を押します。</p>
     <div class=" mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class="max-w-full">
                 <div class="flex items-center">
                     <div class="me-5 sm:me-2"> <span
@@ -200,7 +200,7 @@
     <p class="ms-2">確認のポップアップが表示されますので、OKを押します。一覧から対象の収支が削除され、残高が再計算されます。</p>
     <p class="ms-2">キャンセルを押した場合は削除されません。</p>
     <div class=" mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class="max-w-full">
                 <div class="alert alert-danger"> 削除しました。 </div>
                 <div class="flex items-center">

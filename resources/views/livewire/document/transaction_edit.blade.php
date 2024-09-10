@@ -2,7 +2,7 @@
     <p class="ms-2">上部ナビバーから一覧を選択し、以下の画面へ移動してください。</p>
     <p class="ms-2">修正したい行をクリックします。（例としてコピー用紙のサイズを変更します）</p>
     <div class=" mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class="max-w-full">
                 <div class="flex items-center">
                     <div class="me-5 sm:me-2"> <span
@@ -198,7 +198,7 @@
     </div>
     <p class="ms-2">以下のような画面になります。戻りたい場合は「一覧に戻る」ボタンを押してください。</p>
     <div class=" mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class=" max-w-xl">
                 <form wire:submit="save">
                     <p class="ms-2">各項目を入力して保存ボタンを押してください。<br>※<span class="text-xs font-semibold bg-rose-500 text-white px-2 py-1">
@@ -324,7 +324,7 @@
     <p class="ms-2">修正に成功したら以下のような画面になります。</p>
     <p class="ms-2 text-danger">※金額が修正された場合は残高も変更後の値で再計算されます。</p>
     <div class=" mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class="max-w-full">
                 <div class="alert alert-info"> 保存しました。 </div>
                 <div class="flex items-center">

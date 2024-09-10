@@ -3,7 +3,7 @@
     <p class="ms-2">初回ログイン時は以下のような画面となります。作成画面で保存を行うと一覧に収支が表示されます。</p>
     <p class="ms-2 text-danger">※「前月残高確定」を押すと前月以前の収支について追加・修正ができなくなってしまうため、ご注意ください。（以下の図では2024年09月以前が変更できなくなります）</p>
     <div class=" mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class="max-w-full">
                 <div class="flex items-center">
                     <div class="me-5 sm:me-2"> <span
@@ -93,7 +93,7 @@
         </tbody>
     </table>
     <div class="mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class="max-w-full">
                 <div class="flex items-center">
                     <div class="me-5 sm:me-2"> <span
@@ -295,7 +295,7 @@
     <p class="ms-2">初回表示時、または前月残高確定を行っていない月は以下のボタンが表示されます。</p>
     <p class="ms-2">ボタンを押して前月残高を確定することで、前月の繰越金として表示され、今月の残高に反映がされます。</p>
     <div class=" mb-2">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div colspan="5" class="hidden md:table-cell"> ❕前月残高が確定されていません<br> <span type="submit"
                     class="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xl sm:text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150">前月残高確定</span>
             </div>
@@ -304,7 +304,7 @@
     <p class="ms-2">前月残高確定後の表示。前月（2024-07-01～2024-07-31）の最終残高が今月（2024-08）の最初に作成され、そこから残高が計算されます。</p>
     <p class="ms-2 text-danger">※前月残高確定処理を行わない場合は、前月残高は今月残高に反映されず、0として計算されています。</p>
     <div class=" mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class="max-w-full">
                 <div class="alert alert-info"> 前月残高確定処理が完了しました。 </div>
                 <div class="flex items-center">

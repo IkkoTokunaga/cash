@@ -2,7 +2,7 @@
     <p class="ms-2">上部ナビバーから科目を選択し、以下の画面へ移動してください。</p>
     <p class="ms-2">入力フォームに科目名を入力して、作成ボタンを押します。</p>
     <div class="mb-5">
-        <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+        <div class=" p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class=" max-w-xl">
                 <form>
                     <label class="block font-medium text-sm text-gray-700" for="account_name">
@@ -84,7 +84,7 @@
         </div>
     </div>
     <p class="ms-2">作成に成功すると以下のような表示となります。</p>
-    <div class="p-4 sm:p-8 bg-white sm:rounded-lg border">
+    <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1">
         <div class=" max-w-xl">
             <div class="alert alert-info"> 保存しました。 </div>
             <form>

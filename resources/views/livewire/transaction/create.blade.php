@@ -30,7 +30,7 @@
                                 </th>
                                 <td class="border border-gray-300">
                                     <select id="account_id" wire:model="account_id"
-                                        class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md">
+                                        class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md my-2">
                                         <option value="">選択してください</option>
                                         @foreach ($accounts as $account)
                                             <option value="{{ $account->code }}">{{ $account->name }}</option>
@@ -76,7 +76,7 @@
                                     @foreach ($payment_type_list as $payment_type => $label)
                                         <label for="{{ $payment_type }}">{{ $label }}
                                             <input type="radio" id="{{ $payment_type }}" value="{{ $payment_type }}"
-                                                name="payment_type" class="me-3"
+                                                name="payment_type" class="me-4 my-2"
                                                 wire:model="selected_payment_type"></label>
                                     @endforeach
                                     <x-input-error :messages="$errors->get('selected_payment_type')" class="mt-2" />

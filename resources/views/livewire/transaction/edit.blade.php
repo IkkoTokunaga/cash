@@ -33,7 +33,7 @@
                                 </th>
                                 <td class="border border-gray-300">
                                     <select id="account_id" wire:model="account_id"
-                                        class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md">
+                                        class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md my-2">
                                         <option value="">選択してください</option>
                                         @foreach ($accounts as $account)
                                             <option value="{{ $account->code }}">{{ $account->name }}</option>

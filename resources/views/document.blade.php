@@ -18,9 +18,11 @@ $contents = [
 
 <div>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('使用方法') }}
-        </h2>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('使用方法') }}
+            </h2>
+        </div>
     </x-slot>
 
     <div class="sm:py-12">
@@ -31,14 +33,16 @@ $contents = [
                     <main class="mt-6">
                         <div class="">
                             <div class="mb-12">
-                                <p class="ms-2">画面のサンプルはPC版の画面となります。スマートフォンやタブレット端末ではレイアウトが少し異なりますが、基本的な使用方法としては大きな違いはありません。
+                                <p class="ms-2">
+                                    画面のサンプルはPC版の画面となります。スマートフォンやタブレット端末ではレイアウトが少し異なりますが、基本的な使用方法としては大きな違いはありません。
                                     <br>
                                     スマートフォンは上部のナビバーが隠れている場合がございますので、メニュが見つからない場合は右上のボタンよりメニュを表示させてください。
                                 </p>
                                 <h2 class="my-2 mx-4 text-xl font-semibold text-black">目次</h2>
                                 <ul>
                                     @foreach ($contents as $content)
-                                        <li class="my-2 mx-4"><a class="border-bottom border-dark" href="#{{ $content['id'] }}">{{ $content['index'] }}.
+                                        <li class="my-2 mx-4"><a class="border-bottom border-dark"
+                                                href="#{{ $content['id'] }}">{{ $content['index'] }}.
                                                 {{ $content['title'] }}</a></li>
                                     @endforeach
                                 </ul>

@@ -18,9 +18,9 @@
                 </form>
                 <div class="row ">
                     <div class="col">
-                        <table class="table table-bordered mt-2">
+                        <table class="min-w-full border-collapse table-auto mt-2">
                             <caption align="top">行を選択することでで上記作成ボタンが更新ボタンになり、修正を行えます。</caption>
-                            <thead class="table-success">
+                            <thead class="border border-gray-300 bg-gray-200">
                                 <tr>
                                     <th class="text-center">科目名</th>
                                     <th class="text-center"></th>
@@ -28,9 +28,9 @@
                             </thead>
                             <tbody>
                                 <tr style="cursor: pointer;">
-                                    <td>売上</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">売上</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -38,9 +38,9 @@
                                     </td>
                                 </tr>
                                 <tr style="cursor: pointer;">
-                                    <td>仕入</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">仕入</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -48,9 +48,9 @@
                                     </td>
                                 </tr>
                                 <tr style="cursor: pointer;">
-                                    <td>消耗品</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">消耗品</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -58,9 +58,9 @@
                                     </td>
                                 </tr>
                                 <tr style="cursor: pointer;">
-                                    <td>交通費</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">交通費</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -68,9 +68,9 @@
                                     </td>
                                 </tr>
                                 <tr style="cursor: pointer;">
-                                    <td>雑費</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">雑費</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -78,9 +78,9 @@
                                     </td>
                                 </tr>
                                 <tr style="cursor: pointer;">
-                                    <td>宿泊費</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">宿泊費</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -115,9 +115,9 @@
                 </form>
                 <div class="row ">
                     <div class="col">
-                        <table class="table table-bordered mt-2">
+                        <table class="min-w-full border-collapse table-auto mt-2">
                             <caption align="top">行を選択することでで上記作成ボタンが更新ボタンになり、修正を行えます。</caption>
-                            <thead class="table-success">
+                            <thead class="border border-gray-300 bg-gray-200">
                                 <tr>
                                     <th class="text-center">科目名</th>
                                     <th class="text-center"></th>
@@ -125,9 +125,9 @@
                             </thead>
                             <tbody>
                                 <tr style="cursor: pointer;">
-                                    <td>売上</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">売上</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -135,9 +135,9 @@
                                     </td>
                                 </tr>
                                 <tr style="cursor: pointer;">
-                                    <td>仕入</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">仕入</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -145,9 +145,9 @@
                                     </td>
                                 </tr>
                                 <tr style="cursor: pointer;">
-                                    <td>消耗品</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">消耗品</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -155,9 +155,9 @@
                                     </td>
                                 </tr>
                                 <tr style="cursor: pointer;">
-                                    <td>交通費</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">交通費</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -165,9 +165,9 @@
                                     </td>
                                 </tr>
                                 <tr style="cursor: pointer;">
-                                    <td>雑費</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">雑費</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -175,9 +175,9 @@
                                     </td>
                                 </tr>
                                 <tr style="cursor: pointer;">
-                                    <td>宿泊費</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">宿泊費</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -213,9 +213,9 @@
                 </form>
                 <div class="row ">
                     <div class="col">
-                        <table class="table table-bordered mt-2">
+                        <table class="min-w-full border-collapse table-auto mt-2">
                             <caption align="top">行を選択することでで上記作成ボタンが更新ボタンになり、修正を行えます。</caption>
-                            <thead class="table-success">
+                            <thead class="border border-gray-300 bg-gray-200">
                                 <tr>
                                     <th class="text-center">科目名</th>
                                     <th class="text-center"></th>
@@ -223,9 +223,9 @@
                             </thead>
                             <tbody>
                                 <tr style="cursor: pointer;">
-                                    <td>売上</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">売上</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -233,9 +233,9 @@
                                     </td>
                                 </tr>
                                 <tr style="cursor: pointer;">
-                                    <td>仕入</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">仕入</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -243,9 +243,9 @@
                                     </td>
                                 </tr>
                                 <tr style="cursor: pointer;">
-                                    <td>消耗品</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">消耗品</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -253,9 +253,9 @@
                                     </td>
                                 </tr>
                                 <tr style="cursor: pointer;">
-                                    <td>交通費</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">交通費</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -263,9 +263,9 @@
                                     </td>
                                 </tr>
                                 <tr style="cursor: pointer;">
-                                    <td>雑費</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">雑費</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>
@@ -273,9 +273,9 @@
                                     </td>
                                 </tr>
                                 <tr style="cursor: pointer;" class="table-info">
-                                    <td>宿泊費(ホテル代)</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td class="border border-gray-300">宿泊費(ホテル代)</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-content-around">
                                             <div><img
                                                     src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="" class="min-w-[30px]"></div>

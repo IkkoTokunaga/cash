@@ -70,22 +70,22 @@ new class extends Component {
 
     <form wire:submit="updateProfileInformation" class="mt-6 space-y-6">
         <div>
-            <table class="table table-bordered mt-2 ">
+            <table class="min-w-full border-collapse table-auto mt-2 ">
                 <tr>
-                    <th class="table-success">
+                    <th class="border border-gray-300 bg-gray-200">
                         <x-input-label for="name" :value="__('氏名')" /><x-required-label />
                     </th>
-                    <td>
+                    <td class="border border-gray-300">
                         <x-text-input wire:model="name" id="name" name="name" type="text"
                             class="mt-1 block w-full shadow-none" required autofocus autocomplete="name" />
                         <x-input-error class="mt-2" :messages="$errors->get('name')" />
                     </td>
                 </tr>
                 <tr>
-                    <th class="table-success">
+                    <th class="border border-gray-300 bg-gray-200">
                         <x-input-label for="email" :value="__('Email')" /><x-required-label />
                     </th>
-                    <td>
+                    <td class="border border-gray-300">
                         <x-text-input wire:model="email" id="email" name="email" type="email"
                             class="mt-1 block w-full shadow-none" required autocomplete="username" />
                         <x-input-error class="mt-2" :messages="$errors->get('email')" />

@@ -3,9 +3,11 @@
 @endphp
 <div>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('編集') }}
-        </h2>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('編集') }}
+            </h2>
+        </div>
     </x-slot>
 
     <div class="sm:py-12">
@@ -14,22 +16,22 @@
                 <div class=" max-w-xl">
                     <form wire:submit="save">
                         <p>各項目を入力して保存ボタンを押してください。<br>※<x-required-label />は必須項目です。</p>
-                        <table class="table table-bordered mt-2 ">
+                        <table class="min-w-full border-collapse table-auto mt-2 ">
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <x-input-label for="date" :value="__('日付')" /><x-required-label />
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <x-text-input wire:model="date" id="date" name="date" type="date"
                                         class="mt-1 block shadow-none" />
                                     <x-input-error :messages="$errors->get('date')" class="mt-2" />
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <x-input-label for="account_id" :value="__('科目')" /><x-required-label />
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <select id="account_id" wire:model="account_id"
                                         class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md">
                                         <option value="">選択してください</option>
@@ -41,13 +43,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <x-input-label for="target_user_id" :value="__('取引先')" />
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <div class="flex justify-start items-center">
-                                        <x-text-input wire:model="target_user_id" id="date" name="date" type="text"
-                                            class="me-1 block shadow-none w-[60px]" />
+                                        <x-text-input wire:model="target_user_id" id="date" name="date"
+                                            type="text" class="me-1 block shadow-none w-[60px]" />
                                         <select id="target_user_id" wire:model="target_user_id"
                                             class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md">
                                             <option value="">選択してください</option>
@@ -60,20 +62,20 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <x-input-label for="description" :value="__('摘要')" /><x-required-label />
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <x-text-input wire:model="description" id="description" name="description"
                                         type="text" class="w-full mt-1 block shadow-none" />
                                     <x-input-error :messages="$errors->get('description')" class="mt-2" />
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <x-input-label :value="__('収支タイプ')" /><x-required-label />
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     @foreach ($payment_type_list as $payment_type => $label)
                                         <label for="{{ $payment_type }}">{{ $label }}
                                             <input type="radio" id="{{ $payment_type }}" value="{{ $payment_type }}"
@@ -84,17 +86,17 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <x-input-label for="payment" :value="__('金額 / 円')" /><x-required-label />
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <x-text-input wire:model="payment" id="payment" name="payment" type="number"
                                         class="w-full mt-1 block shadow-none" />
                                     <x-input-error :messages="$errors->get('payment')" class="mt-2" />
                                 </td>
                             </tr>
                         </table>
-                        <div class="flex justify-center items-center">
+                        <div class="flex justify-center items-center mt-2">
                             <x-primary-button class="me-5">{{ __('保存') }}</x-primary-button>
                             <a href="{{ route('transaction.show', Carbon::parse($date)->format('Y-m')) }}"
                                 wire:navigate><x-secondary-button>{{ __('一覧へ戻る') }}</x-secondary-button></a>

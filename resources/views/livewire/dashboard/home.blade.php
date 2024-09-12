@@ -1,8 +1,10 @@
 <div>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ $user_name }} さん
-        </h2>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ $user_name }} さん
+            </h2>
+        </div>
     </x-slot>
     <div
         class="relative min-h-screen flex flex-col items-center justify-start selection:bg-[#FF2D20] selection:text-white mt-5">
@@ -11,12 +13,12 @@
             <main>
                 <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
                     <div
-                    class="border border-dark flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 lg:pb-10 ">
-                    <div class="pt-3 sm:pt-5">
-                        <h2 class="text-xl font-semibold text-black mb-4">お知らせ</h2>
-                        @livewire('dashboard.announce')
+                        class="border border-dark flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 lg:pb-10 ">
+                        <div class="pt-3 sm:pt-5">
+                            <h2 class="text-xl font-semibold text-black mb-4">お知らせ</h2>
+                            @livewire('dashboard.announce')
+                        </div>
                     </div>
-                </div>
 
                     <div
                         class="border border-dark flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300  lg:p-10 lg:pb-10 ">
@@ -40,4 +42,4 @@
             </main>
         </div>
     </div>
-<div>
+    <div>

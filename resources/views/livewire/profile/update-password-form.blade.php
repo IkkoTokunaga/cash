@@ -46,12 +46,12 @@ new class extends Component {
 
     <form wire:submit="updatePassword" class="mt-6 space-y-6">
         <div>
-            <table class="table table-bordered mt-2 ">
+            <table class="min-w-full border-collapse table-auto mt-2 ">
                 <tr>
-                    <th class="table-success">
+                    <th class="border border-gray-300 bg-gray-200">
                         <x-input-label for="update_password_current_password" :value="__('現在のパスワード')" /><x-required-label />
                     </th>
-                    <td>
+                    <td class="border border-gray-300">
                         <x-text-input wire:model="current_password" id="update_password_current_password"
                             name="current_password" type="password" class="mt-1 block w-full shadow-none"
                             autocomplete="current-password" />
@@ -59,20 +59,20 @@ new class extends Component {
                     </td>
                 </tr>
                 <tr>
-                    <th class="table-success">
+                    <th class="border border-gray-300 bg-gray-200">
                         <x-input-label for="update_password_password" :value="__('新しいパスワード')" /><x-required-label />
                     </th>
-                    <td>
+                    <td class="border border-gray-300">
                         <x-text-input wire:model="password" id="update_password_password" name="password"
                             type="password" class="mt-1 block w-full shadow-none" autocomplete="new-password" />
                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
                     </td>
                 </tr>
                 <tr>
-                    <th class="table-success">
+                    <th class="border border-gray-300 bg-gray-200">
                         <x-input-label for="update_password_password_confirmation" :value="__('確認')" /><x-required-label />
                     </th>
-                    <td>
+                    <td class="border border-gray-300">
                         <x-text-input wire:model="password_confirmation" id="update_password_password_confirmation"
                         name="password_confirmation" type="password" class="mt-1 block w-full shadow-none" autocomplete="new-password" />
                     <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />

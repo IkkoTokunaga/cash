@@ -8,31 +8,31 @@
                     <p class="ms-2">各項目を入力して保存ボタンを押してください。<br>※<x-required-label />
 
                         は必須項目です。</p>
-                    <table class="table table-bordered mt-2 ">
+                    <table class="min-w-full border-collapse table-auto mt-2 ">
                         <tbody>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="date">
                                         日付
                                     </label>
                                     <x-required-label />
 
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block shadow-none"
                                         id="date" name="date" type="date" value="2024-09-09">
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="account_id">
                                         科目
                                     </label>
                                     <x-required-label />
 
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <select id="account_id"
                                         class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md">
                                         <option value="">選択してください</option>
@@ -47,12 +47,12 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="target_user_id">
                                         取引先
                                     </label>
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <div class="flex justify-start items-center">
                                         <input
                                             class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm me-1 block shadow-none w-[60px]"
@@ -68,14 +68,14 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="description">
                                         摘要
                                     </label>
                                     <x-required-label />
 
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 block shadow-none"
                                         id="description" name="description" type="text">
@@ -83,14 +83,14 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700">
                                         収支タイプ
                                     </label>
                                     <x-required-label />
 
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <label for="income">収入
                                         <input type="radio" id="income" value="income" name="payment_type"
                                             class="me-3" checked></label>
@@ -102,14 +102,14 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="payment">
                                         金額 / 円
                                     </label>
                                     <x-required-label />
 
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 block shadow-none"
                                         id="payment" name="payment" type="number">
@@ -140,34 +140,34 @@
         </thead>
         <tbody>
             <tr>
-                <td>日付</td>
-                <td>〇</td>
-                <td>フォーマットYYY/MM/DD(例：2024/08/20)<br>締め処理後は保存できません</td>
+                <td class="border border-gray-300">日付</td>
+                <td class="border border-gray-300">〇</td>
+                <td class="border border-gray-300">フォーマットYYY/MM/DD(例：2024/08/20)<br>締め処理後は保存できません</td>
             </tr>
             <tr>
-                <td>科目</td>
-                <td>〇</td>
-                <td></td>
+                <td class="border border-gray-300">科目</td>
+                <td class="border border-gray-300">〇</td>
+                <td class="border border-gray-300"></td>
             </tr>
             <tr>
-                <td>取引先</td>
-                <td></td>
-                <td></td>
+                <td class="border border-gray-300">取引先</td>
+                <td class="border border-gray-300"></td>
+                <td class="border border-gray-300"></td>
             </tr>
             <tr>
-                <td>摘要</td>
-                <td>〇</td>
-                <td>200文字以内</td>
+                <td class="border border-gray-300">摘要</td>
+                <td class="border border-gray-300">〇</td>
+                <td class="border border-gray-300">200文字以内</td>
             </tr>
             <tr>
-                <td>収支タイプ</td>
-                <td>〇</td>
-                <td></td>
+                <td class="border border-gray-300">収支タイプ</td>
+                <td class="border border-gray-300">〇</td>
+                <td class="border border-gray-300"></td>
             </tr>
             <tr>
-                <td>金額 / 円</td>
-                <td>〇</td>
-                <td>整数<br>10桁まで（9,999,999,999 ）</td>
+                <td class="border border-gray-300">金額 / 円</td>
+                <td class="border border-gray-300">〇</td>
+                <td class="border border-gray-300">整数<br>10桁まで（9,999,999,999 ）</td>
             </tr>
         </tbody>
     </table>
@@ -181,31 +181,31 @@
                         </span>
 
                         は必須項目です。</p>
-                    <table class="table table-bordered mt-2 ">
+                    <table class="min-w-full border-collapse table-auto mt-2 ">
                         <tbody>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="date">
                                         日付
                                     </label>
                                     <x-required-label />
 
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block shadow-none"
                                         id="date" name="date" type="date" value="2024-09-09">
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="account_id">
                                         科目
                                     </label>
                                     <x-required-label />
 
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <select id="account_id"
                                         class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md">
                                         <option value="">選択してください</option>
@@ -221,12 +221,12 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="target_user_id">
                                         取引先
                                     </label>
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <div class="flex justify-start items-center">
                                         <input
                                             class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm me-1 block shadow-none w-[60px]"
@@ -240,14 +240,14 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="description">
                                         摘要
                                     </label>
                                     <x-required-label />
 
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 block shadow-none"
                                         id="description" name="description" type="text">
@@ -257,14 +257,14 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700">
                                         収支タイプ
                                     </label>
                                     <x-required-label />
 
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <label for="income">収入
                                         <input type="radio" id="income" value="income" name="payment_type"
                                             class="me-3" checked></label>
@@ -274,14 +274,14 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="payment">
                                         金額 / 円
                                     </label>
                                     <x-required-label />
 
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 block shadow-none"
                                         id="payment" name="payment" type="number">
@@ -312,10 +312,10 @@
                         </span>
 
                         は必須項目です。</p>
-                    <table class="table table-bordered mt-2 ">
+                    <table class="min-w-full border-collapse table-auto mt-2 ">
                         <tbody>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="date">
                                         日付
                                     </label>
@@ -323,7 +323,7 @@
 
 
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block shadow-none"
                                         id="date" name="date" type="date" value="2024-09-07">
@@ -331,7 +331,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="account_id">
                                         科目
                                     </label>
@@ -339,7 +339,7 @@
 
 
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <select id="account_id"
                                         class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md">
                                         <option value="">選択してください</option>
@@ -353,12 +353,12 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="target_user_id">
                                         取引先
                                     </label>
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <div class="flex justify-start items-center">
                                         <input
                                             class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm me-1 block shadow-none w-[60px]"
@@ -373,7 +373,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="description">
                                         摘要
                                     </label>
@@ -381,7 +381,7 @@
 
 
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 block shadow-none"
                                         id="description" name="description" type="text" value="売上＿商品A＿200個">
@@ -389,7 +389,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700">
                                         収支タイプ
                                     </label>
@@ -397,7 +397,7 @@
 
 
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <label for="expense">収入
 
                                     <input type="radio" id="income" value="income" name="payment_type"
@@ -409,7 +409,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="payment">
                                         金額 / 円
                                     </label>
@@ -417,7 +417,7 @@
 
 
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 block shadow-none"
                                         id="payment" name="payment" type="number" value="98000">
@@ -463,9 +463,9 @@
                         </span>
                     </div>
                 </div>
-                <table class="table table-bordered mt-2">
+                <table class="min-w-full border-collapse table-auto mt-2">
                     <caption align="top">行を選択することでで編集画面へ移動できます。</caption>
-                    <thead class="table-success">
+                    <thead class="border border-gray-300 bg-gray-200">
                         <tr>
                             <th class="text-center">日付</th>
                             <th class="text-center hidden md:table-cell">科目</th>
@@ -484,7 +484,7 @@
                             <td colspan="5" class="text-primary hidden md:table-cell">前月繰越金</td>
                             <td colspan="2" class="text-primary md:hidden">前月繰越金</td>
                             <td class="text-end">1,000</td>
-                            <td></td>
+                            <td class="border border-gray-300"></td>
                         </tr>
                         <tr class="table-info" style="cursor: pointer;">
                             <td class="text-center">
@@ -496,7 +496,7 @@
                             <td class="hidden md:table-cell">
                                 テスト売上先
                             </td>
-                            <td>
+                            <td class="border border-gray-300">
                                 <span class="md:hidden text-success">
                                     【 科目 】売上<br>
                                 </span>
@@ -516,8 +516,8 @@
                             </td>
                             <td class="text-end">
                                 99,000</td>
-                            <td>
-                                <div class="d-flex justify-center">
+                            <td class="border border-gray-300">
+                                <div class="flex justify-center">
                                     <div
                                         style="cursor: pointer;">
                                         <img src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
@@ -527,8 +527,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <th colspan="4" class="table-success hidden md:table-cell">合計</th>
-                            <th colspan="2" class="table-success md:hidden">合計</th>
+                            <th colspan="4" class="border border-gray-300 bg-gray-200 hidden md:table-cell">合計</th>
+                            <th colspan="2" class="border border-gray-300 bg-gray-200 md:hidden">合計</th>
                             <td class="text-end hidden md:table-cell">
                                 98,000</td>
                             <td class="text-end md:hidden">
@@ -536,7 +536,7 @@
                             <td class="text-end hidden md:table-cell">
                             </td>
                             <td class="text-end">99,000</td>
-                            <td></td>
+                            <td class="border border-gray-300"></td>
                         </tr>
                     </tbody>
                 </table>

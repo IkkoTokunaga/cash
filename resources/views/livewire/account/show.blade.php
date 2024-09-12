@@ -1,8 +1,10 @@
 <div>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('勘定科目') }}
-        </h2>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('勘定科目') }}
+            </h2>
+        </div>
     </x-slot>
 
     <div class="sm:py-12">
@@ -25,36 +27,33 @@
                         <input type="hidden" id="account_id" wire:model="account_id">
                         <x-primary-button>{{ $bottomText }}</x-primary-button>
                     </form>
-                    <div class="row ">
-                        <div class="col">
-                            <table class="table table-bordered mt-2">
-                                <caption align=top>行を選択することでで上記作成ボタンが更新ボタンになり、修正を行えます。</caption>
-                                <thead class="table-success">
-                                    <tr>
-                                        <th class="text-center">科目名</th>
-                                        <th class="text-center"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($accounts as $account)
-                                        <tr @if (session('saved_account_id') === $account->code && session('saved_account_id')) class="table-info" @endif
-                                            style="cursor: pointer;">
-                                            <td wire:click="edit({{ $account->code }})">{{ $account->name }}</td>
-                                            <td>
-                                                <div class="d-flex justify-content-around">
-                                                    <div wire:click="delete({{ $account->code }})"
-                                                        wire:confirm="削除したデータは元に戻せません。よろしいですか?"><img
-                                                            src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
-                                                            alt="" class="min-w-[30px]">
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                    <p>行を選択することでで上記作成ボタンが更新ボタンになり、修正を行えます。</caption>
+                    <table class="min-w-full border-collapse table-auto mt-2">
+
+                        <thead class="border border-gray-300 bg-gray-200">
+                            <tr>
+                                <th class="text-center border border-gray-300 bg-gray-200">科目名</th>
+                                <th class="text-center border border-gray-300 bg-gray-200"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($accounts as $account)
+                                <tr @if (session('saved_account_id') === $account->code && session('saved_account_id')) class="table-info" @endif
+                                    style="cursor: pointer;">
+                                    <td class="border border-gray-300" wire:click="edit({{ $account->code }})">{{ $account->name }}</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-center">
+                                            <div wire:click="delete({{ $account->code }})"
+                                                wire:confirm="削除したデータは元に戻せません。よろしいですか?"><img
+                                                    src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                                    alt="" class="min-w-[30px]">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

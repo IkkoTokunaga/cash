@@ -8,8 +8,8 @@
                     新規取引先作成
                     </span>
 
-                    <table class="table table-bordered mt-2">
-                        <thead class="table-success">
+                    <table class="min-w-full border-collapse table-auto mt-2">
+                        <thead class="border border-gray-300 bg-gray-200">
                             <tr>
                                 <th class="text-center">No.</th>
                                 <th class="text-center">名前</th>
@@ -21,11 +21,11 @@
                         <tbody>
                             <tr style="cursor: pointer;">
                                 <td class="text-center">13</td>
-                                <td>
+                                <td class="border border-gray-300">
                                     テスト売上先
                                     <br> (てすとうりあげさき)
                                 </td>
-                                <td>
+                                <td class="border border-gray-300">
                                     【 TEL 】 090-1234-5678 <br>
                                     【Email】 test@exsample.com <br>
                                     【 住所 】 東京都港区 <br>
@@ -38,8 +38,8 @@
                                 <td class="hidden md:table-cell">テストです。
                                     毎月100程度発注あり。
                                     要月初の連絡。</td>
-                                <td>
-                                    <div class="d-flex justify-content-around">
+                                <td class="border border-gray-300">
+                                    <div class="flex justify-content-around">
 
                                         <div><img
                                                 src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
@@ -61,67 +61,67 @@
                     <p class="ms-2">各項目を入力して保存ボタンを押してください。<br>※<x-required-label />
 
                         は必須項目です。</p>
-                    <table class="table table-bordered mt-2 ">
+                    <table class="min-w-full border-collapse table-auto mt-2 ">
                         <tbody>
                             <tr>
-                                <th class="table-success">No.</th>
-                                <td>13</td>
+                                <th class="border border-gray-300 bg-gray-200">No.</th>
+                                <td class="border border-gray-300">13</td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="name">
                                         名前
                                     </label><x-required-label />
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 block shadow-none"
                                         id="name" name="name" type="text" value="テスト売上先">
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="kana">
                                         名前(読み方)
                                     </label>
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 block shadow-none"
                                         id="kana" kana="kana" type="text" value="てすとうりあげさき">
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="tel">
                                         電話番号
                                     </label>
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block shadow-none"
                                         id="tel" tel="tel" type="tel" value="090-1234-5678">
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="email">
                                         Email
                                     </label>
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 block shadow-none"
                                         id="email" name="email" type="text" value="test@exsample.com">
                                 </td>
                             </tr>
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="address">
                                         住所
                                     </label>
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <input
                                         class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-full mt-1 block shadow-none"
                                         id="address" name="address" type="text" value="東京都港区">
@@ -129,12 +129,12 @@
                             </tr>
 
                             <tr>
-                                <th class="table-success">
+                                <th class="border border-gray-300 bg-gray-200">
                                     <label class="block font-medium text-sm text-gray-700" for="description">
                                         備考
                                     </label>
                                 </th>
-                                <td>
+                                <td class="border border-gray-300">
                                     <textarea name="description" id="description" rows="10"
                                         class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">テストです。
 毎月100程度発注あり。
@@ -167,8 +167,8 @@
                     class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xl sm:text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150 mb-2">
                     新規取引先作成
                 </span>
-                <table class="table table-bordered mt-2">
-                    <thead class="table-success">
+                <table class="min-w-full border-collapse table-auto mt-2">
+                    <thead class="border border-gray-300 bg-gray-200">
                         <tr>
                             <th class="text-center">No.</th>
                             <th class="text-center">名前</th>
@@ -196,8 +196,8 @@
                                 毎月100程度発注あり。
                                 要月初の連絡。
                                 ＝＝修正版＝＝</td>
-                            <td>
-                                <div class="d-flex justify-content-around">
+                            <td class="border border-gray-300">
+                                <div class="flex justify-content-around">
 
                                     <div><img
                                             src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"

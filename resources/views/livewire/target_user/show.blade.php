@@ -3,9 +3,11 @@ use Carbon\Carbon;
 ?>
 <div>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('取引先') }}
-        </h2>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('取引先') }}
+            </h2>
+        </div>
     </x-slot>
 
     <div class="sm:py-12">
@@ -23,27 +25,29 @@ use Carbon\Carbon;
                             class="mb-2">{{ __('新規取引先作成') }}</x-secondary-button>
                     </a>
 
-                    <table class="table table-bordered mt-2">
-                        <thead class="table-success">
+                    <table class="min-w-full border-collapse table-auto mt-2">
+                        <thead class="bg-gray-200">
                             <tr>
-                                <th class="text-center">No.</th>
-                                <th class="text-center">名前</th>
-                                <th class="text-center">情報</th>
-                                <th class="text-center hidden md:table-cell">備考</th>
-                                <th class="text-center"></th>
+                                <th class="text-center border border-gray-300">No.</th>
+                                <th class="text-center border border-gray-300">名前</th>
+                                <th class="text-center border border-gray-300">情報</th>
+                                <th class="text-center border border-gray-300 hidden md:table-cell">備考</th>
+                                <th class="text-center border border-gray-300"></th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($targetUsers as $targetUser)
-                                <tr @if (session('saved_target_user_id') === $targetUser->code && session('saved_target_user_id')) class="table-info" @endif style="cursor: pointer;">
-                                    <td class="text-center" wire:click="edit({{ $targetUser->code }})">{{ $targetUser->code }}</td>
-                                    <td wire:click="edit({{ $targetUser->code }})">
+                                <tr @if (session('saved_target_user_id') === $targetUser->code && session('saved_target_user_id')) class="table-info" @endif
+                                    style="cursor: pointer;">
+                                    <td class="text-center border border-gray-300" wire:click="edit({{ $targetUser->code }})">
+                                        {{ $targetUser->code }}</td>
+                                    <td class="text-center border border-gray-300" wire:click="edit({{ $targetUser->code }})">
                                         {{ $targetUser->name }}
                                         @if ($targetUser->kana)
                                             <br> ({{ $targetUser->kana }})
                                         @endif
                                     </td>
-                                    <td wire:click="edit({{ $targetUser->code }})">
+                                    <td class="text-center border border-gray-300" wire:click="edit({{ $targetUser->code }})">
                                         @if ($targetUser->tel)
                                             【 TEL 】 {{ $targetUser->tel }} <br>
                                         @endif
@@ -59,9 +63,10 @@ use Carbon\Carbon;
                                             </span>
                                         @endif
                                     </td>
-                                    <td wire:click="edit({{ $targetUser->code }})" class="hidden md:table-cell">{{ $targetUser->description }}</td>
-                                    <td>
-                                        <div class="d-flex justify-content-around">
+                                    <td wire:click="edit({{ $targetUser->code }})" class="border border-gray-300 hidden md:table-cell">
+                                        {{ $targetUser->description }}</td>
+                                    <td class="border border-gray-300">
+                                        <div class="flex justify-center">
                                             {{-- <div wire:click="edit({{ $targetUser->code }})" style="cursor: pointer;">
                                                 <img src="{{ asset('storage/edit_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                                     alt="">

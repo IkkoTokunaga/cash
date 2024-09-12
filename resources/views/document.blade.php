@@ -41,7 +41,7 @@ $contents = [
                                 <h2 class="my-2 mx-4 text-xl font-semibold text-black">目次</h2>
                                 <ul>
                                     @foreach ($contents as $content)
-                                        <li class="my-2 mx-4"><a class="border-bottom border-dark"
+                                        <li class="my-2 mx-4"><a class="border-b-2 border-gray-700"
                                                 href="#{{ $content['id'] }}">{{ $content['index'] }}.
                                                 {{ $content['title'] }}</a></li>
                                     @endforeach

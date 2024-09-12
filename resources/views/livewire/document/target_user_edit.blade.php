@@ -20,7 +20,7 @@
                         </thead>
                         <tbody>
                             <tr style="cursor: pointer;">
-                                <td class="text-center">13</td>
+                                <td class="border border-gray-300 text-center">13</td>
                                 <td class="border border-gray-300">
                                     テスト売上先
                                     <br> (てすとうりあげさき)
@@ -29,13 +29,13 @@
                                     【 TEL 】 090-1234-5678 <br>
                                     【Email】 test@exsample.com <br>
                                     【 住所 】 東京都港区 <br>
-                                    <span class="text-end md:hidden">
+                                    <span class="border border-gray-300 text-end md:hidden">
                                         【 備考 】 テストです。
                                         毎月100程度発注あり。
                                         要月初の連絡。
                                     </span>
                                 </td>
-                                <td class="hidden md:table-cell">テストです。
+                                <td class="border border-gray-300 hidden md:table-cell">テストです。
                                     毎月100程度発注あり。
                                     要月初の連絡。</td>
                                 <td class="border border-gray-300">
@@ -178,21 +178,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="table-info" style="cursor: pointer;">
-                            <td class="text-center"13</td>
-                            <td テスト売上先 <br> (てすとうりあげさき)
+                        <tr>
+                            <td class="border border-gray-300 text-center">13</td>
+                            <td class="border border-gray-300"> テスト売上先 <br> (てすとうりあげさき)
                             </td>
-                            <td 【 TEL 】 090-1234-5678 <br>
+                            <td class="border border-gray-300"> 【 TEL 】 090-1234-5678 <br>
                                 【Email】 test@exsample.com <br>
                                 【 住所 】 東京都港区 <br>
-                                <span class="text-end md:hidden">
+                                <span class="border border-gray-300 text-end md:hidden">
                                     【 備考 】 テストです。
                                     毎月100程度発注あり。
                                     要月初の連絡。
                                     ＝＝修正版＝＝
                                 </span>
                             </td>
-                            <td class="hidden md:table-cell">テストです。
+                            <td class="border border-gray-300 hidden md:table-cell">テストです。
                                 毎月100程度発注あり。
                                 要月初の連絡。
                                 ＝＝修正版＝＝</td>

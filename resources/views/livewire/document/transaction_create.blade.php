@@ -129,16 +129,13 @@
         </div>
     </div>
     <p class="ms-2">作成には以下のような制限がかけられています。</p>
-    <table class="table">
-        <thead>
+    <table class="min-w-full border-collapse table-auto">
+        <thead class="border border-gray-300 text-center">
             <th>項目</th>
             <th>必須</th>
             <th>制限</th>
-            <th></th>
-            <th></th>
-            <th></th>
         </thead>
-        <tbody>
+        <tbody class="border border-gray-300 text-center">
             <tr>
                 <td class="border border-gray-300">日付</td>
                 <td class="border border-gray-300">〇</td>
@@ -465,7 +462,7 @@
                 </div>
                 <table class="min-w-full border-collapse table-auto mt-2">
                     <caption align="top">行を選択することでで編集画面へ移動できます。</caption>
-                    <thead class="border border-gray-300 bg-gray-200">
+                    <thead class="bg-gray-200">
                         <tr>
                             <th class="text-center">日付</th>
                             <th class="text-center hidden md:table-cell">科目</th>
@@ -480,20 +477,20 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="text-center">8/31</td>
-                            <td colspan="5" class="text-primary hidden md:table-cell">前月繰越金</td>
-                            <td colspan="2" class="text-primary md:hidden">前月繰越金</td>
-                            <td class="text-end">1,000</td>
+                            <td class="border border-gray-300 text-center">8/31</td>
+                            <td colspan="5" class="border border-gray-300 text-primary hidden md:table-cell">前月繰越金</td>
+                            <td colspan="2" class="border border-gray-300 text-primary md:hidden">前月繰越金</td>
+                            <td class="border border-gray-300 text-end">1,000</td>
                             <td class="border border-gray-300"></td>
                         </tr>
                         <tr class="table-info" style="cursor: pointer;">
-                            <td class="text-center">
+                            <td class="border border-gray-300 text-center">
                                 9/7
                             </td>
-                            <td class="hidden md:table-cell">
+                            <td class="border border-gray-300 hidden md:table-cell">
                                 売上
                             </td>
-                            <td class="hidden md:table-cell">
+                            <td class="border border-gray-300 hidden md:table-cell">
                                 テスト売上先
                             </td>
                             <td class="border border-gray-300">
@@ -505,16 +502,16 @@
                                 </span>
                                 売上＿商品A＿200個
                             </td>
-                            <td class="text-end">
+                            <td class="border border-gray-300 text-end">
                                 98,000
                                 <span class="md:hidden">
 
                                 </span>
                             </td>
-                            <td class="text-end hidden md:table-cell">
+                            <td class="border border-gray-300 text-end hidden md:table-cell">
 
                             </td>
-                            <td class="text-end">
+                            <td class="border border-gray-300 text-end">
                                 99,000</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
@@ -529,13 +526,13 @@
                         <tr>
                             <th colspan="4" class="border border-gray-300 bg-gray-200 hidden md:table-cell">合計</th>
                             <th colspan="2" class="border border-gray-300 bg-gray-200 md:hidden">合計</th>
-                            <td class="text-end hidden md:table-cell">
+                            <td class="border border-gray-300 text-end hidden md:table-cell">
                                 98,000</td>
-                            <td class="text-end md:hidden">
+                            <td class="border border-gray-300 text-end md:hidden">
                                 98,000</td>
-                            <td class="text-end hidden md:table-cell">
+                            <td class="border border-gray-300 text-end hidden md:table-cell">
                             </td>
-                            <td class="text-end">99,000</td>
+                            <td class="border border-gray-300 text-end">99,000</td>
                             <td class="border border-gray-300"></td>
                         </tr>
                     </tbody>

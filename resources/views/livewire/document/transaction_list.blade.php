@@ -33,10 +33,12 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="text-center">9/30</td>
-                            <td colspan="5" class="hidden md:table-cell"> ❕前月残高が確定されていません<br> <x-danger-button>
+                            <td class="border border-gray-300 text-center">9/30</td>
+                            <td colspan="5" class="border border-gray-300 hidden md:table-cell"> ❕前月残高が確定されていません<br>
+                                <x-danger-button>
                                     前月残高確定 </x-danger-button> </td>
-                            <td colspan="2" class="md:hidden"> ❕前月残高が確定されていません<br> <x-danger-button> 前月残高確定
+                            <td colspan="2" class="border border-gray-300 md:hidden"> ❕前月残高が確定されていません<br>
+                                <x-danger-button> 前月残高確定
                                 </x-danger-button> </td>
                             <td class="border border-gray-300"></td>
                             <td class="border border-gray-300"></td>
@@ -47,13 +49,13 @@
         </div>
     </div>
     <p class="ms-2">一覧画面の表示項目</p>
-    <table class="table">
-        <thead>
+    <table class="min-w-full border-collapse table-auto">
+        <thead class="border border-gray-300 text-center">
             <th>項目</th>
             <th>説明</th>
             <th>例</th>
         </thead>
-        <tbody>
+        <tbody class="border border-gray-300">
             <tr>
                 <td class="border border-gray-300">日付</td>
                 <td class="border border-gray-300">作成画面で登録した日付です。</td>
@@ -85,7 +87,8 @@
                 <td class="border border-gray-300">30,000<br>(マイナス値もありえます）</td>
             </tr>
             <tr>
-                <td class="border border-gray-300"><img src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}" alt=""
+                <td class="border border-gray-300"><img
+                        src="{{ asset('storage/delete_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg') }}" alt=""
                         class="d-inline-block"></td>
                 <td class="border border-gray-300">収支を削除できます。</td>
                 <td class="border border-gray-300">-</td>
@@ -123,8 +126,9 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="text-center">7/31</td>
-                            <td colspan="5" class="hidden md:table-cell"> ❕前月残高が確定されていません<br> <span type="submit"
+                            <td class="text-center border border-gray-300 ">7/31</td>
+                            <td colspan="5" class="border border-gray-300 hidden md:table-cell"> ❕前月残高が確定されていません<br>
+                                <span type="submit"
                                     class="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xl sm:text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150">前月残高確定</span>
                             </td>
                             <td colspan="2" class="md:hidden"> ❕前月残高が確定されていません<br> <button type="submit"
@@ -134,13 +138,14 @@
                             <td class="border border-gray-300"></td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/5 </td>
-                            <td class="hidden md:table-cell"> 売上 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 半沢商事＿売上＿60個 </td>
-                            <td class="text-end"> 99,000 <span class="md:hidden"> </span> </td>
-                            <td class="text-end hidden md:table-cell"> </td>
-                            <td class="text-end"> 99,000</td>
+                            <td class="text-center border border-gray-300 "> 8/5 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 売上 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br>
+                                </span> 半沢商事＿売上＿60個 </td>
+                            <td class="border border-gray-300 text-end"> 99,000 <span class="md:hidden"> </span> </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> </td>
+                            <td class="border border-gray-300 text-end"> 99,000</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -150,13 +155,15 @@
                             </td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/5 </td>
-                            <td class="hidden md:table-cell"> 仕入 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】仕入<br> </span> 岸和田ベンダー＿仕入＿20個 </td>
-                            <td class="text-end"> <span class="md:hidden"> -36,000 </span> </td>
-                            <td class="text-end hidden md:table-cell"> 36,000 </td>
-                            <td class="text-end"> 63,000</td>
+                            <td class="text-center border border-gray-300 "> 8/5 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 仕入 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】仕入<br>
+                                </span> 岸和田ベンダー＿仕入＿20個 </td>
+                            <td class="border border-gray-300 text-end"> <span class="md:hidden"> -36,000 </span>
+                            </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> 36,000 </td>
+                            <td class="border border-gray-300 text-end"> 63,000</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -166,13 +173,15 @@
                             </td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/12 </td>
-                            <td class="hidden md:table-cell"> 消耗品 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】消耗品<br> </span> コピー用紙＿B5＿50セット </td>
-                            <td class="text-end"> <span class="md:hidden"> -50,000 </span> </td>
-                            <td class="text-end hidden md:table-cell"> 50,000 </td>
-                            <td class="text-end"> 13,000</td>
+                            <td class="text-center border border-gray-300 "> 8/12 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 消耗品 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】消耗品<br>
+                                </span> コピー用紙＿B5＿50セット </td>
+                            <td class="border border-gray-300 text-end"> <span class="md:hidden"> -50,000 </span>
+                            </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> 50,000 </td>
+                            <td class="border border-gray-300 text-end"> 13,000</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -182,13 +191,15 @@
                             </td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/14 </td>
-                            <td class="hidden md:table-cell"> 売上 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 近藤医院＿売上＿1600個 </td>
-                            <td class="text-end"> 862,000 <span class="md:hidden"> </span> </td>
-                            <td class="text-end hidden md:table-cell"> </td>
-                            <td class="text-end"> 875,000</td>
+                            <td class="text-center border border-gray-300 "> 8/14 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 売上 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br>
+                                </span> 近藤医院＿売上＿1600個 </td>
+                            <td class="border border-gray-300 text-end"> 862,000 <span class="md:hidden"> </span>
+                            </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> </td>
+                            <td class="border border-gray-300 text-end"> 875,000</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -198,13 +209,15 @@
                             </td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/15 </td>
-                            <td class="hidden md:table-cell"> 仕入 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】仕入<br> </span> 材料AAA＿9600個 </td>
-                            <td class="text-end"> <span class="md:hidden"> -140,000 </span> </td>
-                            <td class="text-end hidden md:table-cell"> 140,000 </td>
-                            <td class="text-end"> 735,000</td>
+                            <td class="text-center border border-gray-300 "> 8/15 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 仕入 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】仕入<br>
+                                </span> 材料AAA＿9600個 </td>
+                            <td class="border border-gray-300 text-end"> <span class="md:hidden"> -140,000 </span>
+                            </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> 140,000 </td>
+                            <td class="border border-gray-300 text-end"> 735,000</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -214,13 +227,15 @@
                             </td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/15 </td>
-                            <td class="hidden md:table-cell"> 売上 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 宮地電機＿売上＿4800個 </td>
-                            <td class="text-end"> 463,000 <span class="md:hidden"> </span> </td>
-                            <td class="text-end hidden md:table-cell"> </td>
-                            <td class="text-end"> 1,198,000</td>
+                            <td class="text-center border border-gray-300 "> 8/15 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 売上 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br>
+                                </span> 宮地電機＿売上＿4800個 </td>
+                            <td class="border border-gray-300 text-end"> 463,000 <span class="md:hidden"> </span>
+                            </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> </td>
+                            <td class="border border-gray-300 text-end"> 1,198,000</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -230,13 +245,15 @@
                             </td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/16 </td>
-                            <td class="hidden md:table-cell"> 仕入 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】仕入<br> </span> はなベンダー＿仕入＿9900個 </td>
-                            <td class="text-end"> <span class="md:hidden"> -99,000 </span> </td>
-                            <td class="text-end hidden md:table-cell"> 99,000 </td>
-                            <td class="text-end"> 1,099,000</td>
+                            <td class="text-center border border-gray-300 "> 8/16 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 仕入 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】仕入<br>
+                                </span> はなベンダー＿仕入＿9900個 </td>
+                            <td class="border border-gray-300 text-end"> <span class="md:hidden"> -99,000 </span>
+                            </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> 99,000 </td>
+                            <td class="border border-gray-300 text-end"> 1,099,000</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -246,13 +263,14 @@
                             </td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/16 </td>
-                            <td class="hidden md:table-cell"> 売上 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 売上＿徳永商事様 </td>
-                            <td class="text-end"> 24,000 <span class="md:hidden"> </span> </td>
-                            <td class="text-end hidden md:table-cell"> </td>
-                            <td class="text-end"> 1,123,000</td>
+                            <td class="text-center border border-gray-300 "> 8/16 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 売上 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br>
+                                </span> 売上＿徳永商事様 </td>
+                            <td class="border border-gray-300 text-end"> 24,000 <span class="md:hidden"> </span> </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> </td>
+                            <td class="border border-gray-300 text-end"> 1,123,000</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -262,13 +280,14 @@
                             </td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/20 </td>
-                            <td class="hidden md:table-cell"> 売上 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 売上 </td>
-                            <td class="text-end"> 96,000 <span class="md:hidden"> </span> </td>
-                            <td class="text-end hidden md:table-cell"> </td>
-                            <td class="text-end"> 1,219,000</td>
+                            <td class="text-center border border-gray-300 "> 8/20 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 売上 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br>
+                                </span> 売上 </td>
+                            <td class="border border-gray-300 text-end"> 96,000 <span class="md:hidden"> </span> </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> </td>
+                            <td class="border border-gray-300 text-end"> 1,219,000</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -280,10 +299,10 @@
                         <tr>
                             <th colspan="4" class="border border-gray-300 bg-gray-200 hidden md:table-cell">合計</th>
                             <th colspan="2" class="border border-gray-300 bg-gray-200 md:hidden">合計</th>
-                            <td class="text-end hidden md:table-cell"> 1,544,000</td>
-                            <td class="text-end md:hidden"> 1,219,000</td>
-                            <td class="text-end hidden md:table-cell"> 325,000</td>
-                            <td class="text-end">1,219,000</td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> 1,544,000</td>
+                            <td class="border border-gray-300 text-end md:hidden"> 1,219,000</td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> 325,000</td>
+                            <td class="border border-gray-300 text-end">1,219,000</td>
                             <td class="border border-gray-300"></td>
                         </tr>
                     </tbody>
@@ -296,7 +315,7 @@
     <p class="ms-2">ボタンを押して前月残高を確定することで、前月の繰越金として表示され、今月の残高に反映がされます。</p>
     <div class=" mb-2">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
-            <div colspan="5" class="hidden md:table-cell"> ❕前月残高が確定されていません<br> <span type="submit"
+            <div> ❕前月残高が確定されていません<br> <span
                     class="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xl sm:text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150">前月残高確定</span>
             </div>
         </div>
@@ -334,21 +353,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="table-info" >
-                            <td class="text-center">7/31</td>
+                        <tr class="table-info">
+                            <td class="text-center border border-gray-300 ">7/31</td>
                             <td colspan="5" class="text-primary hidden md:table-cell">前月繰越金</td>
                             <td colspan="2" class="text-primary md:hidden">前月繰越金</td>
-                            <td class="text-end">67,894</td>
+                            <td class="border border-gray-300 text-end">67,894</td>
                             <td class="border border-gray-300"></td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/5 </td>
-                            <td class="hidden md:table-cell"> 売上 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 半沢商事＿売上＿60個 </td>
-                            <td class="text-end"> 99,000 <span class="md:hidden"> </span> </td>
-                            <td class="text-end hidden md:table-cell"> </td>
-                            <td class="text-end"> 166,894</td>
+                            <td class="text-center border border-gray-300 "> 8/5 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 売上 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br>
+                                </span> 半沢商事＿売上＿60個 </td>
+                            <td class="border border-gray-300 text-end"> 99,000 <span class="md:hidden"> </span> </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> </td>
+                            <td class="border border-gray-300 text-end"> 166,894</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -358,13 +378,15 @@
                             </td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/5 </td>
-                            <td class="hidden md:table-cell"> 仕入 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】仕入<br> </span> 岸和田ベンダー＿仕入＿20個 </td>
-                            <td class="text-end"> <span class="md:hidden"> -36,000 </span> </td>
-                            <td class="text-end hidden md:table-cell"> 36,000 </td>
-                            <td class="text-end"> 130,894</td>
+                            <td class="text-center border border-gray-300 "> 8/5 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 仕入 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】仕入<br>
+                                </span> 岸和田ベンダー＿仕入＿20個 </td>
+                            <td class="border border-gray-300 text-end"> <span class="md:hidden"> -36,000 </span>
+                            </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> 36,000 </td>
+                            <td class="border border-gray-300 text-end"> 130,894</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -374,13 +396,15 @@
                             </td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/12 </td>
-                            <td class="hidden md:table-cell"> 消耗品 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】消耗品<br> </span> コピー用紙＿B5＿50セット </td>
-                            <td class="text-end"> <span class="md:hidden"> -50,000 </span> </td>
-                            <td class="text-end hidden md:table-cell"> 50,000 </td>
-                            <td class="text-end"> 80,894</td>
+                            <td class="text-center border border-gray-300 "> 8/12 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 消耗品 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】消耗品<br>
+                                </span> コピー用紙＿B5＿50セット </td>
+                            <td class="border border-gray-300 text-end"> <span class="md:hidden"> -50,000 </span>
+                            </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> 50,000 </td>
+                            <td class="border border-gray-300 text-end"> 80,894</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -390,13 +414,15 @@
                             </td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/14 </td>
-                            <td class="hidden md:table-cell"> 売上 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 近藤医院＿売上＿1600個 </td>
-                            <td class="text-end"> 862,000 <span class="md:hidden"> </span> </td>
-                            <td class="text-end hidden md:table-cell"> </td>
-                            <td class="text-end"> 942,894</td>
+                            <td class="text-center border border-gray-300 "> 8/14 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 売上 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br>
+                                </span> 近藤医院＿売上＿1600個 </td>
+                            <td class="border border-gray-300 text-end"> 862,000 <span class="md:hidden"> </span>
+                            </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> </td>
+                            <td class="border border-gray-300 text-end"> 942,894</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -406,13 +432,15 @@
                             </td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/15 </td>
-                            <td class="hidden md:table-cell"> 仕入 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】仕入<br> </span> 材料AAA＿9600個 </td>
-                            <td class="text-end"> <span class="md:hidden"> -140,000 </span> </td>
-                            <td class="text-end hidden md:table-cell"> 140,000 </td>
-                            <td class="text-end"> 802,894</td>
+                            <td class="text-center border border-gray-300 "> 8/15 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 仕入 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】仕入<br>
+                                </span> 材料AAA＿9600個 </td>
+                            <td class="border border-gray-300 text-end"> <span class="md:hidden"> -140,000 </span>
+                            </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> 140,000 </td>
+                            <td class="border border-gray-300 text-end"> 802,894</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -422,13 +450,15 @@
                             </td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/15 </td>
-                            <td class="hidden md:table-cell"> 売上 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 宮地電機＿売上＿4800個 </td>
-                            <td class="text-end"> 463,000 <span class="md:hidden"> </span> </td>
-                            <td class="text-end hidden md:table-cell"> </td>
-                            <td class="text-end"> 1,265,894</td>
+                            <td class="text-center border border-gray-300 "> 8/15 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 売上 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br>
+                                </span> 宮地電機＿売上＿4800個 </td>
+                            <td class="border border-gray-300 text-end"> 463,000 <span class="md:hidden"> </span>
+                            </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> </td>
+                            <td class="border border-gray-300 text-end"> 1,265,894</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -438,13 +468,15 @@
                             </td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/16 </td>
-                            <td class="hidden md:table-cell"> 仕入 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】仕入<br> </span> はなベンダー＿仕入＿9900個 </td>
-                            <td class="text-end"> <span class="md:hidden"> -99,000 </span> </td>
-                            <td class="text-end hidden md:table-cell"> 99,000 </td>
-                            <td class="text-end"> 1,166,894</td>
+                            <td class="text-center border border-gray-300 "> 8/16 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 仕入 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】仕入<br>
+                                </span> はなベンダー＿仕入＿9900個 </td>
+                            <td class="border border-gray-300 text-end"> <span class="md:hidden"> -99,000 </span>
+                            </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> 99,000 </td>
+                            <td class="border border-gray-300 text-end"> 1,166,894</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -454,13 +486,14 @@
                             </td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/16 </td>
-                            <td class="hidden md:table-cell"> 売上 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 売上＿徳永商事様 </td>
-                            <td class="text-end"> 24,000 <span class="md:hidden"> </span> </td>
-                            <td class="text-end hidden md:table-cell"> </td>
-                            <td class="text-end"> 1,190,894</td>
+                            <td class="text-center border border-gray-300 "> 8/16 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 売上 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br>
+                                </span> 売上＿徳永商事様 </td>
+                            <td class="border border-gray-300 text-end"> 24,000 <span class="md:hidden"> </span> </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> </td>
+                            <td class="border border-gray-300 text-end"> 1,190,894</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -470,13 +503,14 @@
                             </td>
                         </tr>
                         <tr style="cursor: pointer;">
-                            <td class="text-center"> 8/20 </td>
-                            <td class="hidden md:table-cell"> 売上 </td>
-                            <td class="hidden md:table-cell"> </td>
-                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br> </span> 売上 </td>
-                            <td class="text-end"> 96,000 <span class="md:hidden"> </span> </td>
-                            <td class="text-end hidden md:table-cell"> </td>
-                            <td class="text-end"> 1,286,894</td>
+                            <td class="text-center border border-gray-300 "> 8/20 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> 売上 </td>
+                            <td class="border border-gray-300 hidden md:table-cell"> </td>
+                            <td class="border border-gray-300"> <span class="md:hidden text-success"> 【 科目 】売上<br>
+                                </span> 売上 </td>
+                            <td class="border border-gray-300 text-end"> 96,000 <span class="md:hidden"> </span> </td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> </td>
+                            <td class="border border-gray-300 text-end"> 1,286,894</td>
                             <td class="border border-gray-300">
                                 <div class="flex justify-center">
                                     <div style="cursor: pointer;"> <img
@@ -488,10 +522,10 @@
                         <tr>
                             <th colspan="4" class="border border-gray-300 bg-gray-200 hidden md:table-cell">合計</th>
                             <th colspan="2" class="border border-gray-300 bg-gray-200 md:hidden">合計</th>
-                            <td class="text-end hidden md:table-cell"> 1,544,000</td>
-                            <td class="text-end md:hidden"> 1,219,000</td>
-                            <td class="text-end hidden md:table-cell"> 325,000</td>
-                            <td class="text-end">1,286,894</td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> 1,544,000</td>
+                            <td class="border border-gray-300 text-end md:hidden"> 1,219,000</td>
+                            <td class="border border-gray-300 text-end hidden md:table-cell"> 325,000</td>
+                            <td class="border border-gray-300 text-end">1,286,894</td>
                             <td class="border border-gray-300"></td>
                         </tr>
                     </tbody>

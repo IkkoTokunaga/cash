@@ -146,8 +146,8 @@
                     </thead>
                     <tbody>
 
-                        <tr class="table-info" style="cursor: pointer;">
-                            <td class="text-center">13</td>
+                        <tr>
+                            <td class="text-center border border-gray-300">13</td>
                             <td class="border border-gray-300">
                                 テスト売上先
                                 <br> (てすとうりあげさき)
@@ -162,7 +162,7 @@
                                     要月初の連絡。
                                 </span>
                             </td>
-                            <td class="hidden md:table-cell">テストです。
+                            <td class="border border-gray-300 hidden md:table-cell">テストです。
                                 毎月100程度発注あり。
                                 要月初の連絡。</td>
                             <td class="border border-gray-300">

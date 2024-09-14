@@ -10,9 +10,9 @@
                             class="border border-dark flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 md:row-span-3 lg:p-10 lg:pb-10 ">
                             <h2 class="text-xl font-semibold text-black">コンセプト</h2>
                             <p>シンプルでわかりやすいデザイン、完全無料の収支管理アプリです。<br>フリーランス・法人様におすすめ。もちろん家計用、個人用にもお使いいただけます。</p>
-                            <p>※収支一覧画面</p>
-                            <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
-                                <img src="{{ asset('storage/cash-tool-sample.png') }}"
+                            <p>※操作画面</p>
+                            <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch border">
+                                {{-- <img src="{{ asset('storage/cash-tool-sample.png') }}"
                                     alt="Laravel documentation screenshot"
                                     class="border border-secndary aspect-video h-full w-full flex-1 rounded-[10px] object-top shadow-[0px_4px_34px_rgba(0,0,0,0.06)] "
                                     onerror="
@@ -20,8 +20,11 @@
                                             document.getElementById('docs-card').classList.add('!row-span-1');
                                             document.getElementById('docs-card-content').classList.add('!flex-row');
                                             document.getElementById('background').classList.add('!hidden');
-                                        " />
-
+                                        " /> --}}
+                                <video autoplay muted loop playsinline>
+                                    <source src="{{ asset('storage/cash-canvas.mp4') }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                             <ul>
                                 <li>使用例</li>

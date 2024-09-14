@@ -21,7 +21,7 @@
                                             document.getElementById('docs-card-content').classList.add('!flex-row');
                                             document.getElementById('background').classList.add('!hidden');
                                         " /> --}}
-                                <video autoplay muted loop playsinline>
+                                <video autoplay muted loop playsinline >
                                     <source src="{{ asset('storage/cash-canvas.mp4') }}" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -31,7 +31,7 @@
                                 <li>・ 個人事業主様の出納帳</li>
                                 <li>・ 法人様の出納帳</li>
                                 <li>・ 家計簿</li>
-                                <li>・ おこずかい帳</li>
+                                <li>・ お小遣い帳</li>
                                 <li></li>
                             </ul>
 

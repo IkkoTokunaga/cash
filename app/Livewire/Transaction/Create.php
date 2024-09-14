@@ -89,7 +89,7 @@ class Create extends Component
         return [
             'date.required' => '日付は必須項目です。',
             'date.date_format' => '日付フォーマットが誤っています。',
-            'date.isnot_monthly_closing' => '既に締め処理を行っているため、修正できません。',
+            'date.isnot_monthly_closing' => '既に締め処理を行っているため、作成できません。',
             'account_id.required' => '科目は必須項目です。',
             'account_id.numeric' => '科目のデータ形式が誤っています。',
             'target_user_id.numeric' => '取引先のデータ形式が誤っています。',

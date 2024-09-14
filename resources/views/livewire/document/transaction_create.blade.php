@@ -442,7 +442,7 @@
     <div class=" mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class="max-w-full">
-                <div class="alert alert-info"> 保存しました。 </div>
+                <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-4"> 保存しました。 </div>
                 <div class="flex items-center">
                     <div class="me-5 sm:me-2">
                         <span
@@ -483,7 +483,7 @@
                             <td class="border border-gray-300 text-end">1,000</td>
                             <td class="border border-gray-300"></td>
                         </tr>
-                        <tr class="table-info" style="cursor: pointer;">
+                        <tr class="bg-blue-100 border-l-4 border-blue-500 text-blue-700" style="cursor: pointer;">
                             <td class="border border-gray-300 text-center">
                                 9/7
                             </td>

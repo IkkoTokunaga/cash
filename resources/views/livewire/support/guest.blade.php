@@ -2,9 +2,9 @@
     <div class="w-full">
         @if (session()->has('saved_message'))
             @if (session('saved_support_id'))
-                <div class="alert alert-info">
+                <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-4">
                 @else
-                    <div class="alert alert-danger">
+                    <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4">
             @endif
             {{ session('saved_message') }}
     </div>

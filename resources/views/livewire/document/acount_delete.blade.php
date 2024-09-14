@@ -106,7 +106,7 @@
     <div class="mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class=" max-w-xl">
-                <div class="alert alert-danger"> 削除しました。 </div>
+                <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4"> 削除しました。 </div>
 
                 <form>
 

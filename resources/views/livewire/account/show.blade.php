@@ -13,9 +13,9 @@
                 <div class=" max-w-xl">
                     @if (session()->has('saved_message'))
                         @if (session('saved_account_id'))
-                            <div class="alert alert-info"> {{ session('saved_message') }} </div>
+                            <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-4"> {{ session('saved_message') }} </div>
                         @else
-                            <div class="alert alert-danger"> {{ session('saved_message') }} </div>
+                            <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4"> {{ session('saved_message') }} </div>
                         @endif
                     @endif
 
@@ -38,7 +38,7 @@
                         </thead>
                         <tbody>
                             @foreach ($accounts as $account)
-                                <tr @if (session('saved_account_id') === $account->code && session('saved_account_id')) class="table-info" @endif
+                                <tr @if (session('saved_account_id') === $account->code && session('saved_account_id')) class="bg-blue-100 border-l-4 border-blue-500 text-blue-700" @endif
                                     style="cursor: pointer;">
                                     <td class="border border-gray-300" wire:click="edit({{ $account->code }})">{{ $account->name }}</td>
                                     <td class="border border-gray-300">

@@ -16,9 +16,9 @@ use Carbon\Carbon;
                 <div class="max-w-full">
                     @if (session()->has('saved_message'))
                         @if (session('saved_target_user_id'))
-                            <div class="alert alert-info"> {{ session('saved_message') }} </div>
+                            <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-4"> {{ session('saved_message') }} </div>
                         @else
-                            <div class="alert alert-danger"> {{ session('saved_message') }} </div>
+                            <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4"> {{ session('saved_message') }} </div>
                         @endif
                     @endif
                     <a href="{{ route('target_user.create') }}" wire:navigate><x-secondary-button
@@ -37,7 +37,7 @@ use Carbon\Carbon;
                         </thead>
                         <tbody>
                             @foreach ($targetUsers as $targetUser)
-                                <tr @if (session('saved_target_user_id') === $targetUser->code && session('saved_target_user_id')) class="table-info" @endif
+                                <tr @if (session('saved_target_user_id') === $targetUser->code && session('saved_target_user_id')) class="bg-blue-100 border-l-4 border-blue-500 text-blue-700" @endif
                                     style="cursor: pointer;">
                                     <td class="text-center border border-gray-300" wire:click="edit({{ $targetUser->code }})">
                                         {{ $targetUser->code }}</td>

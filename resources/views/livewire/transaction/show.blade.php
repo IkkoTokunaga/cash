@@ -16,11 +16,11 @@ use Carbon\Carbon;
                 <div class="max-w-full">
                     @if (session()->has('saved_message'))
                         @if (session('saved_transaction_id'))
-                            <div class="alert alert-info"> {{ session('saved_message') }} </div>
+                            <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-4"> {{ session('saved_message') }} </div>
                         @elseif (session('saved_summary') === true)
-                            <div class="alert alert-info"> {{ session('saved_message') }} </div>
+                            <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-4"> {{ session('saved_message') }} </div>
                         @else
-                            <div class="alert alert-danger"> {{ session('saved_message') }} </div>
+                            <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4"> {{ session('saved_message') }} </div>
                         @endif
                     @endif
                     <div class="flex items-center">
@@ -55,7 +55,7 @@ use Carbon\Carbon;
                         </thead>
                         <tbody>
                             @if ($prevMonthData)
-                                <tr @if (session('saved_summary') === true) class="table-info" @endif>
+                                <tr @if (session('saved_summary') === true) class="bg-blue-100 border-l-4 border-blue-500 text-blue-700" @endif>
                                     <td class="text-center border border-gray-300">
                                         {{ Carbon::parse($prevEndOfMonth_Ymd)->format('n/j') }}</td>
                                     <td colspan="5" class="text-primary hidden md:table-cell border border-gray-300">
@@ -96,7 +96,7 @@ use Carbon\Carbon;
                                 </tr>
                             @endif
                             @foreach ($transactions as $transaction)
-                                <tr @if (session('saved_transaction_id') === $transaction->id && session('saved_transaction_id')) class="table-info" @endif
+                                <tr @if (session('saved_transaction_id') === $transaction->id && session('saved_transaction_id')) class="bg-blue-100 border-l-4 border-blue-500 text-blue-700" @endif
                                     style="cursor: pointer;">
                                     <td class="text-center border border-gray-300"
                                         wire:click="edit({{ $transaction->id }})">

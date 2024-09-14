@@ -129,7 +129,7 @@
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class="max-w-full">
 
-                <div class="alert alert-info"> 保存しました。 </div>
+                <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-4"> 保存しました。 </div>
                 <span
                     class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xl sm:text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150 mb-2">
                     新規取引先作成

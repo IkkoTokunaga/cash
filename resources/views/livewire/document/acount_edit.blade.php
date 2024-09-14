@@ -195,7 +195,7 @@
     <div class="mb-5">
         <div class="p-4 sm:p-8 bg-white sm:rounded-lg border border-dark m-1 border-dark m-1">
             <div class=" max-w-xl">
-                <div class="alert alert-info"> 保存しました。 </div>
+                <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-4"> 保存しました。 </div>
 
                 <form>
 
@@ -272,7 +272,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr style="cursor: pointer;" class="table-info">
+                                <tr style="cursor: pointer;" class="bg-blue-100 border-l-4 border-blue-500 text-blue-700">
                                     <td class="border border-gray-300">宿泊費(ホテル代)</td>
                                     <td class="border border-gray-300">
                                         <div class="flex justify-content-around">

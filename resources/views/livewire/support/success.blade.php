@@ -11,9 +11,9 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             @if (session()->has('saved_message'))
                 @if (session('saved_support_id'))
-                    <div class="alert alert-info">{{ session('saved_message') }} </div>
+                    <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-4">{{ session('saved_message') }} </div>
                 @else
-                    <div class="alert alert-danger">{{ session('saved_message') }} </div>
+                    <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4">{{ session('saved_message') }} </div>
                 @endif
             @endif
         </div>

@@ -9,7 +9,7 @@
                         <div
                             class="border border-dark flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 md:row-span-3 lg:p-10 lg:pb-10 ">
                             <h2 class="text-xl font-semibold text-black">コンセプト</h2>
-                            <p>シンプルでわかりやすいデザイン、完全無料の収支管理アプリです。<br>フリーランス・法人様におすすめ。もちろん家計用、個人用にもお使いいただけます。</p>
+                            <p>シンプルでわかりやすいデザイン、無料の収支管理アプリです。<br>フリーランス・法人様におすすめ。もちろん家計用、個人用にもお使いいただけます。</p>
                             <p>※操作画面</p>
                             <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch border">
                                 {{-- <img src="{{ asset('storage/cash-tool-sample.png') }}"

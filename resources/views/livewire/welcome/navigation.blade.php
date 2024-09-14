@@ -5,7 +5,7 @@
             <div class="flex justify-between h-16">
                 <div class="flex">
                     <div class="shrink-0 flex items-center">
-                        <a href="{{ route('welcome') }}" wire:navigate>
+                        <a href="{{ route('welcome') }}" wire:navigate.scroll>
                             <img src="{{ asset('storage/cash-canvas-log.png') }}" alt="cash canvas">
                             {{-- <x-application-logo class="block h-9 w-auto fill-current text-gray-800" /> --}}
                         </a>
@@ -14,7 +14,7 @@
                     @auth
                     <div class=" space-x-8 -my-px ms-10 flex">
                         <div class=" space-x-8 -my-px ms-10 flex">
-                            <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
+                            <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate.scroll>
                                 {{ __('ホーム') }}
                             </x-nav-link>
                         </div>
@@ -23,7 +23,7 @@
                     @else
                         <div class=" space-x-8 -my-px ms-1 flex">
                             <div class=" space-x-8 -my-px ms-10 flex">
-                                <x-nav-link :href="route('login')" :active="request()->routeIs('login')" wire:navigate>
+                                <x-nav-link :href="route('login')" :active="request()->routeIs('login')" wire:navigate.scroll>
                                     {{ __('Login') }}
                                 </x-nav-link>
                             </div>
@@ -32,7 +32,7 @@
                         @if (Route::has('register'))
                             <div class=" space-x-8 -my-px ms-1 flex">
                                 <div class=" space-x-8 -my-px ms-10 flex">
-                                    <x-nav-link :href="route('register')" :active="request()->routeIs('register')" wire:navigate>
+                                    <x-nav-link :href="route('register')" :active="request()->routeIs('register')" wire:navigate.scroll>
                                         {{ __('Sing Up') }}
                                     </x-nav-link>
                                 </div>

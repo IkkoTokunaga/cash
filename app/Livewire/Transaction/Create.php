@@ -7,6 +7,7 @@ use App\Models\Account;
 use App\Models\Transaction;
 use App\Models\TargetUser;
 use Carbon\Carbon;
+use FFI\CType;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
@@ -73,7 +74,12 @@ class Create extends Component
         session()->flash('saved_message', $message);
         session()->flash('saved_transaction_id', $isSaved);
 
-        return $this->redirect('/transaction', true);
+        /**
+         * 作成月に遷移
+         */
+        $createMonth = Carbon::parse($this->date)->format('Y-m');
+
+        return $this->redirect('/transaction/' . $createMonth, true);
     }
 
     public function mount()
